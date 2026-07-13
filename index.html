@@ -125,7 +125,8 @@
   .ov-card-c .ov-item-val { font-size: 13px; font-weight: 700; color: var(--c-text); white-space: pre-line; line-height: 1.8; }
   .note-block { background: #fffbeb; border: 1px solid #fef3c7; border-radius: 6px; padding: 12px 16px; margin: 12px 0; font-size: 13px; color: #92400e; }
   @media (max-width: 768px) {
-    /* 全局 */
+    /* 全局 - 禁止移动端浏览器自动放大字体 */
+    * { -webkit-text-size-adjust: 100% !important; text-size-adjust: 100% !important; }
     body { font-size: 13px; line-height: 1.7; }
     .container { padding: 0 12px; }
 
@@ -171,41 +172,48 @@
     .ov-card-c .ov-item-label { font-size: 11px; }
     .ov-card-c .ov-item-val { font-size: 12px; }
 
-    /* ===== 表格移动端核心适配 ===== */
+    /* ===== 表格移动端：横向滚动 ===== */
     .table-wrap {
-      overflow-x: auto;
+      overflow-x: auto !important;
+      overflow-y: hidden !important;
       -webkit-overflow-scrolling: touch;
       margin: 10px 0;
       border: 1px solid var(--c-border);
       border-radius: 6px;
+      max-width: 100%;
     }
+    .table-wrap::-webkit-scrollbar { height: 5px; }
+    .table-wrap::-webkit-scrollbar-thumb { background: var(--c-gray-300); border-radius: 3px; }
+    .table-wrap::-webkit-scrollbar-track { background: var(--c-gray-50); }
     table.report-table {
+      width: auto !important;
+      min-width: 600px !important;
       font-size: 11px;
-      min-width: 600px;
+    }
+    table.report-table thead th {
+      padding: 6px 8px;
+      font-size: 10px;
       white-space: nowrap;
     }
-    table.report-table thead th { padding: 6px 6px; font-size: 10px; }
-    table.report-table tbody td { padding: 5px 6px; }
-    table.report-table .group-row td { font-size: 11px; }
+    table.report-table tbody td {
+      padding: 5px 8px;
+      font-size: 11px;
+      white-space: nowrap;
+    }
+    table.report-table .group-row td {
+      font-size: 11px;
+      white-space: nowrap;
+    }
 
-    /* 固定宽度的客户明细表 - 移动端取消固定宽度，让表格可滚动 */
+    /* 客户明细表 */
     table.report-table.customer-detail,
     table.report-table.customer-detail-potential {
-      table-layout: auto;
-      min-width: 700px;
+      table-layout: auto !important;
+      min-width: 700px !important;
     }
-    table.report-table.customer-detail col.col-name,
-    table.report-table.customer-detail col.col-ind,
-    table.report-table.customer-detail col.col-mgr,
-    table.report-table.customer-detail col.col-sale,
-    table.report-table.customer-detail col.col-year,
-    table.report-table.customer-detail col.col-amt,
-    table.report-table.customer-detail col.col-amt2,
-    table.report-table.customer-detail-potential col.col-name,
-    table.report-table.customer-detail-potential col.col-ind,
-    table.report-table.customer-detail-potential col.col-year,
-    table.report-table.customer-detail-potential col.col-amt {
-      width: auto;
+    table.report-table.customer-detail col,
+    table.report-table.customer-detail-potential col {
+      width: auto !important;
     }
 
     /* 图表 */
@@ -220,14 +228,14 @@
     .footer { padding: 24px 16px; font-size: 11px; margin-top: 24px; }
   }
 
-  /* 超小屏 (<400px) 进一步压缩 */
+  /* 超小屏 (<400px) */
   @media (max-width: 400px) {
     .cover h1 { font-size: 18px; }
     .cover h2 { font-size: 13px; }
     .chart-container { height: 200px; }
     table.report-table { font-size: 10px; min-width: 520px; }
-    table.report-table thead th { padding: 4px 4px; font-size: 9px; }
-    table.report-table tbody td { padding: 3px 4px; }
+    table.report-table thead th { padding: 4px 6px; font-size: 9px; }
+    table.report-table tbody td { padding: 3px 6px; font-size: 10px; }
     .table-wrap { border-radius: 4px; }
   }
 </style>
