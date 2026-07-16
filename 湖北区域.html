@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>湖北地区 2024-2026 网络安全市场空间分析报告 网络安全市场空间分析报告</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --c-bg: #f5f6f8;
+    --c-surface: #ffffff;
+    --c-text: #2d2d2d;
+    --c-text-sub: #6b7280;
+    --c-border: #e5e7eb;
+    --c-accent: #2563eb;
+    --c-accent-light: #dbeafe;
+    --c-accent-dark: #1e40af;
+    --c-gray-50: #f9fafb;
+    --c-gray-100: #f3f4f6;
+    --c-gray-200: #e5e7eb;
+    --c-gray-300: #d1d5db;
+    --c-gray-500: #6b7280;
+    --c-gray-700: #374151;
+    --c-red: #dc2626;
+    --c-green: #059669;
+    --c-orange: #ea580c;
+    --shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+    background: var(--c-bg);
+    color: var(--c-text);
+    line-height: 1.8;
+    font-size: 14px;
+  }
+  .cover {
+    background: linear-gradient(135deg, #1e3a5f 0%, #2d5a8c 100%);
+    color: #fff;
+    padding: 80px 60px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -50%; right: -20%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(255,255,255,.05) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .cover-tag {
+    display: inline-block;
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 4px;
+    padding: 4px 16px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+  }
+  .cover h1 { font-size: 36px; font-weight: 700; letter-spacing: 1px; margin-bottom: 16px; position: relative; z-index: 1; }
+  .cover h2 { font-size: 22px; font-weight: 400; opacity: .85; margin-bottom: 40px; position: relative; z-index: 1; }
+  .cover-meta { font-size: 13px; opacity: .7; position: relative; z-index: 1; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  .section { background: var(--c-surface); margin: 24px 0; border-radius: 8px; box-shadow: var(--shadow); overflow: hidden; }
+  .section-header { padding: 20px 32px; border-bottom: 1px solid var(--c-border); display: flex; align-items: center; gap: 12px; }
+  .section-num { background: var(--c-accent); color: #fff; font-size: 14px; font-weight: 700; width: 28px; height: 28px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .section-title { font-size: 18px; font-weight: 700; color: var(--c-text); }
+  .section-body { padding: 24px 32px; }
+  .info-block { background: var(--c-gray-50); border-left: 3px solid var(--c-accent); border-radius: 0 6px 6px 0; padding: 16px 20px; margin-bottom: 16px; }
+  .info-block-label { font-size: 13px; font-weight: 700; color: var(--c-accent-dark); margin-bottom: 6px; }
+  .info-block p { font-size: 13px; color: var(--c-gray-700); line-height: 1.9; }
+  .info-block .term-list { font-size: 13px; color: var(--c-gray-700); line-height: 2; }
+  .info-block .term-list .term { font-weight: 700; color: var(--c-text); }
+  .sub-heading { font-size: 15px; font-weight: 700; color: var(--c-accent-dark); margin: 24px 0 12px; padding-left: 12px; border-left: 4px solid var(--c-accent); }
+  .sub-heading-tag { display: inline-block; background: var(--c-accent-light); color: var(--c-accent-dark); font-size: 12px; font-weight: 700; border-radius: 4px; padding: 2px 8px; margin-right: 8px; }
+  .desc-text { font-size: 13px; color: var(--c-gray-700); margin-bottom: 16px; line-height: 1.9; }
+  .table-wrap { overflow-x: auto; margin: 16px 0; }
+  table.report-table { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+  table.report-table.customer-detail, table.report-table.customer-detail-potential { table-layout: fixed; }
+  table.report-table thead th { background: var(--c-gray-100); color: var(--c-gray-700); font-weight: 700; padding: 9px 10px; text-align: center; border: 1px solid var(--c-border); white-space: nowrap; font-size: 12.5px; }
+  table.report-table tbody td { padding: 7px 10px; text-align: center; border: 1px solid var(--c-border); color: var(--c-text); }
+  table.report-table tbody td.left { text-align: left; }
+  table.report-table tbody td.num { text-align: center; }
+  table.report-table tbody tr:hover { background: var(--c-gray-50); }
+  table.report-table .group-row td { background: var(--c-accent-light); font-weight: 700; color: var(--c-accent-dark); text-align: center; }
+  table.report-table .rate-up { color: var(--c-red); font-weight: 700; }
+  table.report-table .rate-down { color: var(--c-green); font-weight: 700; }
+  table.report-table .na { color: var(--c-gray-500); }
+  table.report-table.customer-detail col.col-name { width: 28%; }
+  table.report-table.customer-detail col.col-ind { width: 8%; }
+  table.report-table.customer-detail col.col-mgr { width: 9%; }
+  table.report-table.customer-detail col.col-sale { width: 10%; }
+  table.report-table.customer-detail col.col-year { width: 7%; }
+  table.report-table.customer-detail col.col-amt { width: 13%; }
+  table.report-table.customer-detail col.col-amt2 { width: 13%; }
+  table.report-table.customer-detail-potential col.col-name { width: 42%; }
+  table.report-table.customer-detail-potential col.col-ind { width: 12%; }
+  table.report-table.customer-detail-potential col.col-year { width: 12%; }
+  table.report-table.customer-detail-potential col.col-amt { width: 18%; }
+  .chart-box { background: var(--c-gray-50); border: 1px solid var(--c-border); border-radius: 8px; padding: 20px; margin: 16px 0; }
+  .chart-title { font-size: 14px; font-weight: 700; color: var(--c-gray-700); margin-bottom: 12px; text-align: center; }
+  .chart-container { position: relative; height: 320px; }
+  .highlight-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  .highlight-card { background: var(--c-surface); border: 1px solid var(--c-border); border-radius: 8px; padding: 20px; }
+  .highlight-card .hl-title { font-size: 14px; font-weight: 700; color: var(--c-accent-dark); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid var(--c-accent-light); display: flex; align-items: center; gap: 8px; }
+  .highlight-card .hl-title .badge { background: var(--c-accent); color: #fff; font-size: 11px; border-radius: 4px; padding: 1px 6px; }
+  .highlight-card p { font-size: 13px; color: var(--c-gray-700); margin-bottom: 8px; line-height: 1.9; }
+  .highlight-card .hl-bold { font-weight: 700; color: var(--c-text); }
+  .toc { background: var(--c-surface); border-radius: 8px; box-shadow: var(--shadow); padding: 32px; margin: 24px 0; }
+  .toc h3 { font-size: 16px; font-weight: 700; margin-bottom: 16px; color: var(--c-accent-dark); }
+  .toc ul { list-style: none; }
+  .toc li { padding: 6px 0; }
+  .toc a { text-decoration: none; color: var(--c-gray-700); font-size: 14px; display: flex; align-items: center; gap: 8px; transition: color .2s; }
+  .toc a:hover { color: var(--c-accent); }
+  .toc .toc-num { background: var(--c-gray-100); color: var(--c-gray-500); font-size: 12px; width: 24px; height: 24px; border-radius: 4px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .footer { text-align: center; padding: 40px 24px; font-size: 12px; color: var(--c-gray-500); border-top: 1px solid var(--c-border); margin-top: 40px; }
+  .overview-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 16px; margin: 20px 0; }
+  .ov-card-h { font-size: 14px; font-weight: 700; color: var(--c-accent-dark); padding: 12px 16px; background: var(--c-gray-100); border: 1px solid var(--c-border); border-bottom: 2px solid var(--c-accent-light); border-radius: 8px 8px 0 0; }
+  .ov-card-c { padding: 10px 16px; border-left: 1px solid var(--c-border); border-right: 1px solid var(--c-border); border-bottom: 1px solid var(--c-gray-100); }
+  .ov-card-c.last { border-bottom: 1px solid var(--c-border); border-radius: 0 0 8px 8px; }
+  .ov-card-c .ov-item-label { font-size: 12px; color: var(--c-gray-500); margin-bottom: 4px; }
+  .ov-card-c .ov-item-val { font-size: 13px; font-weight: 700; color: var(--c-text); white-space: pre-line; line-height: 1.8; }
+  .note-block { background: #fffbeb; border: 1px solid #fef3c7; border-radius: 6px; padding: 12px 16px; margin: 12px 0; font-size: 13px; color: #92400e; }
+  @media (max-width: 768px) {
+    /* 禁止移动端浏览器自动放大字体 */
+    * { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { font-size: 13px; line-height: 1.7; }
+    .container { padding: 0 12px; }
+
+    /* 封面 */
+    .cover { padding: 36px 16px 28px; }
+    .cover-tag { font-size: 11px; padding: 3px 12px; letter-spacing: 1px; margin-bottom: 16px; }
+    .cover h1 { font-size: 20px; margin-bottom: 8px; }
+    .cover h2 { font-size: 14px; margin-bottom: 16px; }
+    .cover-meta { font-size: 11px; }
+
+    /* 目录 */
+    .toc { padding: 16px; }
+    .toc h3 { font-size: 14px; margin-bottom: 10px; }
+    .toc a { font-size: 12px; }
+
+    /* 区块 */
+    .section { margin: 12px 0; border-radius: 6px; }
+    .section-header { padding: 12px 14px; gap: 8px; }
+    .section-num { width: 24px; height: 24px; font-size: 12px; border-radius: 4px; }
+    .section-title { font-size: 15px; }
+    .section-body { padding: 14px; }
+
+    /* 信息块 */
+    .info-block { padding: 10px 14px; margin-bottom: 12px; }
+    .info-block-label { font-size: 12px; }
+    .info-block p, .info-block .term-list { font-size: 12px; }
+
+    /* 小标题 */
+    .sub-heading { font-size: 13px; margin: 16px 0 8px; padding-left: 8px; }
+    .sub-heading-tag { font-size: 11px; padding: 1px 6px; }
+    .desc-text { font-size: 12px; margin-bottom: 10px; }
+
+    /* 卡片网格 */
+    .highlight-grid, .overview-grid { grid-template-columns: 1fr; gap: 10px; margin: 12px 0; }
+    .highlight-card { padding: 14px; }
+    .highlight-card .hl-title { font-size: 12px; margin-bottom: 8px; padding-bottom: 6px; }
+    .highlight-card p { font-size: 12px; margin-bottom: 6px; }
+
+    /* 概览卡片 */
+    .overview-grid { grid-template-columns: 1fr; }
+    .ov-card-h { font-size: 12px; padding: 8px 12px; }
+    .ov-card-c { padding: 6px 12px; }
+    .ov-card-c .ov-item-label { font-size: 11px; }
+    .ov-card-c .ov-item-val { font-size: 12px; }
+
+    /* ===== 表格移动端核心适配 ===== */
+    .table-wrap {
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch;
+      margin: 10px 0;
+      border: 1px solid var(--c-border);
+      border-radius: 6px;
+    }
+    /* 滚动条优化 */
+    .table-wrap::-webkit-scrollbar { height: 5px; }
+    .table-wrap::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
+    .table-wrap::-webkit-scrollbar-track { background: #f3f4f6; }
+
+    table.report-table {
+      font-size: 11px;
+      width: auto;
+      min-width: 600px;
+    }
+    table.report-table thead th { padding: 6px 6px; font-size: 10px; white-space: nowrap; }
+    table.report-table tbody td { padding: 5px 6px; font-size: 11px; white-space: nowrap; }
+    table.report-table .group-row td { font-size: 11px; white-space: nowrap; }
+
+    /* 固定宽度的客户明细表 */
+    table.report-table.customer-detail,
+    table.report-table.customer-detail-potential {
+      table-layout: auto;
+      min-width: 700px;
+    }
+    table.report-table.customer-detail col.col-name,
+    table.report-table.customer-detail col.col-ind,
+    table.report-table.customer-detail col.col-mgr,
+    table.report-table.customer-detail col.col-sale,
+    table.report-table.customer-detail col.col-year,
+    table.report-table.customer-detail col.col-amt,
+    table.report-table.customer-detail col.col-amt2,
+    table.report-table.customer-detail-potential col.col-name,
+    table.report-table.customer-detail-potential col.col-ind,
+    table.report-table.customer-detail-potential col.col-year,
+    table.report-table.customer-detail-potential col.col-amt {
+      width: auto;
+    }
+
+    /* 图表 */
+    .chart-box { padding: 12px; margin: 10px 0; border-radius: 6px; }
+    .chart-title { font-size: 12px; margin-bottom: 8px; }
+    .chart-container { height: 240px; }
+
+    /* 提示块 */
+    .note-block { padding: 8px 12px; margin: 8px 0; font-size: 12px; }
+
+    /* 页脚 */
+    .footer { padding: 24px 16px; font-size: 11px; margin-top: 24px; }
+  }
+
+  /* 超小屏 (<400px) 进一步压缩 */
+  @media (max-width: 400px) {
+    .cover h1 { font-size: 18px; }
+    .cover h2 { font-size: 13px; }
+    .chart-container { height: 200px; }
+    table.report-table { font-size: 10px; min-width: 520px; }
+    table.report-table thead th { padding: 4px 4px; font-size: 9px; }
+    table.report-table tbody td { padding: 3px 4px; font-size: 10px; }
+    .table-wrap { border-radius: 4px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== COVER ===== -->
+<div class="cover">
+  <h1>湖北地区</h1>
+  <h2>2024-2026 网络安全市场空间分析报告</h2>
+  <div class="cover-meta">本报告由营销中心、数字化管理部共同发布</div>
+</div>
+<div class="container">
+
+<!-- ===== 数据说明 ===== -->
+<div class="section" id="data-source">
+  <div class="section-header">
+    <div class="section-num" style="background:var(--c-gray-500);">i</div>
+    <div class="section-title">数据说明</div>
+  </div>
+  <div class="section-body">
+    <div class="info-block">
+      <div class="info-block-label">数据来源</div>
+      <p>本报告深度整合了外部公开标讯数据与安恒内部客户档案、合同等核心信息。外部数据均源自市场情报分析平台，基于全网公开招投标公告（招标、中标、采购意向等）整理而成。因公开信息存在格式不统一、内容残缺、时效短且抓取难度大等问题，相关数据仅用于参考市场安全投资变化趋势，不能 1:1 还原所有公开项目实际情况。烦请阅读者注意，感谢！</p>
+    </div>
+    <div class="info-block">
+      <div class="info-block-label">术语解释</div>
+      <div class="term-list">
+        <p><span class="term">匹配上的安恒客户：</span>在外部有公开招标，同时在安恒客户池中的客户。</p>
+        <p><span class="term">未匹配上的安恒客户：</span>未在外部有公开招标，但在安恒客户池中的客户。</p>
+        <p><span class="term">未匹配上的采购单位：</span>在外部有公开招标，但不在安恒客户池的采购单位。</p>
+        <p><span class="term">专项金额：</span>在公开的招标/采购内容中主体为网络安全相关产品或服务的项目产生的金额。</p>
+        <p><span class="term">相关金额：</span>在公开的招标/采购内容中主体为信息化但包含了部分网络安全产品或服务的项目产生的金额。</p>
+        <p><span class="term">市场额计算公式：</span>市场额 = 相关金额 × 比例 + 专项金额。</p>
+      </div>
+    </div>
+    <div class="info-block">
+      <div class="info-block-label">阅读提醒</div>
+      <p>1、报告中对区域的市场额、合同金额等都是以客户（或项目）所在地而非安恒客户实际所属部门所统计。</p>
+      <p>2、报告数据时间范围为2024.1.1-2026.6.30，文中对趋势及潜力分析，数据均取近3年H1同期数据分析得出结论。</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 目录 ===== -->
+<div class="toc">
+  <h3>目录</h3>
+  <ul>
+    <li><a href="#summary"><span class="toc-num">一</span> 总结</a></li>
+    <li><a href="#overview"><span class="toc-num">二</span> 内外部数据分析全景图</a></li>
+    <li><a href="#anheng"><span class="toc-num">三</span> 安恒客户分析</a></li>
+    <li><a href="#potential"><span class="toc-num">四</span> 潜力客户分析</a></li>
+  </ul>
+</div>
+
+<!-- ===== 一、总结 ===== -->
+<div class="section" id="summary">
+  <div class="section-header">
+    <div class="section-num">一</div>
+    <div class="section-title">总结</div>
+  </div>
+  <div class="section-body">
+    <p class="desc-text">湖北地区，近3年H1同期，整体市场规模呈先下降，后小幅度上升趋势，签约合同呈逐年下降趋势，历年变化如下：</p>
+    <div class="table-wrap">
+      <table class="report-table data-table">
+        <thead>
+          <tr>
+            <th>年份</th>
+            <th>市场额(亿)</th>
+            <th>H1市场额(亿)</th>
+            <th>H1同期市场额增长率</th>
+            <th>签约合同金额（亿）</th>
+            <th>H1签约合同金额（亿）</th>
+            <th>H1同期合同额增长率</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>2024</td><td>16.03</td><td>6.77</td><td class="na">N/A</td><td>0.60</td><td>0.17</td><td class="na">N/A</td></tr>
+          <tr><td>2025</td><td>14.94</td><td>6.02</td><td class="rate-down">-11.08%</td><td>0.55</td><td>0.16</td><td class="rate-down">-2.18%</td></tr>
+          <tr><td>2026H1</td><td>6.36</td><td>6.36</td><td class="rate-up">+5.70%</td><td>0.15</td><td>0.15</td><td class="rate-down">-8.81%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="chart-box">
+      <div class="chart-title">历年市场额与签约合同金额趋势</div>
+      <div class="chart-container"><canvas id="chart-summary"></canvas></div>
+    </div>
+
+    <div class="highlight-grid">
+      <div class="highlight-card">
+        <div class="hl-title"><span class="badge">1</span>内部分析</div>
+        <p><span class="hl-bold">市场：</span>近3年市场总规模是37.34亿，内部与外部匹配上的客户市场总规模25.06亿，占比67.00%。</p>
+        <p><span class="hl-bold">客户：</span>内部与外部匹配上的客户数766，占比内部总客户18.00%；产出合同额0.77亿，占比总合同额59.00%，其中无产出客户占比72.00%。 建议：资源重点投入这部分产出客户，同时兼顾未产出客户的激活。</p>
+        <p><span class="hl-bold">地市：</span>近3年NA客户市场容量TOP3地市是武汉市、宜昌市、荆州市，同时具有潜力的地市是荆州市、襄阳市，可以重点关注。</p>
+        <p><span class="hl-bold">行业：</span>近3年NA客户市场容量TOP3行业是运营商、政府、企业，同时具有潜力的行业是军工、企业、电力，建议重点关注。</p>
+      </div>
+      <div class="highlight-card">
+        <div class="hl-title"><span class="badge">2</span>外部分析</div>
+        <p><span class="hl-bold">市场：</span>近3年市场总规模是37.34亿，其中外部未匹配上的采购单位数934，市场规模是12.28亿，占比33.00%。</p>
+        <p><span class="hl-bold">客户：</span>近3年采购单位预算超200w的数量是198，市场规模8.54亿。建议：积极布局潜力客户的拓展工作。</p>
+        <p><span class="hl-bold">地市：</span>近3年潜力客户市场容量TOP3地市是武汉市、宜昌市、黄石市，同时具有潜力的地市是孝感市，可以重点关注。</p>
+        <p><span class="hl-bold">行业：</span>近3年潜力客户市场容量TOP3行业是政府、医疗、教育，同时具有潜力的行业是运营商、企业，建议重点关注。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 二、内外部数据分析全景图 ===== -->
+<div class="section" id="overview">
+  <div class="section-header">
+    <div class="section-num">二</div>
+    <div class="section-title">内外部数据分析全景图</div>
+  </div>
+  <div class="section-body">
+    <div class="overview-grid">
+      <div class="ov-card-h">匹配上的安恒客户</div>
+      <div class="ov-card-h">未匹配上的采购单位</div>
+      <div class="ov-card-h">未匹配上的安恒客户</div>
+      <div class="ov-card-c"><div class="ov-item-label">数量</div><div class="ov-item-val">总计766(占外部45.00%，占安恒18.00%)
+· 有产出：216(28.00%)
+· 无产出：550(72.00%)
+NA客户：109
+· 有产出：56
+· 无产出：53</div></div>
+      <div class="ov-card-c"><div class="ov-item-label">数量</div><div class="ov-item-val">总计934，其中
+潜力：198(21.00%)
+*说明：潜力指近3年预算总和超200W。</div></div>
+      <div class="ov-card-c"><div class="ov-item-label">数量</div><div class="ov-item-val">总计3418，其中
+· 有产出：328(10.00%)
+· 无产出：3090(90.00%)</div></div>
+      <div class="ov-card-c"><div class="ov-item-label">合同金额</div><div class="ov-item-val">0.77亿(NA客户：0.31亿)</div></div>
+      <div class="ov-card-c"><div class="ov-item-label">合同金额</div><div class="ov-item-val">-</div></div>
+      <div class="ov-card-c"><div class="ov-item-label">合同金额</div><div class="ov-item-val">0.52亿 (NA客户：0.13亿)</div></div>
+      <div class="ov-card-c last"><div class="ov-item-label">市场额</div><div class="ov-item-val">总计25.06亿
+· 有产出：10.69亿
+· 无产出：14.37亿
+NA客户：6.46亿
+· 有产出：4.04亿
+· 无产出：2.42亿</div></div>
+      <div class="ov-card-c last"><div class="ov-item-label">市场额</div><div class="ov-item-val">总计12.28亿
+潜力客户：8.54亿</div></div>
+      <div class="ov-card-c last"><div class="ov-item-label">市场额</div><div class="ov-item-val">-</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 三、安恒客户分析 ===== -->
+<div class="section" id="anheng">
+  <div class="section-header">
+    <div class="section-num">三</div>
+    <div class="section-title">安恒客户分析</div>
+  </div>
+  <div class="section-body">
+    <p class="desc-text">该部分客户为在外部有公开招标，同时也在安恒客户池中的客户。</p>
+
+    <div class="sub-heading"><span class="sub-heading-tag">1</span>历年分析</div>
+    <p class="desc-text">近3年安恒客户合同金额占市场额比呈逐年下降趋势。</p>
+
+    <p class="desc-text" style="font-weight:700;color:var(--c-text);">安恒客户</p>
+    <div class="table-wrap">
+      <table class="report-table data-table">
+        <thead>
+          <tr>
+            <th>年份</th>
+            <th>无产出<br>客户数量</th>
+            <th>无产出客户市场额(万)</th>
+            <th>有产出<br>客户数量</th>
+            <th>有产出客户市场额(万)</th>
+            <th>产出合同金额(万)</th>
+            <th>合同金额占市场额比</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>2024</td><td>348</td><td>66,299.26</td><td>154</td><td>37,804.36</td><td>3,696.80</td><td>9.78%</td></tr>
+          <tr><td>2025</td><td>301</td><td>54,725.66</td><td>149</td><td>45,714.86</td><td>3,206.08</td><td>7.01%</td></tr>
+          <tr><td>2026H1</td><td>157</td><td>23,828.87</td><td>87</td><td>22,256.00</td><td>623.92</td><td>2.80%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="chart-box">
+      <div class="chart-title">安恒客户历年分析</div>
+      <div class="chart-container"><canvas id="chart-anheng-year"></canvas></div>
+    </div>
+
+    <p class="desc-text" style="font-weight:700;color:var(--c-text);">NA客户</p>
+    <div class="table-wrap">
+      <table class="report-table data-table">
+        <thead>
+          <tr>
+            <th>年份</th>
+            <th>无产出<br>客户数量</th>
+            <th>无产出客户市场额(万)</th>
+            <th>有产出<br>客户数量</th>
+            <th>有产出客户市场额(万)</th>
+            <th>产出合同金额(万)</th>
+            <th>合同金额占市场额比</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>2024</td><td>38</td><td>9,478.15</td><td>42</td><td>11,626.51</td><td>1,499.56</td><td>12.90%</td></tr>
+          <tr><td>2025</td><td>36</td><td>7,559.30</td><td>46</td><td>20,694.60</td><td>1,316.44</td><td>6.36%</td></tr>
+          <tr><td>2026H1</td><td>22</td><td>7,169.59</td><td>27</td><td>8,065.50</td><td>300.40</td><td>3.72%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="chart-box">
+      <div class="chart-title">NA客户历年分析</div>
+      <div class="chart-container"><canvas id="chart-na-year"></canvas></div>
+    </div>
+
+    <div class="sub-heading"><span class="sub-heading-tag">2</span>地市分析</div>
+    <p class="desc-text">近3年NA客户市场容量TOP3地市是武汉市、宜昌市、荆州市，同时具有潜力的地市是荆州市、襄阳市，可以重点关注。</p>
+
+    <div class="table-wrap">
+      <table class="report-table data-table">
+        <thead>
+          <tr>
+            <th>年份</th>
+            <th>无产出<br>客户数量</th>
+            <th>无产出客户市场额(万)</th>
+            <th>有产出<br>客户数量</th>
+            <th>有产出客户市场额(万)</th>
+            <th>合同金额(万)</th>
+            <th>合同金额占市场额比</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="group-row"><td colspan="7">武汉市</td></tr>
+          <tr><td>2024</td><td>30</td><td>8,515.61</td><td>37</td><td>10,709.58</td><td>1,401.32</td><td>13.08%</td></tr>
+          <tr><td>2025</td><td>25</td><td>5,327.93</td><td>41</td><td>20,100.40</td><td>1,248.86</td><td>6.21%</td></tr>
+          <tr><td>2026H1</td><td>16</td><td>4,130.36</td><td>25</td><td>7,705.13</td><td>197.52</td><td>2.56%</td></tr>
+          <tr class="group-row"><td colspan="7">宜昌市</td></tr>
+          <tr><td>2024</td><td>1</td><td>98.63</td><td>4</td><td>905.93</td><td>78.46</td><td>8.66%</td></tr>
+          <tr><td>2025</td><td>2</td><td>80.47</td><td>4</td><td>544.15</td><td>10.19</td><td>1.87%</td></tr>
+          <tr><td>2026H1</td><td>1</td><td>798.87</td><td>0</td><td>0.00</td><td>0.60</td><td class="na">N/A</td></tr>
+          <tr class="group-row"><td colspan="7">十堰市</td></tr>
+          <tr><td>2024</td><td>1</td><td>334.16</td><td>0</td><td>0.00</td><td>19.77</td><td class="na">N/A</td></tr>
+          <tr><td>2025</td><td>1</td><td>32.00</td><td>1</td><td>50.05</td><td>18.43</td><td>36.82%</td></tr>
+          <tr><td>2026H1</td><td>1</td><td>32.00</td><td>0</td><td>0.00</td><td>19.10</td><td class="na">N/A</td></tr>
+          <tr class="group-row"><td colspan="7">黄石市</td></tr>
+          <tr><td>2024</td><td>1</td><td>234.90</td><td>0</td><td>0.00</td><td>0.00</td><td class="na">N/A</td></tr>
+          <tr><td>2025</td><td>2</td><td>439.62</td><td>0</td><td>0.00</td><td>37.85</td><td class="na">N/A</td></tr>
+          <tr><td>2026H1</td><td>0</td><td>0.00</td><td>1</td><td>30.37</td><td>65.69</td><td>216.31%</td></tr>
+          <tr class="group-row"><td colspan="7">荆州市</td></tr>
+          <tr><td>2024</td><td>2</td><td>129.68</td><td>0</td><td>0.00</td><td>0.00</td><td class="na">N/A</td></tr>
+          <tr><td>2025</td><td>3</td><td>308.53</td><td>0</td><td>0.00</td><td>0.00</td><td class="na">N/A</td></tr>
+          <tr><td>2026H1</td><td>2</td><td>1,405.50</td><td>0</td><td>0.00</td><td>0.00</td><td class="na">N/A</td></tr>
+          <tr class="group-row"><td colspan="7">襄阳市</td></tr>
+          <tr><td>2024</td><td>1</td><td>123.82</td><td>0</td><td>0.00</td><td>0.00</td><td class="na">N/A</td></tr>
+          <tr><td>2025</td><td>1</td><td>839.06</td><td>0</td><td>0.00</td><td>0.00</td><td class="na">N/A</td></tr>
+          <tr><td>2026H1</td><td>2</td><td>802.87</td><td>0</td><td>0.00</td><td>0.00</td><td class="na">N/A</td></tr>
+          <tr class="group-row"><td colspan="7">孝感市</td></tr>
+          <tr><td>2024</td><td>1</td><td>25.60</td><td>0</td><td>0.00</td><td>0.00</td><td class="na">N/A</td></tr>
+          <tr class="group-row"><td colspan="7">黄冈市</td></tr>
+          <tr><td>2024</td><td>1</td><td>15.75</td><td>0</td><td>0.00</td><td>0.00</td><td class="na">N/A</td></tr>
+          <tr><td>2025</td><td>1</td><td>12.00</td><td>0</td><td>0.00</td><td>0.00</td><td class="na">N/A</td></tr>
+          <tr class="group-row"><td colspan="7">荆门市</td></tr>
+          <tr><td>2024</td><td>0</td><td>0.00</td><td>1</td><td>11.00</td><td>0.00</td><td>0.00%</td></tr>
+          <tr><td>2025</td><td>1</td><td>519.69</td><td>0</td><td>0.00</td><td>0.00</td><td class="na">N/A</td></tr>
+          <tr><td>2026H1</td><td>0</td><td>0.00</td><td>0</td><td>0.00</td><td>17.49</td><td class="na">N/A</td></tr>
+          <tr class="group-row"><td colspan="7">鄂州市</td></tr>
+          <tr><td>2025</td><td>0</td><td>0.00</td><td>0</td><td>0.00</td><td>1.11</td><td class="na">N/A</td></tr>
+          <tr><td>2026H1</td><td>0</td><td>0.00</td><td>1</td><td>330.00</td><td>0.00</td><td>0.00%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="chart-box">
+      <div class="chart-title">安恒NA客户地市对比</div>
+      <div class="chart-container"><canvas id="chart-city"></canvas></div>
+    </div>
+
+    <div class="sub-heading"><span class="sub-heading-tag">3</span>行业分析</div>
+    <p class="desc-text">近3年NA客户市场容量TOP3行业是运营商、政府、企业，同时具有潜力的行业是军工、企业、电力，建议重点关注。</p>
+
+    <div class="table-wrap">
+      <table class="report-table data-table">
+        <thead>
+          <tr>
+            <th>年份</th>
+            <th>无产出<br>客户数量</th>
+            <th>无产出客户市场额(万)</th>
+            <th>有产出<br>客户数量</th>
+            <th>有产出客户市场额(万)</th>
+            <th>合同金额(万)</th>
+            <th>合同金额占市场额比</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="group-row"><td colspan="7">运营商</td></tr>
+          <tr><td>2024</td><td>8</td><td>1,876.99</td><td>5</td><td>5,241.67</td><td>605.23</td><td>11.55%</td></tr>
+          <tr><td>2025</td><td>7</td><td>2,256.04</td><td>5</td><td>6,358.06</td><td>236.66</td><td>3.72%</td></tr>
+          <tr><td>2026H1</td><td>7</td><td>2,353.20</td><td>5</td><td>4,276.70</td><td>27.67</td><td>0.65%</td></tr>
+          <tr class="group-row"><td colspan="7">政府</td></tr>
+          <tr><td>2024</td><td>10</td><td>4,397.49</td><td>7</td><td>1,543.08</td><td>8.39</td><td>0.54%</td></tr>
+          <tr><td>2025</td><td>12</td><td>2,104.03</td><td>13</td><td>4,096.94</td><td>265.82</td><td>6.49%</td></tr>
+          <tr><td>2026H1</td><td>3</td><td>846.30</td><td>2</td><td>215.44</td><td>22.31</td><td>10.36%</td></tr>
+          <tr class="group-row"><td colspan="7">企业</td></tr>
+          <tr><td>2024</td><td>2</td><td>453.17</td><td>6</td><td>605.91</td><td>52.22</td><td>8.62%</td></tr>
+          <tr><td>2025</td><td>4</td><td>2,121.21</td><td>5</td><td>2,419.44</td><td>121.06</td><td>5.00%</td></tr>
+          <tr><td>2026H1</td><td>2</td><td>2,196.51</td><td>4</td><td>1,009.39</td><td>113.01</td><td>11.20%</td></tr>
+          <tr class="group-row"><td colspan="7">教育</td></tr>
+          <tr><td>2024</td><td>8</td><td>1,514.00</td><td>12</td><td>1,548.56</td><td>141.26</td><td>9.12%</td></tr>
+          <tr><td>2025</td><td>6</td><td>455.28</td><td>11</td><td>2,958.97</td><td>162.64</td><td>5.50%</td></tr>
+          <tr><td>2026H1</td><td>4</td><td>440.47</td><td>9</td><td>1,152.08</td><td>113.51</td><td>9.85%</td></tr>
+          <tr class="group-row"><td colspan="7">交通</td></tr>
+          <tr><td>2024</td><td>6</td><td>1,060.32</td><td>5</td><td>1,761.55</td><td>76.75</td><td>4.36%</td></tr>
+          <tr><td>2025</td><td>3</td><td>399.63</td><td>5</td><td>2,458.06</td><td>190.79</td><td>7.76%</td></tr>
+          <tr><td>2026H1</td><td>3</td><td>311.44</td><td>3</td><td>353.92</td><td>4.80</td><td>1.36%</td></tr>
+          <tr class="group-row"><td colspan="7">电力</td></tr>
+          <tr><td>2024</td><td>1</td><td>98.63</td><td>3</td><td>495.14</td><td>596.38</td><td>120.45%</td></tr>
+          <tr><td>2025</td><td>1</td><td>75.47</td><td>4</td><td>1,489.70</td><td>314.69</td><td>21.12%</td></tr>
+          <tr><td>2026H1</td><td>1</td><td>798.87</td><td>3</td><td>337.97</td><td>19.10</td><td>5.65%</td></tr>
+          <tr class="group-row"><td colspan="7">油气</td></tr>
+          <tr><td>2024</td><td>0</td><td>0.00</td><td>1</td><td>32.00</td><td>0.94</td><td>2.93%</td></tr>
+          <tr><td>2025</td><td>0</td><td>0.00</td><td>1</td><td>249.10</td><td>18.46</td><td>7.41%</td></tr>
+          <tr><td>2026H1</td><td>0</td><td>0.00</td><td>1</td><td>720.00</td><td>0.00</td><td>0.00%</td></tr>
+          <tr class="group-row"><td colspan="7">军工</td></tr>
+          <tr><td>2024</td><td>1</td><td>41.95</td><td>1</td><td>10.00</td><td>5.00</td><td>50.00%</td></tr>
+          <tr><td>2025</td><td>2</td><td>121.65</td><td>1</td><td>558.85</td><td>0.00</td><td>0.00%</td></tr>
+          <tr><td>2026H1</td><td>1</td><td>190.80</td><td>0</td><td>0.00</td><td>0.00</td><td class="na">N/A</td></tr>
+          <tr class="group-row"><td colspan="7">医疗</td></tr>
+          <tr><td>2024</td><td>0</td><td>0.00</td><td>1</td><td>323.58</td><td>5.80</td><td>1.79%</td></tr>
+          <tr><td>2025</td><td>0</td><td>0.00</td><td>0</td><td>0.00</td><td>5.95</td><td class="na">N/A</td></tr>
+          <tr class="group-row"><td colspan="7">央国企</td></tr>
+          <tr><td>2024</td><td>2</td><td>35.60</td><td>1</td><td>65.00</td><td>7.59</td><td>11.68%</td></tr>
+          <tr><td>2025</td><td>1</td><td>26.00</td><td>1</td><td>105.49</td><td>0.38</td><td>0.36%</td></tr>
+          <tr><td>2026H1</td><td>1</td><td>32.00</td><td>0</td><td>0.00</td><td>0.00</td><td class="na">N/A</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="chart-box">
+      <div class="chart-title">安恒NA客户行业对比</div>
+      <div class="chart-container"><canvas id="chart-industry"></canvas></div>
+    </div>
+
+    <div class="sub-heading"><span class="sub-heading-tag">4</span>重点关注的NA客户</div>
+    <p class="desc-text">在内部有产出，且在外部市场TOP 20（按近3年市场额排序） 的NA客户。</p>
+
+    <div class="table-wrap">
+      <table class="report-table customer-detail">
+        <colgroup>
+          <col class="col-name"><col class="col-ind"><col class="col-mgr"><col class="col-sale"><col class="col-year"><col class="col-amt"><col class="col-amt2">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>采购单位</th>
+            <th>行业</th>
+            <th>客户负责人</th>
+            <th>销售类型</th>
+            <th>年份</th>
+            <th>市场额(万)</th>
+            <th>合同金额(万)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="left" rowspan="3">中国电信股份有限公司武汉分公司</td><td rowspan="3">运营商</td><td rowspan="3">张博武</td><td rowspan="3">Name销售</td><td>2024</td><td>2,256.57</td><td>20.01</td></tr>
+          <tr><td>2025</td><td>3,053.17</td><td>9.67</td></tr>
+          <tr><td>2026H1</td><td>315.86</td><td>0.00</td></tr>
+          <tr><td class="left" rowspan="3">中国联合网络通信有限公司湖北省分公司</td><td rowspan="3">运营商</td><td rowspan="3">张博武</td><td rowspan="3">Name销售</td><td>2024</td><td>1,721.52</td><td>168.79</td></tr>
+          <tr><td>2025</td><td>2,084.95</td><td>214.26</td></tr>
+          <tr><td>2026H1</td><td>564.64</td><td>24.91</td></tr>
+          <tr><td class="left" rowspan="3">湖北公众信息产业有限责任公司</td><td rowspan="3">运营商</td><td rowspan="3">张博武</td><td rowspan="3">Name销售</td><td>2024</td><td>660.75</td><td>203.10</td></tr>
+          <tr><td>2025</td><td>650.52</td><td>3.30</td></tr>
+          <tr><td>2026H1</td><td>2,890.90</td><td>2.16</td></tr>
+          <tr><td class="left" rowspan="3">湖北中烟工业有限责任公司</td><td rowspan="3">企业</td><td rowspan="3">梁朝胜</td><td rowspan="3">Name销售</td><td>2024</td><td>426.31</td><td>0.00</td></tr>
+          <tr><td>2025</td><td>1,712.71</td><td>38.69</td></tr>
+          <tr><td>2026H1</td><td>603.13</td><td>0.00</td></tr>
+          <tr><td class="left" rowspan="3">湖北交投科技发展有限公司</td><td rowspan="3">交通</td><td rowspan="3">梁朝胜</td><td rowspan="3">Name销售</td><td>2024</td><td>1,264.79</td><td>25.90</td></tr>
+          <tr><td>2025</td><td>1,100.43</td><td>47.34</td></tr>
+          <tr><td>2026H1</td><td>282.70</td><td>0.00</td></tr>
+          <tr><td class="left" rowspan="3">国家税务总局湖北省税务局</td><td rowspan="3">政府</td><td rowspan="3">喻双玲</td><td rowspan="3">Name销售Leader</td><td>2024</td><td>972.91</td><td>0.00</td></tr>
+          <tr><td>2025</td><td>1,075.95</td><td>119.97</td></tr>
+          <tr><td>2026H1</td><td>122.54</td><td>8.00</td></tr>
+          <tr><td class="left">湖北省公安厅</td><td>政府</td><td>喻双玲</td><td>Name销售Leader</td><td>2025</td><td>1,107.08</td><td>2.29</td></tr>
+          <tr><td class="left" rowspan="3">中国石油化工股份有限公司江汉油田分公司</td><td rowspan="3">油气</td><td rowspan="3">刘小瑞</td><td rowspan="3">Name销售</td><td>2024</td><td>32.00</td><td>0.94</td></tr>
+          <tr><td>2025</td><td>249.10</td><td>18.46</td></tr>
+          <tr><td>2026H1</td><td>720.00</td><td>0.00</td></tr>
+          <tr><td class="left" rowspan="3">武汉商学院</td><td rowspan="3">教育</td><td rowspan="3">文明</td><td rowspan="3">Name销售</td><td>2024</td><td>187.25</td><td>12.00</td></tr>
+          <tr><td>2025</td><td>704.40</td><td>10.22</td></tr>
+          <tr><td>2026H1</td><td>67.30</td><td>11.89</td></tr>
+          <tr><td class="left" rowspan="3">中国长江三峡集团有限公司</td><td rowspan="3">电力</td><td rowspan="3">王霞</td><td rowspan="3">Name销售Leader</td><td>2024</td><td>306.78</td><td>92.00</td></tr>
+          <tr><td>2025</td><td>370.99</td><td>6.35</td></tr>
+          <tr><td>2026H1</td><td>271.22</td><td>0.00</td></tr>
+          <tr><td class="left" rowspan="2">武汉城市职业学院</td><td rowspan="2">教育</td><td rowspan="2">文明</td><td rowspan="2">Name销售</td><td>2024</td><td>135.10</td><td>0.00</td></tr>
+          <tr><td>2025</td><td>754.92</td><td>12.50</td></tr>
+          <tr><td class="left" rowspan="2">中国铁路武汉局集团有限公司</td><td rowspan="2">交通</td><td rowspan="2">梁朝胜</td><td rowspan="2">Name销售</td><td>2024</td><td>30.38</td><td>30.80</td></tr>
+          <tr><td>2025</td><td>817.10</td><td>7.25</td></tr>
+          <tr><td class="left" rowspan="3">武汉理工大学</td><td rowspan="3">教育</td><td rowspan="3">文明</td><td rowspan="3">Name销售</td><td>2024</td><td>129.72</td><td>0.00</td></tr>
+          <tr><td>2025</td><td>219.80</td><td>30.43</td></tr>
+          <tr><td>2026H1</td><td>478.78</td><td>0.00</td></tr>
+          <tr><td class="left" rowspan="2">湖北省教育信息化发展中心（湖北省电化教育馆）</td><td rowspan="2">教育</td><td rowspan="2">文明</td><td rowspan="2">Name销售</td><td>2025</td><td>712.08</td><td>30.00</td></tr>
+          <tr><td>2026H1</td><td>64.50</td><td>28.64</td></tr>
+          <tr><td class="left" rowspan="3">中国长江电力股份有限公司</td><td rowspan="3">电力</td><td rowspan="3">王霞</td><td rowspan="3">Name销售Leader</td><td>2024</td><td>138.94</td><td>484.61</td></tr>
+          <tr><td>2025</td><td>541.00</td><td>276.55</td></tr>
+          <tr><td>2026H1</td><td>34.75</td><td>0.00</td></tr>
+          <tr><td class="left" rowspan="2">中国电信股份有限公司宜昌分公司</td><td rowspan="2">运营商</td><td rowspan="2">张博武</td><td rowspan="2">Name销售</td><td>2024</td><td>287.59</td><td>70.31</td></tr>
+          <tr><td>2025</td><td>422.66</td><td>8.31</td></tr>
+          <tr><td class="left" rowspan="3">江汉大学</td><td rowspan="3">教育</td><td rowspan="3">文明</td><td rowspan="3">Name销售</td><td>2024</td><td>172.66</td><td>12.00</td></tr>
+          <tr><td>2025</td><td>136.00</td><td>9.33</td></tr>
+          <tr><td>2026H1</td><td>364.20</td><td>0.00</td></tr>
+          <tr><td class="left" rowspan="3">中国联合网络通信有限公司武汉市分公司</td><td rowspan="3">运营商</td><td rowspan="3">张博武</td><td rowspan="3">Name销售</td><td>2024</td><td>315.24</td><td>143.02</td></tr>
+          <tr><td>2025</td><td>146.75</td><td>0.00</td></tr>
+          <tr><td>2026H1</td><td>175.30</td><td>0.00</td></tr>
+          <tr><td class="left" rowspan="2">湖北省市场监督管理局</td><td rowspan="2">政府</td><td rowspan="2">徐静</td><td rowspan="2">Name销售</td><td>2024</td><td>120.07</td><td>0.75</td></tr>
+          <tr><td>2025</td><td>474.79</td><td>0.00</td></tr>
+          <tr><td class="left" rowspan="2">湖北能源集团股份有限公司</td><td rowspan="2">电力</td><td rowspan="2">王霞</td><td rowspan="2">Name销售Leader</td><td>2024</td><td>49.42</td><td>0.00</td></tr>
+          <tr><td>2025</td><td>527.66</td><td>2.53</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note-block">全量数据见附件1</div>
+
+    <p class="desc-text" style="margin-top:20px;">在内部无产出，但在外部市场TOP 20（按近3年市场额排序） 的NA客户。</p>
+
+    <div class="table-wrap">
+      <table class="report-table customer-detail">
+        <colgroup>
+          <col class="col-name"><col class="col-ind"><col class="col-mgr"><col class="col-sale"><col class="col-year"><col class="col-amt">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>采购单位</th>
+            <th>行业</th>
+            <th>客户负责人</th>
+            <th>销售类型</th>
+            <th>年份</th>
+            <th>市场额(万)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="left">武汉光谷建设投资有限公司</td><td>企业</td><td>徐静</td><td>Name销售</td><td>2026H1</td><td>2,081.51</td></tr>
+          <tr><td class="left">湖北省数据局</td><td>政府</td><td>喻双玲</td><td>Name销售Leader</td><td>2024</td><td>2,048.71</td></tr>
+          <tr><td class="left" rowspan="3">中国电信股份有限公司荆州分公司</td><td rowspan="3">运营商</td><td rowspan="3">张博武</td><td rowspan="3">Name销售</td><td>2024</td><td>119.68</td></tr>
+          <tr><td>2025</td><td>162.97</td></tr>
+          <tr><td>2026H1</td><td>1,246.78</td></tr>
+          <tr><td class="left" rowspan="2">湖北省应急管理厅</td><td rowspan="2">政府</td><td rowspan="2">喻双玲</td><td rowspan="2">Name销售Leader</td><td>2024</td><td>1,075.40</td></tr>
+          <tr><td>2025</td><td>181.75</td></tr>
+          <tr><td class="left" rowspan="3">中国烟草总公司湖北省公司</td><td rowspan="3">企业</td><td rowspan="3">梁朝胜</td><td rowspan="3">Name销售</td><td>2024</td><td>440.79</td></tr>
+          <tr><td>2025</td><td>693.48</td></tr>
+          <tr><td>2026H1</td><td>115.00</td></tr>
+          <tr><td class="left" rowspan="3">中国电信股份有限公司襄阳分公司</td><td rowspan="3">运营商</td><td rowspan="3">张博武</td><td rowspan="3">Name销售</td><td>2024</td><td>123.82</td></tr>
+          <tr><td>2025</td><td>839.06</td></tr>
+          <tr><td>2026H1</td><td>211.34</td></tr>
+          <tr><td class="left" rowspan="3">湖北清江水电开发有限责任公司</td><td rowspan="3">电力</td><td rowspan="3">王霞</td><td rowspan="3">Name销售Leader</td><td>2024</td><td>98.63</td></tr>
+          <tr><td>2025</td><td>75.47</td></tr>
+          <tr><td>2026H1</td><td>798.87</td></tr>
+          <tr><td class="left" rowspan="3">中国铁塔股份有限公司湖北省分公司</td><td rowspan="3">运营商</td><td rowspan="3">沈智超</td><td rowspan="3">渠道销售</td><td>2024</td><td>529.44</td></tr>
+          <tr><td>2025</td><td>365.39</td></tr>
+          <tr><td>2026H1</td><td>61.23</td></tr>
+          <tr><td class="left">武汉问道信息技术有限公司</td><td>企业</td><td>梁朝胜</td><td>Name销售</td><td>2025</td><td>903.04</td></tr>
+          <tr><td class="left" rowspan="3">天翼云科技有限公司湖北分公司</td><td rowspan="3">运营商</td><td rowspan="3">张博武</td><td rowspan="3">Name销售</td><td>2024</td><td>147.49</td></tr>
+          <tr><td>2025</td><td>662.53</td></tr>
+          <tr><td>2026H1</td><td>51.61</td></tr>
+          <tr><td class="left" rowspan="3">华中科技大学</td><td rowspan="3">教育</td><td rowspan="3">文明</td><td rowspan="3">Name销售</td><td>2024</td><td>566.40</td></tr>
+          <tr><td>2025</td><td>151.03</td></tr>
+          <tr><td>2026H1</td><td>99.21</td></tr>
+          <tr><td class="left" rowspan="2">湖北省发展和改革委员会</td><td rowspan="2">政府</td><td rowspan="2">徐静</td><td rowspan="2">Name销售</td><td>2024</td><td>270.42</td></tr>
+          <tr><td>2025</td><td>512.29</td></tr>
+          <tr><td class="left" rowspan="2">武汉市司法局戒毒保障所</td><td rowspan="2">政府</td><td rowspan="2">喻双玲</td><td rowspan="2">Name销售Leader</td><td>2025</td><td>157.50</td></tr>
+          <tr><td>2026H1</td><td>591.00</td></tr>
+          <tr><td class="left" rowspan="2">湖北交通投资集团有限公司</td><td rowspan="2">交通</td><td rowspan="2">梁朝胜</td><td rowspan="2">Name销售</td><td>2024</td><td>472.50</td></tr>
+          <tr><td>2026H1</td><td>231.34</td></tr>
+          <tr><td class="left" rowspan="3">湖北省水利厅</td><td rowspan="3">政府</td><td rowspan="3">喻双玲</td><td rowspan="3">Name销售Leader</td><td>2024</td><td>137.00</td></tr>
+          <tr><td>2025</td><td>247.54</td></tr>
+          <tr><td>2026H1</td><td>213.15</td></tr>
+          <tr><td class="left">中国联合网络通信有限公司襄阳市分公司</td><td>运营商</td><td>张博武</td><td>Name销售</td><td>2026H1</td><td>591.52</td></tr>
+          <tr><td class="left">湖北楚禹水务科技有限公司</td><td>企业</td><td>喻双玲</td><td>Name销售Leader</td><td>2025</td><td>519.69</td></tr>
+          <tr><td class="left" rowspan="2">湖北省自然资源厅</td><td rowspan="2">政府</td><td rowspan="2">喻双玲</td><td rowspan="2">Name销售Leader</td><td>2024</td><td>464.51</td></tr>
+          <tr><td>2025</td><td>18.00</td></tr>
+          <tr><td class="left" rowspan="3">中国电信股份有限公司十堰分公司</td><td rowspan="3">运营商</td><td rowspan="3">张博武</td><td rowspan="3">Name销售</td><td>2024</td><td>334.16</td></tr>
+          <tr><td>2025</td><td>32.00</td></tr>
+          <tr><td>2026H1</td><td>32.00</td></tr>
+          <tr><td class="left" rowspan="3">湖北楚道数字交通科技有限公司</td><td rowspan="3">交通</td><td rowspan="3">梁朝胜</td><td rowspan="3">Name销售</td><td>2024</td><td>51.72</td></tr>
+          <tr><td>2025</td><td>290.93</td></tr>
+          <tr><td>2026H1</td><td>50.10</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note-block">全量数据见附件2</div>
+
+  </div>
+</div>
+
+<!-- ===== 四、潜力客户分析 ===== -->
+<div class="section" id="potential">
+  <div class="section-header">
+    <div class="section-num">四</div>
+    <div class="section-title">潜力客户分析</div>
+  </div>
+  <div class="section-body">
+    <p class="desc-text">该部分客户为在外部有公开招标，但不在安恒客户池的采购单位。</p>
+
+    <div class="sub-heading"><span class="sub-heading-tag">1</span>历年市场分析</div>
+    <p class="desc-text">湖北地区，近3年H1同期，潜力客户数量呈逐年下降趋势，市场规模呈逐年下降趋势，历年变化如下：</p>
+
+    <div class="table-wrap">
+      <table class="report-table data-table">
+        <thead>
+          <tr>
+            <th>年份</th>
+            <th>潜力客户数量</th>
+            <th>H1同期数量</th>
+            <th>H1同期数量增长率</th>
+            <th>市场额(亿)</th>
+            <th>H1同期市场额(亿)</th>
+            <th>H1同期市场额增长率</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>2024</td><td>124</td><td>66</td><td class="na">N/A</td><td>3.91</td><td>1.90</td><td class="na">N/A</td></tr>
+          <tr><td>2025</td><td>106</td><td>60</td><td class="rate-down">-9.09%</td><td>3.41</td><td>1.27</td><td class="rate-down">-33.16%</td></tr>
+          <tr><td>2026H1</td><td>51</td><td>51</td><td class="rate-down">-15.00%</td><td>1.23</td><td>1.23</td><td class="rate-down">-3.43%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="chart-box">
+      <div class="chart-title">潜力客户历年市场分析</div>
+      <div class="chart-container"><canvas id="chart-potential-year"></canvas></div>
+    </div>
+
+    <div class="sub-heading"><span class="sub-heading-tag">2</span>地市分析</div>
+    <p class="desc-text">近3年潜力客户市场容量TOP3地市是武汉市、宜昌市、黄石市，同时具有潜力的地市是孝感市，可以重点关注。</p>
+
+    <div class="table-wrap">
+      <table class="report-table data-table">
+        <thead>
+          <tr>
+            <th>年份</th>
+            <th>潜力客户数量</th>
+            <th>市场额(万)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="group-row"><td colspan="3">武汉市</td></tr>
+          <tr><td>2024</td><td>62</td><td>19,952.17</td></tr>
+          <tr><td>2025</td><td>62</td><td>19,843.37</td></tr>
+          <tr><td>2026H1</td><td>37</td><td>10,085.16</td></tr>
+          <tr class="group-row"><td colspan="3">宜昌市</td></tr>
+          <tr><td>2024</td><td>18</td><td>6,221.48</td></tr>
+          <tr><td>2025</td><td>10</td><td>3,350.16</td></tr>
+          <tr><td>2026H1</td><td>2</td><td>235.18</td></tr>
+          <tr class="group-row"><td colspan="3">鄂州市</td></tr>
+          <tr><td>2024</td><td>4</td><td>1,465.99</td></tr>
+          <tr class="group-row"><td colspan="3">黄石市</td></tr>
+          <tr><td>2024</td><td>8</td><td>3,404.37</td></tr>
+          <tr><td>2025</td><td>8</td><td>2,321.64</td></tr>
+          <tr><td>2026H1</td><td>1</td><td>48.66</td></tr>
+          <tr class="group-row"><td colspan="3">十堰市</td></tr>
+          <tr><td>2024</td><td>5</td><td>1,431.81</td></tr>
+          <tr><td>2025</td><td>5</td><td>1,649.31</td></tr>
+          <tr><td>2026H1</td><td>1</td><td>224.77</td></tr>
+          <tr class="group-row"><td colspan="3">荆门市</td></tr>
+          <tr><td>2024</td><td>5</td><td>1,401.63</td></tr>
+          <tr><td>2025</td><td>3</td><td>1,005.34</td></tr>
+          <tr><td>2026H1</td><td>2</td><td>355.30</td></tr>
+          <tr class="group-row"><td colspan="3">随州市</td></tr>
+          <tr><td>2024</td><td>5</td><td>1,010.98</td></tr>
+          <tr><td>2025</td><td>2</td><td>734.25</td></tr>
+          <tr><td>2026H1</td><td>1</td><td>187.50</td></tr>
+          <tr class="group-row"><td colspan="3">恩施土家族苗族自治州</td></tr>
+          <tr><td>2024</td><td>1</td><td>643.40</td></tr>
+          <tr><td>2025</td><td>2</td><td>893.40</td></tr>
+          <tr class="group-row"><td colspan="3">荆州市</td></tr>
+          <tr><td>2024</td><td>3</td><td>849.49</td></tr>
+          <tr><td>2025</td><td>5</td><td>1,731.06</td></tr>
+          <tr><td>2026H1</td><td>3</td><td>290.10</td></tr>
+          <tr class="group-row"><td colspan="3">襄阳市</td></tr>
+          <tr><td>2024</td><td>3</td><td>735.34</td></tr>
+          <tr><td>2025</td><td>3</td><td>878.02</td></tr>
+          <tr><td>2026H1</td><td>1</td><td>105.00</td></tr>
+          <tr class="group-row"><td colspan="3">黄冈市</td></tr>
+          <tr><td>2024</td><td>4</td><td>684.51</td></tr>
+          <tr><td>2025</td><td>3</td><td>667.21</td></tr>
+          <tr class="group-row"><td colspan="3">孝感市</td></tr>
+          <tr><td>2024</td><td>2</td><td>314.60</td></tr>
+          <tr><td>2025</td><td>2</td><td>857.79</td></tr>
+          <tr><td>2026H1</td><td>2</td><td>382.38</td></tr>
+          <tr class="group-row"><td colspan="3">天门市</td></tr>
+          <tr><td>2024</td><td>1</td><td>249.08</td></tr>
+          <tr class="group-row"><td colspan="3">咸宁市</td></tr>
+          <tr><td>2024</td><td>1</td><td>240.00</td></tr>
+          <tr class="group-row"><td colspan="3">神农架林区</td></tr>
+          <tr><td>2024</td><td>1</td><td>226.46</td></tr>
+          <tr class="group-row"><td colspan="3">潜江市</td></tr>
+          <tr><td>2024</td><td>1</td><td>225.00</td></tr>
+          <tr class="group-row"><td colspan="3">仙桃市</td></tr>
+          <tr><td>2025</td><td>1</td><td>180.00</td></tr>
+          <tr><td>2026H1</td><td>1</td><td>353.78</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="chart-box">
+      <div class="chart-title">潜力客户地市对比</div>
+      <div class="chart-container"><canvas id="chart-potential-city"></canvas></div>
+    </div>
+
+    <div class="sub-heading"><span class="sub-heading-tag">3</span>行业分析</div>
+    <p class="desc-text">近3年潜力客户市场容量TOP3行业是政府、医疗、教育，同时具有潜力的行业是运营商、企业，建议重点关注。</p>
+
+    <div class="table-wrap">
+      <table class="report-table data-table">
+        <thead>
+          <tr>
+            <th>年份</th>
+            <th>潜力客户数量</th>
+            <th>市场额(万)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="group-row"><td colspan="3">政府</td></tr>
+          <tr><td>2024</td><td>46</td><td>14,165.31</td></tr>
+          <tr><td>2025</td><td>35</td><td>9,900.20</td></tr>
+          <tr><td>2026H1</td><td>14</td><td>3,434.59</td></tr>
+          <tr class="group-row"><td colspan="3">教育</td></tr>
+          <tr><td>2024</td><td>18</td><td>6,870.60</td></tr>
+          <tr><td>2025</td><td>12</td><td>3,941.33</td></tr>
+          <tr><td>2026H1</td><td>5</td><td>1,613.90</td></tr>
+          <tr class="group-row"><td colspan="3">医疗</td></tr>
+          <tr><td>2024</td><td>22</td><td>6,535.34</td></tr>
+          <tr><td>2025</td><td>16</td><td>5,406.82</td></tr>
+          <tr><td>2026H1</td><td>11</td><td>1,078.88</td></tr>
+          <tr class="group-row"><td colspan="3">企业</td></tr>
+          <tr><td>2024</td><td>11</td><td>4,490.97</td></tr>
+          <tr><td>2025</td><td>11</td><td>4,005.20</td></tr>
+          <tr><td>2026H1</td><td>6</td><td>2,727.44</td></tr>
+          <tr class="group-row"><td colspan="3">金融</td></tr>
+          <tr><td>2024</td><td>3</td><td>1,690.80</td></tr>
+          <tr><td>2025</td><td>2</td><td>1,132.67</td></tr>
+          <tr class="group-row"><td colspan="3">交通</td></tr>
+          <tr><td>2024</td><td>5</td><td>1,456.62</td></tr>
+          <tr><td>2025</td><td>5</td><td>1,727.87</td></tr>
+          <tr><td>2026H1</td><td>5</td><td>931.11</td></tr>
+          <tr class="group-row"><td colspan="3">公安</td></tr>
+          <tr><td>2024</td><td>5</td><td>1,214.23</td></tr>
+          <tr><td>2025</td><td>3</td><td>874.30</td></tr>
+          <tr><td>2026H1</td><td>1</td><td>166.75</td></tr>
+          <tr class="group-row"><td colspan="3">运营商</td></tr>
+          <tr><td>2024</td><td>4</td><td>923.55</td></tr>
+          <tr><td>2025</td><td>6</td><td>1,999.08</td></tr>
+          <tr><td>2026H1</td><td>6</td><td>1,395.28</td></tr>
+          <tr class="group-row"><td colspan="3">数据局</td></tr>
+          <tr><td>2024</td><td>5</td><td>898.17</td></tr>
+          <tr><td>2025</td><td>7</td><td>2,152.61</td></tr>
+          <tr><td>2026H1</td><td>2</td><td>605.61</td></tr>
+          <tr class="group-row"><td colspan="3">电力</td></tr>
+          <tr><td>2024</td><td>4</td><td>414.75</td></tr>
+          <tr><td>2025</td><td>9</td><td>2,971.47</td></tr>
+          <tr><td>2026H1</td><td>1</td><td>314.27</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="chart-box">
+      <div class="chart-title">潜力客户行业对比</div>
+      <div class="chart-container"><canvas id="chart-potential-industry"></canvas></div>
+    </div>
+
+    <div class="sub-heading"><span class="sub-heading-tag">4</span>重点关注的潜力客户</div>
+    <p class="desc-text">在外部市场TOP 20（按近3年市场额排序） 的潜力客户。</p>
+
+    <div class="table-wrap">
+      <table class="report-table customer-detail-potential">
+        <colgroup>
+          <col class="col-name"><col class="col-ind"><col class="col-year"><col class="col-amt">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>采购单位</th>
+            <th>行业</th>
+            <th>年份</th>
+            <th>市场额(万)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="left" rowspan="2">武汉市东西湖职业技术学校</td><td rowspan="2">教育</td><td>2024</td><td>709.10</td></tr>
+          <tr><td>2025</td><td>799.11</td></tr>
+          <tr><td class="left" rowspan="2">湖北电信工程有限公司</td><td rowspan="2">运营商</td><td>2025</td><td>909.59</td></tr>
+          <tr><td>2026H1</td><td>525.63</td></tr>
+          <tr><td class="left" rowspan="3">武汉市信息中心</td><td rowspan="3">政府</td><td>2024</td><td>755.58</td></tr>
+          <tr><td>2025</td><td>165.01</td></tr>
+          <tr><td>2026H1</td><td>236.25</td></tr>
+          <tr><td class="left" rowspan="3">武汉软件工程职业学院</td><td rowspan="3">教育</td><td>2024</td><td>437.57</td></tr>
+          <tr><td>2025</td><td>531.88</td></tr>
+          <tr><td>2026H1</td><td>98.65</td></tr>
+          <tr><td class="left" rowspan="2">恩施州数字产业发展有限公司</td><td rowspan="2">企业</td><td>2024</td><td>643.40</td></tr>
+          <tr><td>2025</td><td>420.09</td></tr>
+          <tr><td class="left" rowspan="3">江汉大学附属医院</td><td rowspan="3">医疗</td><td>2024</td><td>600.38</td></tr>
+          <tr><td>2025</td><td>251.25</td></tr>
+          <tr><td>2026H1</td><td>208.05</td></tr>
+          <tr><td class="left" rowspan="2">大冶市公安局</td><td rowspan="2">公安</td><td>2024</td><td>687.69</td></tr>
+          <tr><td>2025</td><td>346.30</td></tr>
+          <tr><td class="left" rowspan="2">湖北省中西医结合医院</td><td rowspan="2">医疗</td><td>2024</td><td>90.00</td></tr>
+          <tr><td>2025</td><td>930.98</td></tr>
+          <tr><td class="left" rowspan="2">东风汽车集团股份有限公司研发总院</td><td rowspan="2">企业</td><td>2024</td><td>301.87</td></tr>
+          <tr><td>2026H1</td><td>662.48</td></tr>
+          <tr><td class="left">武汉临空港投资集团有限公司</td><td>金融</td><td>2024</td><td>936.80</td></tr>
+          <tr><td class="left">网络空间安全学院（筹）</td><td>教育</td><td>2026H1</td><td>933.45</td></tr>
+          <tr><td class="left" rowspan="2">湖北交投科技发展有限公司网络数据分公司</td><td rowspan="2">交通</td><td>2025</td><td>867.81</td></tr>
+          <tr><td>2026H1</td><td>48.00</td></tr>
+          <tr><td class="left">荆州市第一人民医院</td><td>医疗</td><td>2025</td><td>903.75</td></tr>
+          <tr><td class="left" rowspan="2">武汉市投资促进局（武汉市政务服务局）</td><td rowspan="2">政府</td><td>2025</td><td>499.12</td></tr>
+          <tr><td>2026H1</td><td>335.18</td></tr>
+          <tr><td class="left" rowspan="2">武汉市武昌区经济信息化和科技创新局</td><td rowspan="2">政府</td><td>2025</td><td>707.31</td></tr>
+          <tr><td>2026H1</td><td>120.06</td></tr>
+          <tr><td class="left" rowspan="2">武汉楚烟信息技术有限公司</td><td rowspan="2">企业</td><td>2024</td><td>106.20</td></tr>
+          <tr><td>2025</td><td>694.85</td></tr>
+          <tr><td class="left">武汉百智诚远科技有限公司</td><td>政府</td><td>2026H1</td><td>800.00</td></tr>
+          <tr><td class="left">湖北大数据集团数字科技有限公司</td><td>企业</td><td>2026H1</td><td>789.10</td></tr>
+          <tr><td class="left" rowspan="2">武汉市江岸区大数据中心（武汉市江岸区中小企业发展服务中心）</td><td rowspan="2">数据局</td><td>2025</td><td>148.50</td></tr>
+          <tr><td>2026H1</td><td>584.61</td></tr>
+          <tr><td class="left" rowspan="3">襄阳市第一人民医院</td><td rowspan="3">医疗</td><td>2024</td><td>193.44</td></tr>
+          <tr><td>2025</td><td>429.62</td></tr>
+          <tr><td>2026H1</td><td>105.00</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note-block">全量数据见附件3</div>
+
+  </div>
+</div>
+
+<div class="footer">
+  本报告由营销中心、数字化管理部共同发布 · 数据时间范围：2024.1.1-2026.6.30
+</div>
+</div>
+
+<script>
+// === Chart defaults ===
+Chart.defaults.font.family = '"Microsoft YaHei", "PingFang SC", Arial, sans-serif';
+Chart.defaults.font.size = 12;
+Chart.defaults.color = '#6b7280';
+Chart.defaults.borderColor = '#e5e7eb';
+
+// === Data Label Plugin ===
+const dataLabelPlugin = {
+  id: 'barDataLabels',
+  afterDatasetsDraw(chart) {
+    var ctx = chart.ctx;
+    chart.data.datasets.forEach(function(dataset, i) {
+      var meta = chart.getDatasetMeta(i);
+      if (meta.hidden) return;
+      if (meta.type && meta.type !== 'bar') return;
+      var unit = dataset.unit || '';
+      var numDatasets = chart.data.datasets.filter(function(ds, idx) {
+        var m = chart.getDatasetMeta(idx);
+        return !m.hidden && (!m.type || m.type === 'bar');
+      }).length;
+      var fontSize = numDatasets >= 3 ? 9 : 10;
+      meta.data.forEach(function(el, index) {
+        var v = dataset.data[index];
+        if (v === 0 || v === null || v === undefined) return;
+        var pos = el.tooltipPosition();
+        var barH = Math.abs(el.base - el.y);
+        // For short bars, place label at a fixed offset above baseline
+        // so the value is always visible even when the bar is tiny
+        var labelY = barH < 10 ? el.base - 6 : pos.y - 2;
+        var label;
+        if (unit) {
+          label = v.toFixed(2) + unit;
+        } else {
+          label = Math.round(v).toString();
+        }
+        ctx.save();
+        ctx.font = '500 ' + fontSize + 'px "Microsoft YaHei", Arial, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'bottom';
+        // White outline for readability when labels are close
+        ctx.strokeStyle = 'white';
+        ctx.lineWidth = 3;
+        ctx.lineJoin = 'round';
+        ctx.strokeText(label, pos.x, labelY);
+        ctx.fillStyle = '#6b7280';
+        ctx.fillText(label, pos.x, labelY);
+        ctx.restore();
+      });
+    });
+  }
+};
+Chart.register(dataLabelPlugin);
+
+const colorBlue = '#2563eb';
+const colorBlueLight = 'rgba(37,99,235,0.15)';
+const colorGray = '#9ca3af';
+const colorGrayLight = 'rgba(156,163,175,0.2)';
+const colorOrange = '#ea580c';
+const colorOrangeLight = 'rgba(234,88,12,0.15)';
+
+// === Chart 1: Summary ===
+new Chart(document.getElementById('chart-summary'), {
+  type: 'bar',
+  data: {
+    labels: ['2024', '2025', '2026H1'],
+    datasets: [
+      { label: '市场额(亿)', data: [16.03, 14.94, 6.36], unit: '亿', backgroundColor: colorBlueLight, borderColor: colorBlue, borderWidth: 2, borderRadius: 4, yAxisID: 'y' },
+      { label: '签约合同金额(亿)', data: [0.6, 0.55, 0.15], unit: '亿', backgroundColor: colorOrangeLight, borderColor: colorOrange, borderWidth: 2, borderRadius: 4, yAxisID: 'y1' }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'bottom', labels: { padding: 16, usePointStyle: true } } },
+    scales: {
+      y: { position: 'left', title: { display: true, text: '市场额(亿)' }, grid: { color: '#f3f4f6' } },
+      y1: { position: 'right', title: { display: true, text: '合同金额(亿)' }, grid: { drawOnChartArea: false } }
+    }
+  }
+});
+
+// === Chart 2: Anheng Year ===
+new Chart(document.getElementById('chart-anheng-year'), {
+  type: 'bar',
+  data: {
+    labels: ['2024', '2025', '2026H1'],
+    datasets: [
+      { label: '无产出客户市场额(万)', data: [66299.26, 54725.66, 23828.87], unit: '万', backgroundColor: colorGrayLight, borderColor: colorGray, borderWidth: 1.5, borderRadius: 4 },
+      { label: '有产出客户市场额(万)', data: [37804.36, 45714.86, 22256.0], unit: '万', backgroundColor: colorBlueLight, borderColor: colorBlue, borderWidth: 1.5, borderRadius: 4 },
+      { label: '产出合同金额(万)', data: [3696.8, 3206.08, 623.92], unit: '万', backgroundColor: colorOrangeLight, borderColor: colorOrange, borderWidth: 1.5, borderRadius: 4 }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'bottom', labels: { padding: 16, usePointStyle: true, boxWidth: 12 } } },
+    scales: { y: { title: { display: true, text: '金额(万)' }, grid: { color: '#f3f4f6' } } }
+  }
+});
+
+// === Chart 3: NA Year ===
+new Chart(document.getElementById('chart-na-year'), {
+  type: 'bar',
+  data: {
+    labels: ['2024', '2025', '2026H1'],
+    datasets: [
+      { label: '无产出客户市场额(万)', data: [9478.15, 7559.3, 7169.59], unit: '万', backgroundColor: colorGrayLight, borderColor: colorGray, borderWidth: 1.5, borderRadius: 4 },
+      { label: '有产出客户市场额(万)', data: [11626.51, 20694.6, 8065.5], unit: '万', backgroundColor: colorBlueLight, borderColor: colorBlue, borderWidth: 1.5, borderRadius: 4 },
+      { label: '产出合同金额(万)', data: [1499.56, 1316.44, 300.4], unit: '万', backgroundColor: colorOrangeLight, borderColor: colorOrange, borderWidth: 1.5, borderRadius: 4 }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'bottom', labels: { padding: 16, usePointStyle: true, boxWidth: 12 } } },
+    scales: { y: { title: { display: true, text: '金额(万)' }, grid: { color: '#f3f4f6' } } }
+  }
+});
+
+// === Chart 4: City (NA) ===
+new Chart(document.getElementById('chart-city'), {
+  type: 'bar',
+  data: {
+    labels: ['武汉市', '宜昌市', '荆州市', '襄阳市', '黄石市', '荆门市'],
+    datasets: [
+      { label: '2024市场额(万)', data: [19225.19, 1004.56, 129.68, 123.82, 234.9, 11.0], unit: '万', backgroundColor: 'rgba(37,99,235,0.6)', borderColor: colorBlue, borderWidth: 1, borderRadius: 4 },
+      { label: '2025市场额(万)', data: [25428.33, 624.62, 308.53, 839.06, 439.62, 519.69], unit: '万', backgroundColor: 'rgba(234,88,12,0.6)', borderColor: colorOrange, borderWidth: 1, borderRadius: 4 },
+      { label: '2026H1市场额(万)', data: [11835.49, 798.87, 1405.5, 802.87, 30.37, 0.0], unit: '万', backgroundColor: 'rgba(156,163,175,0.6)', borderColor: colorGray, borderWidth: 1, borderRadius: 4 }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'bottom', labels: { padding: 16, usePointStyle: true, boxWidth: 12 } } },
+    scales: { y: { title: { display: true, text: '市场额(万)' }, grid: { color: '#f3f4f6' } }, x: { ticks: { maxRotation: 0 } } }
+  }
+});
+
+// === Chart 5: Industry (NA) ===
+new Chart(document.getElementById('chart-industry'), {
+  type: 'bar',
+  data: {
+    labels: ['运营商', '政府', '企业', '教育', '交通', '电力', '油气', '军工', '医疗', '央国企'],
+    datasets: [
+      { label: '2024市场额(万)', data: [7118.66, 5940.57, 1059.08, 3062.56, 2821.87, 593.78, 32.0, 51.95, 323.58, 100.6], unit: '万', backgroundColor: 'rgba(37,99,235,0.6)', borderColor: colorBlue, borderWidth: 1, borderRadius: 4 },
+      { label: '2025市场额(万)', data: [8614.1, 6200.97, 4540.64, 3414.25, 2857.69, 1565.17, 249.1, 680.5, 0.0, 131.49], unit: '万', backgroundColor: 'rgba(234,88,12,0.6)', borderColor: colorOrange, borderWidth: 1, borderRadius: 4 },
+      { label: '2026H1市场额(万)', data: [6629.9, 1061.74, 3205.9, 1592.55, 665.36, 1136.84, 720.0, 190.8, 0, 32.0], unit: '万', backgroundColor: 'rgba(156,163,175,0.6)', borderColor: colorGray, borderWidth: 1, borderRadius: 4 }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'bottom', labels: { padding: 16, usePointStyle: true, boxWidth: 12 } } },
+    scales: { y: { title: { display: true, text: '市场额(万)' }, grid: { color: '#f3f4f6' } }, x: { ticks: { maxRotation: 30 } } }
+  }
+});
+
+// === Chart 6: Potential Year ===
+new Chart(document.getElementById('chart-potential-year'), {
+  type: 'bar',
+  data: {
+    labels: ['2024', '2025', '2026H1'],
+    datasets: [
+      { label: '潜力客户数量', data: [124, 106, 51], backgroundColor: colorBlueLight, borderColor: colorBlue, borderWidth: 2, borderRadius: 4, yAxisID: 'y' },
+      { label: '市场额(亿)', data: [3.91, 3.41, 1.23], unit: '亿', backgroundColor: colorOrangeLight, borderColor: colorOrange, borderWidth: 2, borderRadius: 4, yAxisID: 'y1' }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'bottom', labels: { padding: 16, usePointStyle: true, boxWidth: 12 } } },
+    scales: {
+      y: { position: 'left', title: { display: true, text: '客户数量' }, grid: { color: '#f3f4f6' } },
+      y1: { position: 'right', title: { display: true, text: '市场额(亿)' }, grid: { drawOnChartArea: false } }
+    }
+  }
+});
+
+// === Chart 7: Potential City ===
+new Chart(document.getElementById('chart-potential-city'), {
+  type: 'bar',
+  data: {
+    labels: ['武汉市', '宜昌市', '黄石市', '十堰市', '荆州市', '荆门市', '随州市', '襄阳市', '孝感市', '恩施土家族苗族自治州', '鄂州市', '黄冈市', '仙桃市', '天门市', '咸宁市', '神农架林区', '潜江市'],
+    datasets: [
+      { label: '2024市场额(万)', data: [19952.17, 6221.48, 3404.37, 1431.81, 849.49, 1401.63, 1010.98, 735.34, 314.6, 643.4, 1465.99, 684.51, 0, 249.08, 240.0, 226.46, 225.0], unit: '万', backgroundColor: 'rgba(37,99,235,0.6)', borderColor: colorBlue, borderWidth: 1, borderRadius: 4 },
+      { label: '2025市场额(万)', data: [19843.37, 3350.16, 2321.64, 1649.31, 1731.06, 1005.34, 734.25, 878.02, 857.79, 893.4, 0, 667.21, 180.0, 0, 0, 0, 0], unit: '万', backgroundColor: 'rgba(234,88,12,0.6)', borderColor: colorOrange, borderWidth: 1, borderRadius: 4 },
+      { label: '2026H1市场额(万)', data: [10085.16, 235.18, 48.66, 224.77, 290.1, 355.3, 187.5, 105.0, 382.38, 0, 0, 0, 353.78, 0, 0, 0, 0], unit: '万', backgroundColor: 'rgba(156,163,175,0.6)', borderColor: colorGray, borderWidth: 1, borderRadius: 4 }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'bottom', labels: { padding: 16, usePointStyle: true, boxWidth: 12 } } },
+    scales: { y: { title: { display: true, text: '市场额(万)' }, grid: { color: '#f3f4f6' } }, x: { ticks: { maxRotation: 0 } } }
+  }
+});
+
+// === Chart 8: Potential Industry ===
+new Chart(document.getElementById('chart-potential-industry'), {
+  type: 'bar',
+  data: {
+    labels: ['政府', '教育', '医疗', '企业', '金融', '交通', '公安', '运营商', '数据局', '电力'],
+    datasets: [
+      { label: '2024市场额(万)', data: [14165.31, 6870.6, 6535.34, 4490.97, 1690.8, 1456.62, 1214.23, 923.55, 898.17, 414.75], unit: '万', backgroundColor: 'rgba(37,99,235,0.6)', borderColor: colorBlue, borderWidth: 1, borderRadius: 4 },
+      { label: '2025市场额(万)', data: [9900.2, 3941.33, 5406.82, 4005.2, 1132.67, 1727.87, 874.3, 1999.08, 2152.61, 2971.47], unit: '万', backgroundColor: 'rgba(234,88,12,0.6)', borderColor: colorOrange, borderWidth: 1, borderRadius: 4 },
+      { label: '2026H1市场额(万)', data: [3434.59, 1613.9, 1078.88, 2727.44, 0, 931.11, 166.75, 1395.28, 605.61, 314.27], unit: '万', backgroundColor: 'rgba(156,163,175,0.6)', borderColor: colorGray, borderWidth: 1, borderRadius: 4 }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'bottom', labels: { padding: 16, usePointStyle: true, boxWidth: 12 } } },
+    scales: { y: { title: { display: true, text: '市场额(万)' }, grid: { color: '#f3f4f6' } }, x: { ticks: { maxRotation: 30 } } }
+  }
+});
+</script>
+</body>
+</html>
