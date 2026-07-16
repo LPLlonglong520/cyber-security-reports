@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>贵州地区 2024-2026 网络安全市场空间分析报告 网络安全市场空间分析报告</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --c-bg: #f5f6f8;
+    --c-surface: #ffffff;
+    --c-text: #2d2d2d;
+    --c-text-sub: #6b7280;
+    --c-border: #e5e7eb;
+    --c-accent: #2563eb;
+    --c-accent-light: #dbeafe;
+    --c-accent-dark: #1e40af;
+    --c-gray-50: #f9fafb;
+    --c-gray-100: #f3f4f6;
+    --c-gray-200: #e5e7eb;
+    --c-gray-300: #d1d5db;
+    --c-gray-500: #6b7280;
+    --c-gray-700: #374151;
+    --c-red: #dc2626;
+    --c-green: #059669;
+    --c-orange: #ea580c;
+    --shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+    background: var(--c-bg);
+    color: var(--c-text);
+    line-height: 1.8;
+    font-size: 14px;
+  }
+  .cover {
+    background: linear-gradient(135deg, #1e3a5f 0%, #2d5a8c 100%);
+    color: #fff;
+    padding: 80px 60px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: -50%; right: -20%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(255,255,255,.05) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .cover-tag {
+    display: inline-block;
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 4px;
+    padding: 4px 16px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+  }
+  .cover h1 { font-size: 36px; font-weight: 700; letter-spacing: 1px; margin-bottom: 16px; position: relative; z-index: 1; }
+  .cover h2 { font-size: 22px; font-weight: 400; opacity: .85; margin-bottom: 40px; position: relative; z-index: 1; }
+  .cover-meta { font-size: 13px; opacity: .7; position: relative; z-index: 1; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  .section { background: var(--c-surface); margin: 24px 0; border-radius: 8px; box-shadow: var(--shadow); overflow: hidden; }
+  .section-header { padding: 20px 32px; border-bottom: 1px solid var(--c-border); display: flex; align-items: center; gap: 12px; }
+  .section-num { background: var(--c-accent); color: #fff; font-size: 14px; font-weight: 700; width: 28px; height: 28px; border-radius: 6px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .section-title { font-size: 18px; font-weight: 700; color: var(--c-text); }
+  .section-body { padding: 24px 32px; }
+  .info-block { background: var(--c-gray-50); border-left: 3px solid var(--c-accent); border-radius: 0 6px 6px 0; padding: 16px 20px; margin-bottom: 16px; }
+  .info-block-label { font-size: 13px; font-weight: 700; color: var(--c-accent-dark); margin-bottom: 6px; }
+  .info-block p { font-size: 13px; color: var(--c-gray-700); line-height: 1.9; }
+  .info-block .term-list { font-size: 13px; color: var(--c-gray-700); line-height: 2; }
+  .info-block .term-list .term { font-weight: 700; color: var(--c-text); }
+  .sub-heading { font-size: 15px; font-weight: 700; color: var(--c-accent-dark); margin: 24px 0 12px; padding-left: 12px; border-left: 4px solid var(--c-accent); }
+  .sub-heading-tag { display: inline-block; background: var(--c-accent-light); color: var(--c-accent-dark); font-size: 12px; font-weight: 700; border-radius: 4px; padding: 2px 8px; margin-right: 8px; }
+  .desc-text { font-size: 13px; color: var(--c-gray-700); margin-bottom: 16px; line-height: 1.9; }
+  .table-wrap { overflow-x: auto; margin: 16px 0; }
+  table.report-table { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+  table.report-table.customer-detail, table.report-table.customer-detail-potential { table-layout: fixed; }
+  table.report-table thead th { background: var(--c-gray-100); color: var(--c-gray-700); font-weight: 700; padding: 9px 10px; text-align: center; border: 1px solid var(--c-border); white-space: nowrap; font-size: 12.5px; }
+  table.report-table tbody td { padding: 7px 10px; text-align: center; border: 1px solid var(--c-border); color: var(--c-text); }
+  table.report-table tbody td.left { text-align: left; }
+  table.report-table tbody td.num { text-align: center; }
+  table.report-table tbody tr:hover { background: var(--c-gray-50); }
+  table.report-table .group-row td { background: var(--c-accent-light); font-weight: 700; color: var(--c-accent-dark); text-align: center; }
+  table.report-table .rate-up { color: var(--c-red); font-weight: 700; }
+  table.report-table .rate-down { color: var(--c-green); font-weight: 700; }
+  table.report-table .na { color: var(--c-gray-500); }
+  table.report-table.customer-detail col.col-name { width: 28%; }
+  table.report-table.customer-detail col.col-ind { width: 8%; }
+  table.report-table.customer-detail col.col-mgr { width: 9%; }
+  table.report-table.customer-detail col.col-sale { width: 10%; }
+  table.report-table.customer-detail col.col-year { width: 7%; }
+  table.report-table.customer-detail col.col-amt { width: 13%; }
+  table.report-table.customer-detail col.col-amt2 { width: 13%; }
+  table.report-table.customer-detail-potential col.col-name { width: 42%; }
+  table.report-table.customer-detail-potential col.col-ind { width: 12%; }
+  table.report-table.customer-detail-potential col.col-year { width: 12%; }
+  table.report-table.customer-detail-potential col.col-amt { width: 18%; }
+  .chart-box { background: var(--c-gray-50); border: 1px solid var(--c-border); border-radius: 8px; padding: 20px; margin: 16px 0; }
+  .chart-title { font-size: 14px; font-weight: 700; color: var(--c-gray-700); margin-bottom: 12px; text-align: center; }
+  .chart-container { position: relative; height: 320px; }
+  .highlight-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  .highlight-card { background: var(--c-surface); border: 1px solid var(--c-border); border-radius: 8px; padding: 20px; }
+  .highlight-card .hl-title { font-size: 14px; font-weight: 700; color: var(--c-accent-dark); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid var(--c-accent-light); display: flex; align-items: center; gap: 8px; }
+  .highlight-card .hl-title .badge { background: var(--c-accent); color: #fff; font-size: 11px; border-radius: 4px; padding: 1px 6px; }
+  .highlight-card p { font-size: 13px; color: var(--c-gray-700); margin-bottom: 8px; line-height: 1.9; }
+  .highlight-card .hl-bold { font-weight: 700; color: var(--c-text); }
+  .toc { background: var(--c-surface); border-radius: 8px; box-shadow: var(--shadow); padding: 32px; margin: 24px 0; }
+  .toc h3 { font-size: 16px; font-weight: 700; margin-bottom: 16px; color: var(--c-accent-dark); }
+  .toc ul { list-style: none; }
+  .toc li { padding: 6px 0; }
+  .toc a { text-decoration: none; color: var(--c-gray-700); font-size: 14px; display: flex; align-items: center; gap: 8px; transition: color .2s; }
+  .toc a:hover { color: var(--c-accent); }
+  .toc .toc-num { background: var(--c-gray-100); color: var(--c-gray-500); font-size: 12px; width: 24px; height: 24px; border-radius: 4px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .footer { text-align: center; padding: 40px 24px; font-size: 12px; color: var(--c-gray-500); border-top: 1px solid var(--c-border); margin-top: 40px; }
+  .overview-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 16px; margin: 20px 0; }
+  .ov-card-h { font-size: 14px; font-weight: 700; color: var(--c-accent-dark); padding: 12px 16px; background: var(--c-gray-100); border: 1px solid var(--c-border); border-bottom: 2px solid var(--c-accent-light); border-radius: 8px 8px 0 0; }
+  .ov-card-c { padding: 10px 16px; border-left: 1px solid var(--c-border); border-right: 1px solid var(--c-border); border-bottom: 1px solid var(--c-gray-100); }
+  .ov-card-c.last { border-bottom: 1px solid var(--c-border); border-radius: 0 0 8px 8px; }
+  .ov-card-c .ov-item-label { font-size: 12px; color: var(--c-gray-500); margin-bottom: 4px; }
+  .ov-card-c .ov-item-val { font-size: 13px; font-weight: 700; color: var(--c-text); white-space: pre-line; line-height: 1.8; }
+  .note-block { background: #fffbeb; border: 1px solid #fef3c7; border-radius: 6px; padding: 12px 16px; margin: 12px 0; font-size: 13px; color: #92400e; }
+  @media (max-width: 768px) {
+    /* 禁止移动端浏览器自动放大字体 */
+    * { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body { font-size: 13px; line-height: 1.7; }
+    .container { padding: 0 12px; }
+
+    /* 封面 */
+    .cover { padding: 36px 16px 28px; }
+    .cover-tag { font-size: 11px; padding: 3px 12px; letter-spacing: 1px; margin-bottom: 16px; }
+    .cover h1 { font-size: 20px; margin-bottom: 8px; }
+    .cover h2 { font-size: 14px; margin-bottom: 16px; }
+    .cover-meta { font-size: 11px; }
+
+    /* 目录 */
+    .toc { padding: 16px; }
+    .toc h3 { font-size: 14px; margin-bottom: 10px; }
+    .toc a { font-size: 12px; }
+
+    /* 区块 */
+    .section { margin: 12px 0; border-radius: 6px; }
+    .section-header { padding: 12px 14px; gap: 8px; }
+    .section-num { width: 24px; height: 24px; font-size: 12px; border-radius: 4px; }
+    .section-title { font-size: 15px; }
+    .section-body { padding: 14px; }
+
+    /* 信息块 */
+    .info-block { padding: 10px 14px; margin-bottom: 12px; }
+    .info-block-label { font-size: 12px; }
+    .info-block p, .info-block .term-list { font-size: 12px; }
+
+    /* 小标题 */
+    .sub-heading { font-size: 13px; margin: 16px 0 8px; padding-left: 8px; }
+    .sub-heading-tag { font-size: 11px; padding: 1px 6px; }
+    .desc-text { font-size: 12px; margin-bottom: 10px; }
+
+    /* 卡片网格 */
+    .highlight-grid, .overview-grid { grid-template-columns: 1fr; gap: 10px; margin: 12px 0; }
+    .highlight-card { padding: 14px; }
+    .highlight-card .hl-title { font-size: 12px; margin-bottom: 8px; padding-bottom: 6px; }
+    .highlight-card p { font-size: 12px; margin-bottom: 6px; }
+
+    /* 概览卡片 */
+    .overview-grid { grid-template-columns: 1fr; }
+    .ov-card-h { font-size: 12px; padding: 8px 12px; }
+    .ov-card-c { padding: 6px 12px; }
+    .ov-card-c .ov-item-label { font-size: 11px; }
+    .ov-card-c .ov-item-val { font-size: 12px; }
+
+    /* ===== 表格移动端核心适配 ===== */
+    .table-wrap {
+      overflow-x: auto !important;
+      -webkit-overflow-scrolling: touch;
+      margin: 10px 0;
+      border: 1px solid var(--c-border);
+      border-radius: 6px;
+    }
+    /* 滚动条优化 */
+    .table-wrap::-webkit-scrollbar { height: 5px; }
+    .table-wrap::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
+    .table-wrap::-webkit-scrollbar-track { background: #f3f4f6; }
+
+    table.report-table {
+      font-size: 11px;
+      width: auto;
+      min-width: 600px;
+    }
+    table.report-table thead th { padding: 6px 6px; font-size: 10px; white-space: nowrap; }
+    table.report-table tbody td { padding: 5px 6px; font-size: 11px; white-space: nowrap; }
+    table.report-table .group-row td { font-size: 11px; white-space: nowrap; }
+
+    /* 固定宽度的客户明细表 */
+    table.report-table.customer-detail,
+    table.report-table.customer-detail-potential {
+      table-layout: auto;
+      min-width: 700px;
+    }
+    table.report-table.customer-detail col.col-name,
+    table.report-table.customer-detail col.col-ind,
+    table.report-table.customer-detail col.col-mgr,
+    table.report-table.customer-detail col.col-sale,
+    table.report-table.customer-detail col.col-year,
+    table.report-table.customer-detail col.col-amt,
+    table.report-table.customer-detail col.col-amt2,
+    table.report-table.customer-detail-potential col.col-name,
+    table.report-table.customer-detail-potential col.col-ind,
+    table.report-table.customer-detail-potential col.col-year,
+    table.report-table.customer-detail-potential col.col-amt {
+      width: auto;
+    }
+
+    /* 图表 */
+    .chart-box { padding: 12px; margin: 10px 0; border-radius: 6px; }
+    .chart-title { font-size: 12px; margin-bottom: 8px; }
+    .chart-container { height: 240px; }
+
+    /* 提示块 */
+    .note-block { padding: 8px 12px; margin: 8px 0; font-size: 12px; }
+
+    /* 页脚 */
+    .footer { padding: 24px 16px; font-size: 11px; margin-top: 24px; }
+  }
+
+  /* 超小屏 (<400px) 进一步压缩 */
+  @media (max-width: 400px) {
+    .cover h1 { font-size: 18px; }
+    .cover h2 { font-size: 13px; }
+    .chart-container { height: 200px; }
+    table.report-table { font-size: 10px; min-width: 520px; }
+    table.report-table thead th { padding: 4px 4px; font-size: 9px; }
+    table.report-table tbody td { padding: 3px 4px; font-size: 10px; }
+    .table-wrap { border-radius: 4px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== COVER ===== -->
+<div class="cover">
+  <h1>贵州地区</h1>
+  <h2>2024-2026 网络安全市场空间分析报告</h2>
+  <div class="cover-meta">本报告由营销中心、数字化管理部共同发布</div>
+</div>
+<div class="container">
+
+<!-- ===== 数据说明 ===== -->
+<div class="section" id="data-source">
+  <div class="section-header">
+    <div class="section-num" style="background:var(--c-gray-500);">i</div>
+    <div class="section-title">数据说明</div>
+  </div>
+  <div class="section-body">
+    <div class="info-block">
+      <div class="info-block-label">数据来源</div>
+      <p>本报告深度整合了外部公开标讯数据与安恒内部客户档案、合同等核心信息。外部数据均源自市场情报分析平台，基于全网公开招投标公告（招标、中标、采购意向等）整理而成。因公开信息存在格式不统一、内容残缺、时效短且抓取难度大等问题，相关数据仅用于参考市场安全投资变化趋势，不能 1:1 还原所有公开项目实际情况。烦请阅读者注意，感谢！</p>
+    </div>
+    <div class="info-block">
+      <div class="info-block-label">术语解释</div>
+      <div class="term-list">
+        <p><span class="term">匹配上的安恒客户：</span>在外部有公开招标，同时在安恒客户池中的客户。</p>
+        <p><span class="term">未匹配上的安恒客户：</span>未在外部有公开招标，但在安恒客户池中的客户。</p>
+        <p><span class="term">未匹配上的采购单位：</span>在外部有公开招标，但不在安恒客户池的采购单位。</p>
+        <p><span class="term">专项金额：</span>在公开的招标/采购内容中主体为网络安全相关产品或服务的项目产生的金额。</p>
+        <p><span class="term">相关金额：</span>在公开的招标/采购内容中主体为信息化但包含了部分网络安全产品或服务的项目产生的金额。</p>
+        <p><span class="term">市场额计算公式：</span>市场额 = 相关金额 × 比例 + 专项金额。</p>
+      </div>
+    </div>
+    <div class="info-block">
+      <div class="info-block-label">阅读提醒</div>
+      <p>1、报告中对区域的市场额、合同金额等都是以客户（或项目）所在地而非安恒客户实际所属部门所统计。</p>
+      <p>2、报告数据时间范围为2024.1.1-2026.6.30，文中对趋势及潜力分析，数据均取近3年H1同期数据分析得出结论。</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 目录 ===== -->
+<div class="toc">
+  <h3>目录</h3>
+  <ul>
+    <li><a href="#summary"><span class="toc-num">一</span> 总结</a></li>
+    <li><a href="#overview"><span class="toc-num">二</span> 内外部数据分析全景图</a></li>
+    <li><a href="#anheng"><span class="toc-num">三</span> 安恒客户分析</a></li>
+    <li><a href="#potential"><span class="toc-num">四</span> 潜力客户分析</a></li>
+  </ul>
+</div>
+
+<!-- ===== 一、总结 ===== -->
+<div class="section" id="summary">
+  <div class="section-header">
+    <div class="section-num">一</div>
+    <div class="section-title">总结</div>
+  </div>
+  <div class="section-body">
+    <p class="desc-text">贵州地区，近3年H1同期，整体市场规模呈逐年增长趋势，签约合同呈逐年下降趋势，历年变化如下：</p>
+    <div class="table-wrap">
+      <table class="report-table data-table">
+        <thead>
+          <tr>
+            <th>年份</th>
+            <th>市场额(亿)</th>
+            <th>H1市场额(亿)</th>
+            <th>H1同期市场额增长率</th>
+            <th>签约合同金额（亿）</th>
+            <th>H1签约合同金额（亿）</th>
+            <th>H1同期合同额增长率</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>2024</td><td>13.21</td><td>4.78</td><td class="na">N/A</td><td>0.54</td><td>0.18</td><td class="na">N/A</td></tr>
+          <tr><td>2025</td><td>14.09</td><td>5.26</td><td class="rate-up">+10.17%</td><td>0.51</td><td>0.14</td><td class="rate-down">-21.28%</td></tr>
+          <tr><td>2026H1</td><td>6.02</td><td>6.02</td><td class="rate-up">+14.34%</td><td>0.14</td><td>0.14</td><td class="rate-down">-1.28%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="chart-box">
+      <div class="chart-title">历年市场额与签约合同金额趋势</div>
+      <div class="chart-container"><canvas id="chart-summary"></canvas></div>
+    </div>
+
+    <div class="highlight-grid">
+      <div class="highlight-card">
+        <div class="hl-title"><span class="badge">1</span>内部分析</div>
+        <p><span class="hl-bold">市场：</span>近3年市场总规模是33.32亿，内部与外部匹配上的客户市场总规模20.84亿，占比63.00%。</p>
+        <p><span class="hl-bold">客户：</span>内部与外部匹配上的客户数489，占比内部总客户21.00%；产出合同额0.92亿，占比总合同额77.00%，其中无产出客户占比73.00%。 建议：资源重点投入这部分产出客户，同时兼顾未产出客户的激活。</p>
+        <p><span class="hl-bold">地市：</span>近3年NA客户市场容量TOP3地市是贵阳市、遵义市、毕节市，同时具有潜力的地市是六盘水市，可以重点关注。</p>
+        <p><span class="hl-bold">行业：</span>近3年NA客户市场容量TOP3行业是政府、运营商、医疗，同时具有潜力的行业是企业、交通，建议重点关注。</p>
+      </div>
+      <div class="highlight-card">
+        <div class="hl-title"><span class="badge">2</span>外部分析</div>
+        <p><span class="hl-bold">市场：</span>近3年市场总规模是33.32亿，其中外部未匹配上的采购单位数1159，市场规模是12.48亿，占比37.00%。</p>
+        <p><span class="hl-bold">客户：</span>近3年采购单位预算超200w的数量是188，市场规模8.85亿。建议：积极布局潜力客户的拓展工作。</p>
+        <p><span class="hl-bold">地市：</span>近3年潜力客户市场容量TOP3地市是贵阳市、黔南布依族苗族自治州、铜仁市，同时具有潜力的地市是毕节市、黔西南布依族苗族自治州、黔东南苗族侗族自治州，可以重点关注。</p>
+        <p><span class="hl-bold">行业：</span>近3年潜力客户市场容量TOP3行业是政府、医疗、企业，同时具有潜力的行业是金融、网信、电力，建议重点关注。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 二、内外部数据分析全景图 ===== -->
+<div class="section" id="overview">
+  <div class="section-header">
+    <div class="section-num">二</div>
+    <div class="section-title">内外部数据分析全景图</div>
+  </div>
+  <div class="section-body">
+    <div class="overview-grid">
+      <div class="ov-card-h">匹配上的安恒客户</div>
+      <div class="ov-card-h">未匹配上的采购单位</div>
+      <div class="ov-card-h">未匹配上的安恒客户</div>
+      <div class="ov-card-c"><div class="ov-item-label">数量</div><div class="ov-item-val">总计489(占外部30.00%，占安恒21.00%)
+· 有产出：134(27.00%)
+· 无产出：355(73.00%)
+NA客户：145
+· 有产出：64
+· 无产出：81</div></div>
+      <div class="ov-card-c"><div class="ov-item-label">数量</div><div class="ov-item-val">总计1159，其中
+潜力：188(16.00%)
+*说明：潜力指近3年预算总和超200W。</div></div>
+      <div class="ov-card-c"><div class="ov-item-label">数量</div><div class="ov-item-val">总计1841，其中
+· 有产出：125(7.00%)
+· 无产出：1716(93.00%)</div></div>
+      <div class="ov-card-c"><div class="ov-item-label">合同金额</div><div class="ov-item-val">0.92亿(NA客户：0.79亿)</div></div>
+      <div class="ov-card-c"><div class="ov-item-label">合同金额</div><div class="ov-item-val">-</div></div>
+      <div class="ov-card-c"><div class="ov-item-label">合同金额</div><div class="ov-item-val">0.27亿 (NA客户：0.04亿)</div></div>
+      <div class="ov-card-c last"><div class="ov-item-label">市场额</div><div class="ov-item-val">总计20.84亿
+· 有产出：9.05亿
+· 无产出：11.78亿
+NA客户：13.31亿
+· 有产出：7.56亿
+· 无产出：5.75亿</div></div>
+      <div class="ov-card-c last"><div class="ov-item-label">市场额</div><div class="ov-item-val">总计12.48亿
+潜力客户：8.85亿</div></div>
+      <div class="ov-card-c last"><div class="ov-item-label">市场额</div><div class="ov-item-val">-</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 三、安恒客户分析 ===== -->
+<div class="section" id="anheng">
+  <div class="section-header">
+    <div class="section-num">三</div>
+    <div class="section-title">安恒客户分析</div>
+  </div>
+  <div class="section-body">
+    <p class="desc-text">该部分客户为在外部有公开招标，同时也在安恒客户池中的客户。</p>
+
+    <div class="sub-heading"><span class="sub-heading-tag">1</span>历年分析</div>
+    <p class="desc-text">近3年安恒客户合同金额占市场额比呈逐年下降趋势。</p>
+
+    <p class="desc-text" style="font-weight:700;color:var(--c-text);">安恒客户</p>
+    <div class="table-wrap">
+      <table class="report-table data-table">
+        <thead>
+          <tr>
+            <th>年份</th>
+            <th>无产出<br>客户数量</th>
+            <th>无产出客户市场额(万)</th>
+            <th>有产出<br>客户数量</th>
+            <th>有产出客户市场额(万)</th>
+            <th>产出合同金额(万)</th>
+            <th>合同金额占市场额比</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>2024</td><td>222</td><td>46,790.43</td><td>94</td><td>35,316.79</td><td>4,055.29</td><td>11.48%</td></tr>
+          <tr><td>2025</td><td>246</td><td>50,799.78</td><td>106</td><td>38,533.91</td><td>4,033.89</td><td>10.47%</td></tr>
+          <tr><td>2026H1</td><td>141</td><td>20,436.58</td><td>62</td><td>16,476.74</td><td>1,075.55</td><td>6.53%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="chart-box">
+      <div class="chart-title">安恒客户历年分析</div>
+      <div class="chart-container"><canvas id="chart-anheng-year"></canvas></div>
+    </div>
+
+    <p class="desc-text" style="font-weight:700;color:var(--c-text);">NA客户</p>
+    <div class="table-wrap">
+      <table class="report-table data-table">
+        <thead>
+          <tr>
+            <th>年份</th>
+            <th>无产出<br>客户数量</th>
+            <th>无产出客户市场额(万)</th>
+            <th>有产出<br>客户数量</th>
+            <th>有产出客户市场额(万)</th>
+            <th>产出合同金额(万)</th>
+            <th>合同金额占市场额比</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>2024</td><td>62</td><td>21,967.56</td><td>54</td><td>28,627.27</td><td>3,512.55</td><td>12.27%</td></tr>
+          <tr><td>2025</td><td>70</td><td>26,886.49</td><td>59</td><td>31,741.77</td><td>3,471.70</td><td>10.94%</td></tr>
+          <tr><td>2026H1</td><td>42</td><td>8,671.61</td><td>40</td><td>15,254.53</td><td>931.20</td><td>6.10%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="chart-box">
+      <div class="chart-title">NA客户历年分析</div>
+      <div class="chart-container"><canvas id="chart-na-year"></canvas></div>
+    </div>
+
+    <div class="sub-heading"><span class="sub-heading-tag">2</span>地市分析</div>
+    <p class="desc-text">近3年NA客户市场容量TOP3地市是贵阳市、遵义市、毕节市，同时具有潜力的地市是六盘水市，可以重点关注。</p>
+
+    <div class="table-wrap">
+      <table class="report-table data-table">
+        <thead>
+          <tr>
+            <th>年份</th>
+            <th>无产出<br>客户数量</th>
+            <th>无产出客户市场额(万)</th>
+            <th>有产出<br>客户数量</th>
+            <th>有产出客户市场额(万)</th>
+            <th>合同金额(万)</th>
+            <th>合同金额占市场额比</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="group-row"><td colspan="7">贵阳市</td></tr>
+          <tr><td>2024</td><td>54</td><td>21,469.55</td><td>47</td><td>28,272.96</td><td>3,441.18</td><td>12.17%</td></tr>
+          <tr><td>2025</td><td>57</td><td>23,066.09</td><td>52</td><td>30,629.13</td><td>3,345.85</td><td>10.92%</td></tr>
+          <tr><td>2026H1</td><td>36</td><td>7,894.87</td><td>37</td><td>14,511.09</td><td>927.94</td><td>6.39%</td></tr>
+          <tr class="group-row"><td colspan="7">遵义市</td></tr>
+          <tr><td>2024</td><td>3</td><td>262.59</td><td>1</td><td>197.39</td><td>0.00</td><td>0.00%</td></tr>
+          <tr><td>2025</td><td>3</td><td>1,310.65</td><td>1</td><td>35.49</td><td>0.00</td><td>0.00%</td></tr>
+          <tr><td>2026H1</td><td>2</td><td>342.38</td><td>0</td><td>0.00</td><td>2.36</td><td class="na">N/A</td></tr>
+          <tr class="group-row"><td colspan="7">毕节市</td></tr>
+          <tr><td>2024</td><td>4</td><td>212.12</td><td>0</td><td>0.00</td><td>0.00</td><td class="na">N/A</td></tr>
+          <tr><td>2025</td><td>4</td><td>1,187.55</td><td>0</td><td>0.00</td><td>0.00</td><td class="na">N/A</td></tr>
+          <tr><td>2026H1</td><td>1</td><td>46.69</td><td>0</td><td>0.00</td><td>0.00</td><td class="na">N/A</td></tr>
+          <tr class="group-row"><td colspan="7">六盘水市</td></tr>
+          <tr><td>2024</td><td>0</td><td>0.00</td><td>3</td><td>77.61</td><td>5.17</td><td>6.66%</td></tr>
+          <tr><td>2025</td><td>1</td><td>120.00</td><td>3</td><td>552.13</td><td>67.22</td><td>12.18%</td></tr>
+          <tr><td>2026H1</td><td>0</td><td>0.00</td><td>2</td><td>667.22</td><td>0.00</td><td>0.00%</td></tr>
+          <tr class="group-row"><td colspan="7">黔东南苗族侗族自治州</td></tr>
+          <tr><td>2024</td><td>1</td><td>23.30</td><td>1</td><td>32.00</td><td>0.00</td><td>0.00%</td></tr>
+          <tr><td>2025</td><td>2</td><td>407.09</td><td>1</td><td>64.02</td><td>58.63</td><td>91.58%</td></tr>
+          <tr><td>2026H1</td><td>1</td><td>32.00</td><td>0</td><td>0.00</td><td>0.00</td><td class="na">N/A</td></tr>
+          <tr class="group-row"><td colspan="7">安顺市</td></tr>
+          <tr><td>2024</td><td>0</td><td>0.00</td><td>1</td><td>42.83</td><td>15.00</td><td>35.02%</td></tr>
+          <tr><td>2025</td><td>0</td><td>0.00</td><td>1</td><td>170.00</td><td>0.00</td><td>0.00%</td></tr>
+          <tr><td>2026H1</td><td>0</td><td>0.00</td><td>1</td><td>76.22</td><td>0.00</td><td>0.00%</td></tr>
+          <tr class="group-row"><td colspan="7">黔南布依族苗族自治州</td></tr>
+          <tr><td>2024</td><td>0</td><td>0.00</td><td>1</td><td>4.48</td><td>51.20</td><td>1142.86%</td></tr>
+          <tr><td>2025</td><td>0</td><td>0.00</td><td>1</td><td>291.00</td><td>0.00</td><td>0.00%</td></tr>
+          <tr><td>2026H1</td><td>0</td><td>0.00</td><td>0</td><td>0.00</td><td>0.90</td><td class="na">N/A</td></tr>
+          <tr class="group-row"><td colspan="7">黔西南布依族苗族自治州</td></tr>
+          <tr><td>2025</td><td>1</td><td>143.01</td><td>0</td><td>0.00</td><td>0.00</td><td class="na">N/A</td></tr>
+          <tr class="group-row"><td colspan="7">铜仁市</td></tr>
+          <tr><td>2025</td><td>2</td><td>652.09</td><td>0</td><td>0.00</td><td>0.00</td><td class="na">N/A</td></tr>
+          <tr><td>2026H1</td><td>2</td><td>355.67</td><td>0</td><td>0.00</td><td>0.00</td><td class="na">N/A</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="chart-box">
+      <div class="chart-title">安恒NA客户地市对比</div>
+      <div class="chart-container"><canvas id="chart-city"></canvas></div>
+    </div>
+
+    <div class="sub-heading"><span class="sub-heading-tag">3</span>行业分析</div>
+    <p class="desc-text">近3年NA客户市场容量TOP3行业是政府、运营商、医疗，同时具有潜力的行业是企业、交通，建议重点关注。</p>
+
+    <div class="table-wrap">
+      <table class="report-table data-table">
+        <thead>
+          <tr>
+            <th>年份</th>
+            <th>无产出<br>客户数量</th>
+            <th>无产出客户市场额(万)</th>
+            <th>有产出<br>客户数量</th>
+            <th>有产出客户市场额(万)</th>
+            <th>合同金额(万)</th>
+            <th>合同金额占市场额比</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="group-row"><td colspan="7">政府</td></tr>
+          <tr><td>2024</td><td>20</td><td>9,532.08</td><td>15</td><td>13,664.81</td><td>2,050.64</td><td>15.01%</td></tr>
+          <tr><td>2025</td><td>21</td><td>8,797.43</td><td>17</td><td>13,573.72</td><td>1,625.72</td><td>11.98%</td></tr>
+          <tr><td>2026H1</td><td>12</td><td>2,537.85</td><td>11</td><td>5,612.28</td><td>608.81</td><td>10.85%</td></tr>
+          <tr class="group-row"><td colspan="7">运营商</td></tr>
+          <tr><td>2024</td><td>7</td><td>5,012.29</td><td>7</td><td>3,720.18</td><td>577.91</td><td>15.53%</td></tr>
+          <tr><td>2025</td><td>13</td><td>5,990.86</td><td>7</td><td>7,881.43</td><td>412.76</td><td>5.24%</td></tr>
+          <tr><td>2026H1</td><td>8</td><td>1,727.81</td><td>5</td><td>2,576.90</td><td>163.39</td><td>6.34%</td></tr>
+          <tr class="group-row"><td colspan="7">医疗</td></tr>
+          <tr><td>2024</td><td>4</td><td>1,947.21</td><td>6</td><td>2,452.95</td><td>97.18</td><td>3.96%</td></tr>
+          <tr><td>2025</td><td>6</td><td>2,217.26</td><td>7</td><td>2,930.88</td><td>552.10</td><td>18.84%</td></tr>
+          <tr><td>2026H1</td><td>4</td><td>400.72</td><td>5</td><td>934.20</td><td>9.36</td><td>1.00%</td></tr>
+          <tr class="group-row"><td colspan="7">电力</td></tr>
+          <tr><td>2024</td><td>8</td><td>1,550.90</td><td>6</td><td>1,374.89</td><td>5.17</td><td>0.38%</td></tr>
+          <tr><td>2025</td><td>8</td><td>4,196.68</td><td>5</td><td>877.63</td><td>114.08</td><td>13.00%</td></tr>
+          <tr><td>2026H1</td><td>6</td><td>1,340.55</td><td>4</td><td>626.79</td><td>62.47</td><td>9.97%</td></tr>
+          <tr class="group-row"><td colspan="7">教育</td></tr>
+          <tr><td>2024</td><td>8</td><td>2,153.33</td><td>7</td><td>1,687.18</td><td>9.25</td><td>0.55%</td></tr>
+          <tr><td>2025</td><td>8</td><td>1,768.88</td><td>9</td><td>1,293.60</td><td>154.55</td><td>11.95%</td></tr>
+          <tr><td>2026H1</td><td>4</td><td>1,360.73</td><td>4</td><td>518.40</td><td>5.56</td><td>1.07%</td></tr>
+          <tr class="group-row"><td colspan="7">金融</td></tr>
+          <tr><td>2024</td><td>4</td><td>680.52</td><td>4</td><td>2,901.96</td><td>322.98</td><td>11.13%</td></tr>
+          <tr><td>2025</td><td>2</td><td>799.37</td><td>5</td><td>1,632.44</td><td>395.65</td><td>24.24%</td></tr>
+          <tr><td>2026H1</td><td>0</td><td>0.00</td><td>4</td><td>2,151.80</td><td>73.70</td><td>3.43%</td></tr>
+          <tr class="group-row"><td colspan="7">交通</td></tr>
+          <tr><td>2024</td><td>5</td><td>667.68</td><td>4</td><td>544.04</td><td>13.90</td><td>2.56%</td></tr>
+          <tr><td>2025</td><td>6</td><td>1,451.61</td><td>5</td><td>2,283.54</td><td>99.16</td><td>4.34%</td></tr>
+          <tr><td>2026H1</td><td>5</td><td>912.22</td><td>3</td><td>482.89</td><td>0.00</td><td>0.00%</td></tr>
+          <tr class="group-row"><td colspan="7">企业</td></tr>
+          <tr><td>2024</td><td>3</td><td>117.65</td><td>2</td><td>1,381.54</td><td>381.02</td><td>27.58%</td></tr>
+          <tr><td>2025</td><td>2</td><td>1,273.15</td><td>2</td><td>444.32</td><td>55.68</td><td>12.53%</td></tr>
+          <tr><td>2026H1</td><td>1</td><td>310.38</td><td>2</td><td>1,958.02</td><td>0.00</td><td>0.00%</td></tr>
+          <tr class="group-row"><td colspan="7">央国企</td></tr>
+          <tr><td>2024</td><td>3</td><td>305.92</td><td>2</td><td>879.29</td><td>0.00</td><td>0.00%</td></tr>
+          <tr><td>2025</td><td>3</td><td>372.50</td><td>2</td><td>824.22</td><td>62.00</td><td>7.52%</td></tr>
+          <tr><td>2026H1</td><td>1</td><td>32.00</td><td>2</td><td>393.23</td><td>7.90</td><td>2.01%</td></tr>
+          <tr class="group-row"><td colspan="7">军工</td></tr>
+          <tr><td>2025</td><td>1</td><td>18.75</td><td>0</td><td>0.00</td><td>0.00</td><td class="na">N/A</td></tr>
+          <tr><td>2026H1</td><td>1</td><td>49.35</td><td>0</td><td>0.00</td><td>0.00</td><td class="na">N/A</td></tr>
+          <tr class="group-row"><td colspan="7">油气</td></tr>
+          <tr><td>2024</td><td>0</td><td>0.00</td><td>1</td><td>20.44</td><td>54.50</td><td>266.67%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="chart-box">
+      <div class="chart-title">安恒NA客户行业对比</div>
+      <div class="chart-container"><canvas id="chart-industry"></canvas></div>
+    </div>
+
+    <div class="sub-heading"><span class="sub-heading-tag">4</span>重点关注的NA客户</div>
+    <p class="desc-text">在内部有产出，且在外部市场TOP 20（按近3年市场额排序） 的NA客户。</p>
+
+    <div class="table-wrap">
+      <table class="report-table customer-detail">
+        <colgroup>
+          <col class="col-name"><col class="col-ind"><col class="col-mgr"><col class="col-sale"><col class="col-year"><col class="col-amt"><col class="col-amt2">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>采购单位</th>
+            <th>行业</th>
+            <th>客户负责人</th>
+            <th>销售类型</th>
+            <th>年份</th>
+            <th>市场额(万)</th>
+            <th>合同金额(万)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="left" rowspan="3">中国移动通信集团贵州有限公司</td><td rowspan="3">运营商</td><td rowspan="3">杨斌</td><td rowspan="3">Name销售Leader</td><td>2024</td><td>1,941.13</td><td>491.67</td></tr>
+          <tr><td>2025</td><td>3,278.59</td><td>291.13</td></tr>
+          <tr><td>2026H1</td><td>1,034.69</td><td>162.49</td></tr>
+          <tr><td class="left" rowspan="3">中国联合网络通信有限公司贵州省分公司</td><td rowspan="3">运营商</td><td rowspan="3">杨斌</td><td rowspan="3">Name销售Leader</td><td>2024</td><td>1,396.41</td><td>0.04</td></tr>
+          <tr><td>2025</td><td>3,740.39</td><td>0.00</td></tr>
+          <tr><td>2026H1</td><td>776.73</td><td>0.00</td></tr>
+          <tr><td class="left" rowspan="2">贵州大数据产业集团有限公司</td><td rowspan="2">政府</td><td rowspan="2">杨开亮</td><td rowspan="2">销售负责人</td><td>2025</td><td>2,997.59</td><td>1,074.84</td></tr>
+          <tr><td>2026H1</td><td>2,846.91</td><td>481.72</td></tr>
+          <tr><td class="left" rowspan="3">贵州省大数据发展管理局</td><td rowspan="3">政府</td><td rowspan="3">刘奇全</td><td rowspan="3">Name销售Leader</td><td>2024</td><td>2,817.72</td><td>0.00</td></tr>
+          <tr><td>2025</td><td>1,834.98</td><td>8.00</td></tr>
+          <tr><td>2026H1</td><td>37.50</td><td>52.98</td></tr>
+          <tr><td class="left" rowspan="3">贵州省信息中心</td><td rowspan="3">政府</td><td rowspan="3">刘奇全</td><td rowspan="3">Name销售Leader</td><td>2024</td><td>2,194.60</td><td>161.80</td></tr>
+          <tr><td>2025</td><td>2,036.34</td><td>190.48</td></tr>
+          <tr><td>2026H1</td><td>371.29</td><td>7.60</td></tr>
+          <tr><td class="left" rowspan="2">贵州省人民政府办公厅</td><td rowspan="2">政府</td><td rowspan="2">罗国庆</td><td rowspan="2">Name销售</td><td>2024</td><td>2,791.49</td><td>7.30</td></tr>
+          <tr><td>2025</td><td>1,687.22</td><td>40.19</td></tr>
+          <tr><td class="left" rowspan="3">贵州省医疗保障局</td><td rowspan="3">医疗</td><td rowspan="3">郑继波</td><td rowspan="3">Name销售Leader</td><td>2024</td><td>1,748.64</td><td>45.23</td></tr>
+          <tr><td>2025</td><td>1,744.90</td><td>23.50</td></tr>
+          <tr><td>2026H1</td><td>543.12</td><td>0.00</td></tr>
+          <tr><td class="left" rowspan="3">贵阳银行股份有限公司</td><td rowspan="3">金融</td><td rowspan="3">张魏</td><td rowspan="3">Name销售</td><td>2024</td><td>2,139.09</td><td>3.73</td></tr>
+          <tr><td>2025</td><td>1,069.34</td><td>44.80</td></tr>
+          <tr><td>2026H1</td><td>783.50</td><td>2.00</td></tr>
+          <tr><td class="left" rowspan="3">贵州医科大学附属医院</td><td rowspan="3">企业</td><td rowspan="3">陈应超</td><td rowspan="3">Name销售</td><td>2024</td><td>1,352.66</td><td>360.02</td></tr>
+          <tr><td>2025</td><td>351.43</td><td>26.00</td></tr>
+          <tr><td>2026H1</td><td>1,934.92</td><td>0.00</td></tr>
+          <tr><td class="left" rowspan="3">贵州省人力资源和社会保障厅</td><td rowspan="3">政府</td><td rowspan="3">郑继波</td><td rowspan="3">Name销售Leader</td><td>2024</td><td>1,927.08</td><td>277.62</td></tr>
+          <tr><td>2025</td><td>656.64</td><td>147.88</td></tr>
+          <tr><td>2026H1</td><td>39.03</td><td>0.00</td></tr>
+          <tr><td class="left" rowspan="3">贵州省交通运输厅</td><td rowspan="3">交通</td><td rowspan="3">赵鑫</td><td rowspan="3">Name销售</td><td>2024</td><td>158.21</td><td>0.00</td></tr>
+          <tr><td>2025</td><td>1,540.41</td><td>3.00</td></tr>
+          <tr><td>2026H1</td><td>410.82</td><td>0.00</td></tr>
+          <tr><td class="left" rowspan="3">贵州银行股份有限公司</td><td rowspan="3">金融</td><td rowspan="3">张魏</td><td rowspan="3">Name销售</td><td>2024</td><td>724.40</td><td>51.60</td></tr>
+          <tr><td>2025</td><td>485.86</td><td>213.09</td></tr>
+          <tr><td>2026H1</td><td>760.00</td><td>7.00</td></tr>
+          <tr><td class="left" rowspan="3">贵州省住房和城乡建设厅</td><td rowspan="3">政府</td><td rowspan="3">罗国庆</td><td rowspan="3">Name销售</td><td>2024</td><td>1,127.55</td><td>0.00</td></tr>
+          <tr><td>2025</td><td>738.82</td><td>6.55</td></tr>
+          <tr><td>2026H1</td><td>94.72</td><td>0.00</td></tr>
+          <tr><td class="left" rowspan="3">贵州省民政厅</td><td rowspan="3">政府</td><td rowspan="3">罗国庆</td><td rowspan="3">Name销售</td><td>2024</td><td>417.27</td><td>0.00</td></tr>
+          <tr><td>2025</td><td>736.32</td><td>27.67</td></tr>
+          <tr><td>2026H1</td><td>584.14</td><td>0.00</td></tr>
+          <tr><td class="left" rowspan="3">贵州数安汇大数据产业发展有限公司</td><td rowspan="3">政府</td><td rowspan="3">刘奇全</td><td rowspan="3">Name销售Leader</td><td>2024</td><td>591.26</td><td>39.22</td></tr>
+          <tr><td>2025</td><td>204.34</td><td>58.49</td></tr>
+          <tr><td>2026H1</td><td>638.70</td><td>0.00</td></tr>
+          <tr><td class="left" rowspan="3">贵州省水文水资源局</td><td rowspan="3">政府</td><td rowspan="3">赵鑫</td><td rowspan="3">Name销售</td><td>2024</td><td>548.38</td><td>0.00</td></tr>
+          <tr><td>2025</td><td>435.11</td><td>0.00</td></tr>
+          <tr><td>2026H1</td><td>336.32</td><td>48.70</td></tr>
+          <tr><td class="left" rowspan="3">贵州乌江水电开发有限责任公司</td><td rowspan="3">电力</td><td rowspan="3">薛然</td><td rowspan="3">Name销售</td><td>2024</td><td>604.66</td><td>0.00</td></tr>
+          <tr><td>2025</td><td>225.88</td><td>38.84</td></tr>
+          <tr><td>2026H1</td><td>479.20</td><td>43.96</td></tr>
+          <tr><td class="left" rowspan="3">贵州中烟工业有限责任公司</td><td rowspan="3">央国企</td><td rowspan="3">陈应超</td><td rowspan="3">Name销售</td><td>2024</td><td>469.85</td><td>0.00</td></tr>
+          <tr><td>2025</td><td>603.63</td><td>2.00</td></tr>
+          <tr><td>2026H1</td><td>147.81</td><td>0.00</td></tr>
+          <tr><td class="left" rowspan="2">贵州省科学技术厅</td><td rowspan="2">政府</td><td rowspan="2">罗国庆</td><td rowspan="2">Name销售</td><td>2024</td><td>506.94</td><td>0.00</td></tr>
+          <tr><td>2025</td><td>690.76</td><td>0.00</td></tr>
+          <tr><td class="left" rowspan="3">贵阳市住房公积金管理中心</td><td rowspan="3">政府</td><td rowspan="3">郑继波</td><td rowspan="3">Name销售Leader</td><td>2024</td><td>152.32</td><td>7.29</td></tr>
+          <tr><td>2025</td><td>368.42</td><td>20.16</td></tr>
+          <tr><td>2026H1</td><td>525.00</td><td>9.93</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note-block">全量数据见附件1</div>
+
+    <p class="desc-text" style="margin-top:20px;">在内部无产出，但在外部市场TOP 20（按近3年市场额排序） 的NA客户。</p>
+
+    <div class="table-wrap">
+      <table class="report-table customer-detail">
+        <colgroup>
+          <col class="col-name"><col class="col-ind"><col class="col-mgr"><col class="col-sale"><col class="col-year"><col class="col-amt">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>采购单位</th>
+            <th>行业</th>
+            <th>客户负责人</th>
+            <th>销售类型</th>
+            <th>年份</th>
+            <th>市场额(万)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="left" rowspan="3">联通数字科技有限公司贵州省分公司</td><td rowspan="3">运营商</td><td rowspan="3">杨斌</td><td rowspan="3">Name销售Leader</td><td>2024</td><td>1,927.32</td></tr>
+          <tr><td>2025</td><td>2,376.07</td></tr>
+          <tr><td>2026H1</td><td>945.89</td></tr>
+          <tr><td class="left" rowspan="3">贵州电网有限责任公司</td><td rowspan="3">电力</td><td rowspan="3">杨开亮</td><td rowspan="3">销售负责人</td><td>2024</td><td>1,199.24</td></tr>
+          <tr><td>2025</td><td>2,928.49</td></tr>
+          <tr><td>2026H1</td><td>409.99</td></tr>
+          <tr><td class="left" rowspan="3">中国电信股份有限公司贵州分公司</td><td rowspan="3">运营商</td><td rowspan="3">杨斌</td><td rowspan="3">Name销售Leader</td><td>2024</td><td>1,825.74</td></tr>
+          <tr><td>2025</td><td>1,208.90</td></tr>
+          <tr><td>2026H1</td><td>55.23</td></tr>
+          <tr><td class="left" rowspan="3">贵州大学</td><td rowspan="3">教育</td><td rowspan="3">雷文彩</td><td rowspan="3">Name销售</td><td>2024</td><td>798.06</td></tr>
+          <tr><td>2025</td><td>441.79</td></tr>
+          <tr><td>2026H1</td><td>859.23</td></tr>
+          <tr><td class="left" rowspan="3">贵州省市场监督管理局</td><td rowspan="3">政府</td><td rowspan="3">罗国庆</td><td rowspan="3">Name销售</td><td>2024</td><td>844.60</td></tr>
+          <tr><td>2025</td><td>1,015.76</td></tr>
+          <tr><td>2026H1</td><td>166.20</td></tr>
+          <tr><td class="left" rowspan="3">贵州省应急管理厅</td><td rowspan="3">政府</td><td rowspan="3">罗国庆</td><td rowspan="3">Name销售</td><td>2024</td><td>1,560.56</td></tr>
+          <tr><td>2025</td><td>170.78</td></tr>
+          <tr><td>2026H1</td><td>235.82</td></tr>
+          <tr><td class="left" rowspan="3">贵州高速数据运营有限公司</td><td rowspan="3">交通</td><td rowspan="3">赵鑫</td><td rowspan="3">Name销售</td><td>2024</td><td>341.55</td></tr>
+          <tr><td>2025</td><td>886.51</td></tr>
+          <tr><td>2026H1</td><td>645.00</td></tr>
+          <tr><td class="left" rowspan="3">贵州省人民医院</td><td rowspan="3">医疗</td><td rowspan="3">郑继波</td><td rowspan="3">Name销售Leader</td><td>2024</td><td>1,181.06</td></tr>
+          <tr><td>2025</td><td>600.90</td></tr>
+          <tr><td>2026H1</td><td>90.00</td></tr>
+          <tr><td class="left" rowspan="3">国家税务总局贵州省税务局</td><td rowspan="3">政府</td><td rowspan="3">唐华</td><td rowspan="3">Name销售</td><td>2024</td><td>823.64</td></tr>
+          <tr><td>2025</td><td>911.62</td></tr>
+          <tr><td>2026H1</td><td>25.00</td></tr>
+          <tr><td class="left" rowspan="3">贵州省监狱管理局</td><td rowspan="3">政府</td><td rowspan="3">赵鑫</td><td rowspan="3">Name销售</td><td>2024</td><td>673.59</td></tr>
+          <tr><td>2025</td><td>713.02</td></tr>
+          <tr><td>2026H1</td><td>168.64</td></tr>
+          <tr><td class="left" rowspan="2">贵州省公共资源交易中心</td><td rowspan="2">政府</td><td rowspan="2">罗国庆</td><td rowspan="2">Name销售</td><td>2024</td><td>1,213.53</td></tr>
+          <tr><td>2025</td><td>274.26</td></tr>
+          <tr><td class="left" rowspan="3">贵州省统计局</td><td rowspan="3">政府</td><td rowspan="3">罗国庆</td><td rowspan="3">Name销售</td><td>2024</td><td>351.32</td></tr>
+          <tr><td>2025</td><td>707.48</td></tr>
+          <tr><td>2026H1</td><td>411.85</td></tr>
+          <tr><td class="left" rowspan="3">贵州茅台酒股份有限公司</td><td rowspan="3">企业</td><td rowspan="3">陈应超</td><td rowspan="3">Name销售</td><td>2024</td><td>32.00</td></tr>
+          <tr><td>2025</td><td>1,028.15</td></tr>
+          <tr><td>2026H1</td><td>310.38</td></tr>
+          <tr><td class="left" rowspan="3">贵州中医药大学第一附属医院</td><td rowspan="3">医疗</td><td rowspan="3">郑继波</td><td rowspan="3">Name销售Leader</td><td>2024</td><td>409.05</td></tr>
+          <tr><td>2025</td><td>782.23</td></tr>
+          <tr><td>2026H1</td><td>89.18</td></tr>
+          <tr><td class="left" rowspan="2">贵阳农村商业银行股份有限公司</td><td rowspan="2">金融</td><td rowspan="2">张魏</td><td rowspan="2">Name销售</td><td>2024</td><td>470.86</td></tr>
+          <tr><td>2025</td><td>739.37</td></tr>
+          <tr><td class="left" rowspan="2">贵州省司法厅</td><td rowspan="2">政府</td><td rowspan="2">赵鑫</td><td rowspan="2">Name销售</td><td>2024</td><td>1,006.02</td></tr>
+          <tr><td>2025</td><td>179.17</td></tr>
+          <tr><td class="left" rowspan="3">贵州省林业局</td><td rowspan="3">政府</td><td rowspan="3">罗国庆</td><td rowspan="3">Name销售</td><td>2024</td><td>44.48</td></tr>
+          <tr><td>2025</td><td>819.68</td></tr>
+          <tr><td>2026H1</td><td>319.85</td></tr>
+          <tr><td class="left" rowspan="3">贵州省福利彩票发行中心</td><td rowspan="3">政府</td><td rowspan="3">罗国庆</td><td rowspan="3">Name销售</td><td>2024</td><td>56.00</td></tr>
+          <tr><td>2025</td><td>428.35</td></tr>
+          <tr><td>2026H1</td><td>607.08</td></tr>
+          <tr><td class="left" rowspan="2">贵州省高级人民法院</td><td rowspan="2">政府</td><td rowspan="2">赵鑫</td><td rowspan="2">Name销售</td><td>2024</td><td>382.35</td></tr>
+          <tr><td>2025</td><td>647.18</td></tr>
+          <tr><td class="left" rowspan="2">贵州省发展和改革委员会</td><td rowspan="2">政府</td><td rowspan="2">罗国庆</td><td rowspan="2">Name销售</td><td>2024</td><td>179.54</td></tr>
+          <tr><td>2025</td><td>744.75</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note-block">全量数据见附件2</div>
+
+  </div>
+</div>
+
+<!-- ===== 四、潜力客户分析 ===== -->
+<div class="section" id="potential">
+  <div class="section-header">
+    <div class="section-num">四</div>
+    <div class="section-title">潜力客户分析</div>
+  </div>
+  <div class="section-body">
+    <p class="desc-text">该部分客户为在外部有公开招标，但不在安恒客户池的采购单位。</p>
+
+    <div class="sub-heading"><span class="sub-heading-tag">1</span>历年市场分析</div>
+    <p class="desc-text">贵州地区，近3年H1同期，潜力客户数量呈先下降，后小幅度上升趋势，市场规模呈先下降，后大幅度上升趋势，历年变化如下：</p>
+
+    <div class="table-wrap">
+      <table class="report-table data-table">
+        <thead>
+          <tr>
+            <th>年份</th>
+            <th>潜力客户数量</th>
+            <th>H1同期数量</th>
+            <th>H1同期数量增长率</th>
+            <th>市场额(亿)</th>
+            <th>H1同期市场额(亿)</th>
+            <th>H1同期市场额增长率</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>2024</td><td>117</td><td>65</td><td class="na">N/A</td><td>3.67</td><td>1.45</td><td class="na">N/A</td></tr>
+          <tr><td>2025</td><td>115</td><td>58</td><td class="rate-down">-10.77%</td><td>3.55</td><td>1.22</td><td class="rate-down">-15.39%</td></tr>
+          <tr><td>2026H1</td><td>61</td><td>61</td><td class="rate-up">+5.17%</td><td>1.62</td><td>1.62</td><td class="rate-up">+32.70%</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="chart-box">
+      <div class="chart-title">潜力客户历年市场分析</div>
+      <div class="chart-container"><canvas id="chart-potential-year"></canvas></div>
+    </div>
+
+    <div class="sub-heading"><span class="sub-heading-tag">2</span>地市分析</div>
+    <p class="desc-text">近3年潜力客户市场容量TOP3地市是贵阳市、黔南布依族苗族自治州、铜仁市，同时具有潜力的地市是毕节市、黔西南布依族苗族自治州、黔东南苗族侗族自治州，可以重点关注。</p>
+
+    <div class="table-wrap">
+      <table class="report-table data-table">
+        <thead>
+          <tr>
+            <th>年份</th>
+            <th>潜力客户数量</th>
+            <th>市场额(万)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="group-row"><td colspan="3">贵阳市</td></tr>
+          <tr><td>2024</td><td>57</td><td>19,142.25</td></tr>
+          <tr><td>2025</td><td>63</td><td>20,451.05</td></tr>
+          <tr><td>2026H1</td><td>30</td><td>5,709.87</td></tr>
+          <tr class="group-row"><td colspan="3">安顺市</td></tr>
+          <tr><td>2024</td><td>7</td><td>3,071.02</td></tr>
+          <tr><td>2025</td><td>5</td><td>807.63</td></tr>
+          <tr><td>2026H1</td><td>5</td><td>2,218.38</td></tr>
+          <tr class="group-row"><td colspan="3">黔南布依族苗族自治州</td></tr>
+          <tr><td>2024</td><td>18</td><td>4,630.13</td></tr>
+          <tr><td>2025</td><td>9</td><td>1,751.70</td></tr>
+          <tr><td>2026H1</td><td>6</td><td>1,939.77</td></tr>
+          <tr class="group-row"><td colspan="3">黔东南苗族侗族自治州</td></tr>
+          <tr><td>2024</td><td>8</td><td>2,021.29</td></tr>
+          <tr><td>2025</td><td>8</td><td>1,425.96</td></tr>
+          <tr><td>2026H1</td><td>7</td><td>2,198.07</td></tr>
+          <tr class="group-row"><td colspan="3">铜仁市</td></tr>
+          <tr><td>2024</td><td>5</td><td>2,406.45</td></tr>
+          <tr><td>2025</td><td>12</td><td>4,724.57</td></tr>
+          <tr><td>2026H1</td><td>1</td><td>222.75</td></tr>
+          <tr class="group-row"><td colspan="3">遵义市</td></tr>
+          <tr><td>2024</td><td>7</td><td>1,835.29</td></tr>
+          <tr><td>2025</td><td>7</td><td>2,863.10</td></tr>
+          <tr><td>2026H1</td><td>1</td><td>525.00</td></tr>
+          <tr class="group-row"><td colspan="3">毕节市</td></tr>
+          <tr><td>2024</td><td>4</td><td>1,283.40</td></tr>
+          <tr><td>2025</td><td>3</td><td>805.39</td></tr>
+          <tr><td>2026H1</td><td>2</td><td>637.89</td></tr>
+          <tr class="group-row"><td colspan="3">黔西南布依族苗族自治州</td></tr>
+          <tr><td>2024</td><td>8</td><td>1,747.60</td></tr>
+          <tr><td>2025</td><td>5</td><td>1,560.24</td></tr>
+          <tr><td>2026H1</td><td>7</td><td>2,456.02</td></tr>
+          <tr class="group-row"><td colspan="3">六盘水市</td></tr>
+          <tr><td>2024</td><td>3</td><td>594.62</td></tr>
+          <tr><td>2025</td><td>3</td><td>1,124.05</td></tr>
+          <tr><td>2026H1</td><td>2</td><td>330.90</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="chart-box">
+      <div class="chart-title">潜力客户地市对比</div>
+      <div class="chart-container"><canvas id="chart-potential-city"></canvas></div>
+    </div>
+
+    <div class="sub-heading"><span class="sub-heading-tag">3</span>行业分析</div>
+    <p class="desc-text">近3年潜力客户市场容量TOP3行业是政府、医疗、企业，同时具有潜力的行业是金融、网信、电力，建议重点关注。</p>
+
+    <div class="table-wrap">
+      <table class="report-table data-table">
+        <thead>
+          <tr>
+            <th>年份</th>
+            <th>潜力客户数量</th>
+            <th>市场额(万)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="group-row"><td colspan="3">政府</td></tr>
+          <tr><td>2024</td><td>37</td><td>10,192.94</td></tr>
+          <tr><td>2025</td><td>31</td><td>6,867.18</td></tr>
+          <tr><td>2026H1</td><td>12</td><td>3,219.65</td></tr>
+          <tr class="group-row"><td colspan="3">企业</td></tr>
+          <tr><td>2024</td><td>15</td><td>6,429.65</td></tr>
+          <tr><td>2025</td><td>13</td><td>2,867.29</td></tr>
+          <tr><td>2026H1</td><td>8</td><td>3,071.01</td></tr>
+          <tr class="group-row"><td colspan="3">教育</td></tr>
+          <tr><td>2024</td><td>12</td><td>3,894.01</td></tr>
+          <tr><td>2025</td><td>13</td><td>3,656.14</td></tr>
+          <tr><td>2026H1</td><td>10</td><td>1,982.93</td></tr>
+          <tr class="group-row"><td colspan="3">金融</td></tr>
+          <tr><td>2024</td><td>2</td><td>1,548.78</td></tr>
+          <tr><td>2025</td><td>5</td><td>2,109.74</td></tr>
+          <tr><td>2026H1</td><td>4</td><td>852.44</td></tr>
+          <tr class="group-row"><td colspan="3">医疗</td></tr>
+          <tr><td>2024</td><td>22</td><td>5,747.02</td></tr>
+          <tr><td>2025</td><td>21</td><td>5,085.37</td></tr>
+          <tr><td>2026H1</td><td>8</td><td>2,326.12</td></tr>
+          <tr class="group-row"><td colspan="3">公安</td></tr>
+          <tr><td>2024</td><td>9</td><td>2,736.04</td></tr>
+          <tr><td>2025</td><td>7</td><td>3,368.61</td></tr>
+          <tr><td>2026H1</td><td>1</td><td>742.50</td></tr>
+          <tr class="group-row"><td colspan="3">运营商</td></tr>
+          <tr><td>2024</td><td>2</td><td>976.43</td></tr>
+          <tr><td>2025</td><td>5</td><td>2,986.31</td></tr>
+          <tr><td>2026H1</td><td>5</td><td>1,589.34</td></tr>
+          <tr class="group-row"><td colspan="3">交通</td></tr>
+          <tr><td>2024</td><td>3</td><td>956.67</td></tr>
+          <tr><td>2025</td><td>6</td><td>1,958.05</td></tr>
+          <tr><td>2026H1</td><td>3</td><td>356.51</td></tr>
+          <tr class="group-row"><td colspan="3">电力</td></tr>
+          <tr><td>2024</td><td>9</td><td>1,406.12</td></tr>
+          <tr><td>2025</td><td>11</td><td>3,443.76</td></tr>
+          <tr><td>2026H1</td><td>6</td><td>615.78</td></tr>
+          <tr class="group-row"><td colspan="3">数据局</td></tr>
+          <tr><td>2024</td><td>4</td><td>1,675.44</td></tr>
+          <tr><td>2025</td><td>2</td><td>1,959.16</td></tr>
+          <tr><td>2026H1</td><td>3</td><td>543.55</td></tr>
+          <tr class="group-row"><td colspan="3">网信</td></tr>
+          <tr><td>2024</td><td>1</td><td>86.30</td></tr>
+          <tr><td>2025</td><td>1</td><td>1,212.09</td></tr>
+          <tr><td>2026H1</td><td>1</td><td>938.84</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="chart-box">
+      <div class="chart-title">潜力客户行业对比</div>
+      <div class="chart-container"><canvas id="chart-potential-industry"></canvas></div>
+    </div>
+
+    <div class="sub-heading"><span class="sub-heading-tag">4</span>重点关注的潜力客户</div>
+    <p class="desc-text">在外部市场TOP 20（按近3年市场额排序） 的潜力客户。</p>
+
+    <div class="table-wrap">
+      <table class="report-table customer-detail-potential">
+        <colgroup>
+          <col class="col-name"><col class="col-ind"><col class="col-year"><col class="col-amt">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>采购单位</th>
+            <th>行业</th>
+            <th>年份</th>
+            <th>市场额(万)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="left" rowspan="3">贵州省农村信用社联合社</td><td rowspan="3">金融</td><td>2024</td><td>1,508.38</td></tr>
+          <tr><td>2025</td><td>1,053.67</td></tr>
+          <tr><td>2026H1</td><td>57.96</td></tr>
+          <tr><td class="left" rowspan="3">贵州省互联网信息办公室</td><td rowspan="3">网信</td><td>2024</td><td>86.30</td></tr>
+          <tr><td>2025</td><td>1,212.09</td></tr>
+          <tr><td>2026H1</td><td>938.84</td></tr>
+          <tr><td class="left" rowspan="2">遵义市大数据发展管理局</td><td rowspan="2">数据局</td><td>2024</td><td>647.94</td></tr>
+          <tr><td>2025</td><td>1,514.16</td></tr>
+          <tr><td class="left" rowspan="3">中国电信贵州公司</td><td rowspan="3">运营商</td><td>2024</td><td>506.56</td></tr>
+          <tr><td>2025</td><td>1,134.01</td></tr>
+          <tr><td>2026H1</td><td>246.40</td></tr>
+          <tr><td class="left" rowspan="3">中国移动贵州公司</td><td rowspan="3">运营商</td><td>2024</td><td>469.87</td></tr>
+          <tr><td>2025</td><td>1,120.76</td></tr>
+          <tr><td>2026H1</td><td>145.38</td></tr>
+          <tr><td class="left" rowspan="3">贵州电子科技职业学院</td><td rowspan="3">教育</td><td>2024</td><td>608.85</td></tr>
+          <tr><td>2025</td><td>253.38</td></tr>
+          <tr><td>2026H1</td><td>354.43</td></tr>
+          <tr><td class="left" rowspan="2">贵阳市城市轨道交通运营有限公司</td><td rowspan="2">交通</td><td>2024</td><td>788.50</td></tr>
+          <tr><td>2025</td><td>389.37</td></tr>
+          <tr><td class="left">贵州省邮电规划设计院有限公司</td><td>其他</td><td>2024</td><td>1,082.65</td></tr>
+          <tr><td class="left" rowspan="2">中国联合网络通信有限公司安顺市分公司</td><td rowspan="2">运营商</td><td>2025</td><td>98.33</td></tr>
+          <tr><td>2026H1</td><td>909.13</td></tr>
+          <tr><td class="left" rowspan="2">南方电网数字电网集团（贵州）有限公司</td><td rowspan="2">电力</td><td>2025</td><td>962.22</td></tr>
+          <tr><td>2026H1</td><td>21.31</td></tr>
+          <tr><td class="left" rowspan="2">江口县卫生健康局</td><td rowspan="2">医疗</td><td>2024</td><td>668.35</td></tr>
+          <tr><td>2025</td><td>253.40</td></tr>
+          <tr><td class="left">南方电网供应链（贵州）有限公司</td><td>电力</td><td>2025</td><td>920.19</td></tr>
+          <tr><td class="left">贵州安顺大数据发展有限公司</td><td>企业</td><td>2024</td><td>909.00</td></tr>
+          <tr><td class="left">贵州西南能矿锌业有限公司</td><td>企业</td><td>2026H1</td><td>901.27</td></tr>
+          <tr><td class="left" rowspan="2">中国烟草总公司贵州省公司</td><td rowspan="2">企业</td><td>2025</td><td>397.06</td></tr>
+          <tr><td>2026H1</td><td>492.16</td></tr>
+          <tr><td class="left" rowspan="2">中国铁路成都局集团有限公司贵阳电务段</td><td rowspan="2">交通</td><td>2025</td><td>865.71</td></tr>
+          <tr><td>2026H1</td><td>19.75</td></tr>
+          <tr><td class="left" rowspan="2">贵州省自然资源技术信息中心</td><td rowspan="2">政府</td><td>2024</td><td>600.88</td></tr>
+          <tr><td>2025</td><td>275.06</td></tr>
+          <tr><td class="left" rowspan="3">贵州省无线电监测站</td><td rowspan="3">政府</td><td>2024</td><td>37.50</td></tr>
+          <tr><td>2025</td><td>269.47</td></tr>
+          <tr><td>2026H1</td><td>562.50</td></tr>
+          <tr><td class="left" rowspan="2">贵阳综合保税区管理委员会产业发展局</td><td rowspan="2">政府</td><td>2025</td><td>621.23</td></tr>
+          <tr><td>2026H1</td><td>203.94</td></tr>
+          <tr><td class="left" rowspan="3">贵阳市自然资源和规划局</td><td rowspan="3">政府</td><td>2024</td><td>217.75</td></tr>
+          <tr><td>2025</td><td>277.89</td></tr>
+          <tr><td>2026H1</td><td>309.57</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note-block">全量数据见附件3</div>
+
+  </div>
+</div>
+
+<div class="footer">
+  本报告由营销中心、数字化管理部共同发布 · 数据时间范围：2024.1.1-2026.6.30
+</div>
+</div>
+
+<script>
+// === Chart defaults ===
+Chart.defaults.font.family = '"Microsoft YaHei", "PingFang SC", Arial, sans-serif';
+Chart.defaults.font.size = 12;
+Chart.defaults.color = '#6b7280';
+Chart.defaults.borderColor = '#e5e7eb';
+
+// === Data Label Plugin ===
+const dataLabelPlugin = {
+  id: 'barDataLabels',
+  afterDatasetsDraw(chart) {
+    var ctx = chart.ctx;
+    chart.data.datasets.forEach(function(dataset, i) {
+      var meta = chart.getDatasetMeta(i);
+      if (meta.hidden) return;
+      if (meta.type && meta.type !== 'bar') return;
+      var unit = dataset.unit || '';
+      var numDatasets = chart.data.datasets.filter(function(ds, idx) {
+        var m = chart.getDatasetMeta(idx);
+        return !m.hidden && (!m.type || m.type === 'bar');
+      }).length;
+      var fontSize = numDatasets >= 3 ? 9 : 10;
+      meta.data.forEach(function(el, index) {
+        var v = dataset.data[index];
+        if (v === 0 || v === null || v === undefined) return;
+        var pos = el.tooltipPosition();
+        var barH = Math.abs(el.base - el.y);
+        // For short bars, place label at a fixed offset above baseline
+        // so the value is always visible even when the bar is tiny
+        var labelY = barH < 10 ? el.base - 6 : pos.y - 2;
+        var label;
+        if (unit) {
+          label = v.toFixed(2) + unit;
+        } else {
+          label = Math.round(v).toString();
+        }
+        ctx.save();
+        ctx.font = '500 ' + fontSize + 'px "Microsoft YaHei", Arial, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'bottom';
+        // White outline for readability when labels are close
+        ctx.strokeStyle = 'white';
+        ctx.lineWidth = 3;
+        ctx.lineJoin = 'round';
+        ctx.strokeText(label, pos.x, labelY);
+        ctx.fillStyle = '#6b7280';
+        ctx.fillText(label, pos.x, labelY);
+        ctx.restore();
+      });
+    });
+  }
+};
+Chart.register(dataLabelPlugin);
+
+const colorBlue = '#2563eb';
+const colorBlueLight = 'rgba(37,99,235,0.15)';
+const colorGray = '#9ca3af';
+const colorGrayLight = 'rgba(156,163,175,0.2)';
+const colorOrange = '#ea580c';
+const colorOrangeLight = 'rgba(234,88,12,0.15)';
+
+// === Chart 1: Summary ===
+new Chart(document.getElementById('chart-summary'), {
+  type: 'bar',
+  data: {
+    labels: ['2024', '2025', '2026H1'],
+    datasets: [
+      { label: '市场额(亿)', data: [13.21, 14.09, 6.02], unit: '亿', backgroundColor: colorBlueLight, borderColor: colorBlue, borderWidth: 2, borderRadius: 4, yAxisID: 'y' },
+      { label: '签约合同金额(亿)', data: [0.54, 0.51, 0.14], unit: '亿', backgroundColor: colorOrangeLight, borderColor: colorOrange, borderWidth: 2, borderRadius: 4, yAxisID: 'y1' }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'bottom', labels: { padding: 16, usePointStyle: true } } },
+    scales: {
+      y: { position: 'left', title: { display: true, text: '市场额(亿)' }, grid: { color: '#f3f4f6' } },
+      y1: { position: 'right', title: { display: true, text: '合同金额(亿)' }, grid: { drawOnChartArea: false } }
+    }
+  }
+});
+
+// === Chart 2: Anheng Year ===
+new Chart(document.getElementById('chart-anheng-year'), {
+  type: 'bar',
+  data: {
+    labels: ['2024', '2025', '2026H1'],
+    datasets: [
+      { label: '无产出客户市场额(万)', data: [46790.43, 50799.78, 20436.58], unit: '万', backgroundColor: colorGrayLight, borderColor: colorGray, borderWidth: 1.5, borderRadius: 4 },
+      { label: '有产出客户市场额(万)', data: [35316.79, 38533.91, 16476.74], unit: '万', backgroundColor: colorBlueLight, borderColor: colorBlue, borderWidth: 1.5, borderRadius: 4 },
+      { label: '产出合同金额(万)', data: [4055.29, 4033.89, 1075.55], unit: '万', backgroundColor: colorOrangeLight, borderColor: colorOrange, borderWidth: 1.5, borderRadius: 4 }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'bottom', labels: { padding: 16, usePointStyle: true, boxWidth: 12 } } },
+    scales: { y: { title: { display: true, text: '金额(万)' }, grid: { color: '#f3f4f6' } } }
+  }
+});
+
+// === Chart 3: NA Year ===
+new Chart(document.getElementById('chart-na-year'), {
+  type: 'bar',
+  data: {
+    labels: ['2024', '2025', '2026H1'],
+    datasets: [
+      { label: '无产出客户市场额(万)', data: [21967.56, 26886.49, 8671.61], unit: '万', backgroundColor: colorGrayLight, borderColor: colorGray, borderWidth: 1.5, borderRadius: 4 },
+      { label: '有产出客户市场额(万)', data: [28627.27, 31741.77, 15254.53], unit: '万', backgroundColor: colorBlueLight, borderColor: colorBlue, borderWidth: 1.5, borderRadius: 4 },
+      { label: '产出合同金额(万)', data: [3512.55, 3471.7, 931.2], unit: '万', backgroundColor: colorOrangeLight, borderColor: colorOrange, borderWidth: 1.5, borderRadius: 4 }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'bottom', labels: { padding: 16, usePointStyle: true, boxWidth: 12 } } },
+    scales: { y: { title: { display: true, text: '金额(万)' }, grid: { color: '#f3f4f6' } } }
+  }
+});
+
+// === Chart 4: City (NA) ===
+new Chart(document.getElementById('chart-city'), {
+  type: 'bar',
+  data: {
+    labels: ['贵阳市', '遵义市', '毕节市', '六盘水市', '铜仁市', '黔东南苗族侗族自治州'],
+    datasets: [
+      { label: '2024市场额(万)', data: [49742.51, 459.98, 212.12, 77.61, 0, 55.3], unit: '万', backgroundColor: 'rgba(37,99,235,0.6)', borderColor: colorBlue, borderWidth: 1, borderRadius: 4 },
+      { label: '2025市场额(万)', data: [53695.23, 1346.14, 1187.55, 672.13, 652.09, 471.11], unit: '万', backgroundColor: 'rgba(234,88,12,0.6)', borderColor: colorOrange, borderWidth: 1, borderRadius: 4 },
+      { label: '2026H1市场额(万)', data: [22405.95, 342.38, 46.69, 667.22, 355.67, 32.0], unit: '万', backgroundColor: 'rgba(156,163,175,0.6)', borderColor: colorGray, borderWidth: 1, borderRadius: 4 }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'bottom', labels: { padding: 16, usePointStyle: true, boxWidth: 12 } } },
+    scales: { y: { title: { display: true, text: '市场额(万)' }, grid: { color: '#f3f4f6' } }, x: { ticks: { maxRotation: 0 } } }
+  }
+});
+
+// === Chart 5: Industry (NA) ===
+new Chart(document.getElementById('chart-industry'), {
+  type: 'bar',
+  data: {
+    labels: ['政府', '运营商', '医疗', '电力', '教育', '金融', '交通', '企业', '央国企', '军工', '油气'],
+    datasets: [
+      { label: '2024市场额(万)', data: [23196.89, 8732.47, 4400.15, 2925.79, 3840.5, 3582.48, 1211.71, 1499.2, 1185.2, 0, 20.44], unit: '万', backgroundColor: 'rgba(37,99,235,0.6)', borderColor: colorBlue, borderWidth: 1, borderRadius: 4 },
+      { label: '2025市场额(万)', data: [22371.14, 13872.29, 5148.14, 5074.31, 3062.48, 2431.81, 3735.15, 1717.48, 1196.72, 18.75, 0], unit: '万', backgroundColor: 'rgba(234,88,12,0.6)', borderColor: colorOrange, borderWidth: 1, borderRadius: 4 },
+      { label: '2026H1市场额(万)', data: [8150.13, 4304.71, 1334.92, 1967.35, 1879.13, 2151.8, 1395.12, 2268.4, 425.23, 49.35, 0], unit: '万', backgroundColor: 'rgba(156,163,175,0.6)', borderColor: colorGray, borderWidth: 1, borderRadius: 4 }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'bottom', labels: { padding: 16, usePointStyle: true, boxWidth: 12 } } },
+    scales: { y: { title: { display: true, text: '市场额(万)' }, grid: { color: '#f3f4f6' } }, x: { ticks: { maxRotation: 30 } } }
+  }
+});
+
+// === Chart 6: Potential Year ===
+new Chart(document.getElementById('chart-potential-year'), {
+  type: 'bar',
+  data: {
+    labels: ['2024', '2025', '2026H1'],
+    datasets: [
+      { label: '潜力客户数量', data: [117, 115, 61], backgroundColor: colorBlueLight, borderColor: colorBlue, borderWidth: 2, borderRadius: 4, yAxisID: 'y' },
+      { label: '市场额(亿)', data: [3.67, 3.55, 1.62], unit: '亿', backgroundColor: colorOrangeLight, borderColor: colorOrange, borderWidth: 2, borderRadius: 4, yAxisID: 'y1' }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'bottom', labels: { padding: 16, usePointStyle: true, boxWidth: 12 } } },
+    scales: {
+      y: { position: 'left', title: { display: true, text: '客户数量' }, grid: { color: '#f3f4f6' } },
+      y1: { position: 'right', title: { display: true, text: '市场额(亿)' }, grid: { drawOnChartArea: false } }
+    }
+  }
+});
+
+// === Chart 7: Potential City ===
+new Chart(document.getElementById('chart-potential-city'), {
+  type: 'bar',
+  data: {
+    labels: ['贵阳市', '黔南布依族苗族自治州', '铜仁市', '安顺市', '黔西南布依族苗族自治州', '黔东南苗族侗族自治州', '遵义市', '毕节市', '六盘水市'],
+    datasets: [
+      { label: '2024市场额(万)', data: [19142.25, 4630.13, 2406.45, 3071.02, 1747.6, 2021.29, 1835.29, 1283.4, 594.62], unit: '万', backgroundColor: 'rgba(37,99,235,0.6)', borderColor: colorBlue, borderWidth: 1, borderRadius: 4 },
+      { label: '2025市场额(万)', data: [20451.05, 1751.7, 4724.57, 807.63, 1560.24, 1425.96, 2863.1, 805.39, 1124.05], unit: '万', backgroundColor: 'rgba(234,88,12,0.6)', borderColor: colorOrange, borderWidth: 1, borderRadius: 4 },
+      { label: '2026H1市场额(万)', data: [5709.87, 1939.77, 222.75, 2218.38, 2456.02, 2198.07, 525.0, 637.89, 330.9], unit: '万', backgroundColor: 'rgba(156,163,175,0.6)', borderColor: colorGray, borderWidth: 1, borderRadius: 4 }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'bottom', labels: { padding: 16, usePointStyle: true, boxWidth: 12 } } },
+    scales: { y: { title: { display: true, text: '市场额(万)' }, grid: { color: '#f3f4f6' } }, x: { ticks: { maxRotation: 0 } } }
+  }
+});
+
+// === Chart 8: Potential Industry ===
+new Chart(document.getElementById('chart-potential-industry'), {
+  type: 'bar',
+  data: {
+    labels: ['政府', '企业', '教育', '金融', '医疗', '公安', '运营商', '交通', '电力', '数据局', '网信'],
+    datasets: [
+      { label: '2024市场额(万)', data: [10192.94, 6429.65, 3894.01, 1548.78, 5747.02, 2736.04, 976.43, 956.67, 1406.12, 1675.44, 86.3], unit: '万', backgroundColor: 'rgba(37,99,235,0.6)', borderColor: colorBlue, borderWidth: 1, borderRadius: 4 },
+      { label: '2025市场额(万)', data: [6867.18, 2867.29, 3656.14, 2109.74, 5085.37, 3368.61, 2986.31, 1958.05, 3443.76, 1959.16, 1212.09], unit: '万', backgroundColor: 'rgba(234,88,12,0.6)', borderColor: colorOrange, borderWidth: 1, borderRadius: 4 },
+      { label: '2026H1市场额(万)', data: [3219.65, 3071.01, 1982.93, 852.44, 2326.12, 742.5, 1589.34, 356.51, 615.78, 543.55, 938.84], unit: '万', backgroundColor: 'rgba(156,163,175,0.6)', borderColor: colorGray, borderWidth: 1, borderRadius: 4 }
+    ]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { position: 'bottom', labels: { padding: 16, usePointStyle: true, boxWidth: 12 } } },
+    scales: { y: { title: { display: true, text: '市场额(万)' }, grid: { color: '#f3f4f6' } }, x: { ticks: { maxRotation: 30 } } }
+  }
+});
+</script>
+</body>
+</html>
