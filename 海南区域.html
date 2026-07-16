@@ -125,8 +125,8 @@
   .ov-card-c .ov-item-val { font-size: 13px; font-weight: 700; color: var(--c-text); white-space: pre-line; line-height: 1.8; }
   .note-block { background: #fffbeb; border: 1px solid #fef3c7; border-radius: 6px; padding: 12px 16px; margin: 12px 0; font-size: 13px; color: #92400e; }
   @media (max-width: 768px) {
-    /* 全局 - 禁止移动端浏览器自动放大字体 */
-    * { -webkit-text-size-adjust: 100% !important; text-size-adjust: 100% !important; }
+    /* 禁止移动端浏览器自动放大字体 */
+    * { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
     body { font-size: 13px; line-height: 1.7; }
     .container { padding: 0 12px; }
 
@@ -172,48 +172,46 @@
     .ov-card-c .ov-item-label { font-size: 11px; }
     .ov-card-c .ov-item-val { font-size: 12px; }
 
-    /* ===== 表格移动端：横向滚动 ===== */
+    /* ===== 表格移动端核心适配 ===== */
     .table-wrap {
       overflow-x: auto !important;
-      overflow-y: hidden !important;
       -webkit-overflow-scrolling: touch;
       margin: 10px 0;
       border: 1px solid var(--c-border);
       border-radius: 6px;
-      max-width: 100%;
     }
+    /* 滚动条优化 */
     .table-wrap::-webkit-scrollbar { height: 5px; }
-    .table-wrap::-webkit-scrollbar-thumb { background: var(--c-gray-300); border-radius: 3px; }
-    .table-wrap::-webkit-scrollbar-track { background: var(--c-gray-50); }
-    table.report-table {
-      width: auto !important;
-      min-width: 600px !important;
-      font-size: 11px;
-    }
-    table.report-table thead th {
-      padding: 6px 8px;
-      font-size: 10px;
-      white-space: nowrap;
-    }
-    table.report-table tbody td {
-      padding: 5px 8px;
-      font-size: 11px;
-      white-space: nowrap;
-    }
-    table.report-table .group-row td {
-      font-size: 11px;
-      white-space: nowrap;
-    }
+    .table-wrap::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
+    .table-wrap::-webkit-scrollbar-track { background: #f3f4f6; }
 
-    /* 客户明细表 */
+    table.report-table {
+      font-size: 11px;
+      width: auto;
+      min-width: 600px;
+    }
+    table.report-table thead th { padding: 6px 6px; font-size: 10px; white-space: nowrap; }
+    table.report-table tbody td { padding: 5px 6px; font-size: 11px; white-space: nowrap; }
+    table.report-table .group-row td { font-size: 11px; white-space: nowrap; }
+
+    /* 固定宽度的客户明细表 */
     table.report-table.customer-detail,
     table.report-table.customer-detail-potential {
-      table-layout: auto !important;
-      min-width: 700px !important;
+      table-layout: auto;
+      min-width: 700px;
     }
-    table.report-table.customer-detail col,
-    table.report-table.customer-detail-potential col {
-      width: auto !important;
+    table.report-table.customer-detail col.col-name,
+    table.report-table.customer-detail col.col-ind,
+    table.report-table.customer-detail col.col-mgr,
+    table.report-table.customer-detail col.col-sale,
+    table.report-table.customer-detail col.col-year,
+    table.report-table.customer-detail col.col-amt,
+    table.report-table.customer-detail col.col-amt2,
+    table.report-table.customer-detail-potential col.col-name,
+    table.report-table.customer-detail-potential col.col-ind,
+    table.report-table.customer-detail-potential col.col-year,
+    table.report-table.customer-detail-potential col.col-amt {
+      width: auto;
     }
 
     /* 图表 */
@@ -228,14 +226,14 @@
     .footer { padding: 24px 16px; font-size: 11px; margin-top: 24px; }
   }
 
-  /* 超小屏 (<400px) */
+  /* 超小屏 (<400px) 进一步压缩 */
   @media (max-width: 400px) {
     .cover h1 { font-size: 18px; }
     .cover h2 { font-size: 13px; }
     .chart-container { height: 200px; }
     table.report-table { font-size: 10px; min-width: 520px; }
-    table.report-table thead th { padding: 4px 6px; font-size: 9px; }
-    table.report-table tbody td { padding: 3px 6px; font-size: 10px; }
+    table.report-table thead th { padding: 4px 4px; font-size: 9px; }
+    table.report-table tbody td { padding: 3px 4px; font-size: 10px; }
     .table-wrap { border-radius: 4px; }
   }
 </style>
@@ -244,9 +242,8 @@
 
 <!-- ===== COVER ===== -->
 <div class="cover">
-  <div class="cover-tag">网络安全市场空间分析</div>
   <h1>海南地区</h1>
-  <h2>2024-2026 网络安全市场空间分析报告 网络安全市场空间分析报告</h2>
+  <h2>2024-2026 网络安全市场空间分析报告</h2>
   <div class="cover-meta">本报告由营销中心、数字化管理部共同发布</div>
 </div>
 <div class="container">
@@ -306,15 +303,17 @@
           <tr>
             <th>年份</th>
             <th>市场额(亿)</th>
+            <th>H1市场额(亿)</th>
             <th>H1同期市场额增长率</th>
-            <th>签约合同金额(亿)</th>
+            <th>签约合同金额（亿）</th>
+            <th>H1签约合同金额（亿）</th>
             <th>H1同期合同额增长率</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>2024</td><td>4.73</td><td class="na">N/A</td><td>0.18</td><td class="na">N/A</td></tr>
-          <tr><td>2025</td><td>5.15</td><td class="rate-up">+14.53%</td><td>0.18</td><td class="rate-down">-45.43%</td></tr>
-          <tr><td>2026</td><td>2.63</td><td class="rate-up">+14.68%</td><td>0.06</td><td class="rate-up">+50.85%</td></tr>
+          <tr><td>2024</td><td>4.25</td><td>1.72</td><td class="na">N/A</td><td>0.18</td><td>0.07</td><td class="na">N/A</td></tr>
+          <tr><td>2025</td><td>4.89</td><td>2.29</td><td class="rate-up">+32.85%</td><td>0.18</td><td>0.04</td><td class="rate-down">-45.43%</td></tr>
+          <tr><td>2026H1</td><td>2.41</td><td>2.41</td><td class="rate-up">+5.29%</td><td>0.06</td><td>0.06</td><td class="rate-up">+50.85%</td></tr>
         </tbody>
       </table>
     </div>
@@ -327,17 +326,17 @@
     <div class="highlight-grid">
       <div class="highlight-card">
         <div class="hl-title"><span class="badge">1</span>内部分析</div>
-        <p><span class="hl-bold">市场：</span>近3年市场总规模是12.51亿，内部与外部匹配上的客户市场总规模9.74亿，占比78.00%。</p>
+        <p><span class="hl-bold">市场：</span>近3年市场总规模是11.55亿，内部与外部匹配上的客户市场总规模9.30亿，占比81.00%。</p>
         <p><span class="hl-bold">客户：</span>内部与外部匹配上的客户数280，占比内部总客户22.00%；产出合同额0.23亿，占比总合同额54.00%，其中无产出客户占比75.00%。 建议：资源重点投入这部分产出客户，同时兼顾未产出客户的激活。</p>
-        <p><span class="hl-bold">地市：</span>近3年NA客户市场容量TOP3地市是海口市、琼海市、儋州市，同时具有潜力的地市是海口市，可以重点关注。</p>
-        <p><span class="hl-bold">行业：</span>近3年NA客户市场容量TOP3行业是运营商、政府、企业，同时具有潜力的行业是企业、公安，建议重点关注。</p>
+        <p><span class="hl-bold">地市：</span>近3年NA客户市场容量TOP3地市是海口市、琼海市、儋州市。</p>
+        <p><span class="hl-bold">行业：</span>近3年NA客户市场容量TOP3行业是运营商、政府、企业，同时具有潜力的行业是企业，建议重点关注。</p>
       </div>
       <div class="highlight-card">
         <div class="hl-title"><span class="badge">2</span>外部分析</div>
-        <p><span class="hl-bold">市场：</span>近3年市场总规模是12.51亿，其中外部未匹配上的采购单位数187，市场规模是2.77亿，占比22.00%。</p>
-        <p><span class="hl-bold">客户：</span>近3年采购单位预算超200w的数量是37，市场规模1.90亿。建议：积极布局潜力客户的拓展工作。</p>
-        <p><span class="hl-bold">地市：</span>近3年潜力客户市场容量TOP3地市是海口市、三亚市、儋州市，同时具有潜力的地市是海口市，可以重点关注。</p>
-        <p><span class="hl-bold">行业：</span>近3年潜力客户市场容量TOP3行业是政府、数据局、教育，同时具有潜力的行业是教育、政府，建议重点关注。</p>
+        <p><span class="hl-bold">市场：</span>近3年市场总规模是11.55亿，其中外部未匹配上的采购单位数187，市场规模是2.25亿，占比19.00%。</p>
+        <p><span class="hl-bold">客户：</span>近3年采购单位预算超200w的数量是34，市场规模1.35亿。建议：积极布局潜力客户的拓展工作。</p>
+        <p><span class="hl-bold">地市：</span>近3年潜力客户市场容量TOP3地市是海口市、三亚市、东方市，同时具有潜力的地市是海口市，可以重点关注。</p>
+        <p><span class="hl-bold">行业：</span>近3年潜力客户市场容量TOP3行业是政府、运营商、教育，同时具有潜力的行业是运营商、政府，建议重点关注。</p>
       </div>
     </div>
   </div>
@@ -361,7 +360,7 @@ NA客户：34
 · 有产出：19
 · 无产出：15</div></div>
       <div class="ov-card-c"><div class="ov-item-label">数量</div><div class="ov-item-val">总计187，其中
-潜力：37(20.00%)
+潜力：34(18.00%)
 *说明：潜力指近3年预算总和超200W。</div></div>
       <div class="ov-card-c"><div class="ov-item-label">数量</div><div class="ov-item-val">总计999，其中
 · 有产出：72(7.00%)
@@ -369,14 +368,14 @@ NA客户：34
       <div class="ov-card-c"><div class="ov-item-label">合同金额</div><div class="ov-item-val">0.23亿(NA客户：0.11亿)</div></div>
       <div class="ov-card-c"><div class="ov-item-label">合同金额</div><div class="ov-item-val">-</div></div>
       <div class="ov-card-c"><div class="ov-item-label">合同金额</div><div class="ov-item-val">0.20亿 (NA客户：0.04亿)</div></div>
-      <div class="ov-card-c last"><div class="ov-item-label">市场额</div><div class="ov-item-val">总计9.74亿
-· 有产出：3.59亿
-· 无产出：6.15亿
-NA客户：2.64亿
-· 有产出：2.05亿
-· 无产出：0.59亿</div></div>
-      <div class="ov-card-c last"><div class="ov-item-label">市场额</div><div class="ov-item-val">总计2.77亿
-潜力客户：1.90亿</div></div>
+      <div class="ov-card-c last"><div class="ov-item-label">市场额</div><div class="ov-item-val">总计9.30亿
+· 有产出：3.34亿
+· 无产出：5.97亿
+NA客户：2.19亿
+· 有产出：1.80亿
+· 无产出：0.40亿</div></div>
+      <div class="ov-card-c last"><div class="ov-item-label">市场额</div><div class="ov-item-val">总计2.25亿
+潜力客户：1.35亿</div></div>
       <div class="ov-card-c last"><div class="ov-item-label">市场额</div><div class="ov-item-val">-</div></div>
     </div>
   </div>
@@ -409,9 +408,9 @@ NA客户：2.64亿
           </tr>
         </thead>
         <tbody>
-          <tr><td>2024</td><td>122</td><td>19,991.45</td><td>54</td><td>13,277.95</td><td>1,099.87</td><td>8.28%</td></tr>
-          <tr><td>2025</td><td>118</td><td>29,054.31</td><td>44</td><td>13,578.53</td><td>872.07</td><td>6.42%</td></tr>
-          <tr><td>2026</td><td>79</td><td>12,729.02</td><td>22</td><td>8,798.98</td><td>294.61</td><td>3.35%</td></tr>
+          <tr><td>2024</td><td>122</td><td>19,991.45</td><td>54</td><td>12,947.18</td><td>1,099.87</td><td>8.49%</td></tr>
+          <tr><td>2025</td><td>118</td><td>27,574.79</td><td>44</td><td>13,175.24</td><td>872.07</td><td>6.62%</td></tr>
+          <tr><td>2026H1</td><td>78</td><td>12,355.42</td><td>22</td><td>7,003.10</td><td>294.61</td><td>4.21%</td></tr>
         </tbody>
       </table>
     </div>
@@ -436,9 +435,9 @@ NA客户：2.64亿
           </tr>
         </thead>
         <tbody>
-          <tr><td>2024</td><td>8</td><td>889.05</td><td>13</td><td>6,288.98</td><td>462.43</td><td>7.35%</td></tr>
-          <tr><td>2025</td><td>10</td><td>3,306.19</td><td>13</td><td>8,155.84</td><td>560.66</td><td>6.87%</td></tr>
-          <tr><td>2026</td><td>9</td><td>1,709.46</td><td>11</td><td>6,043.69</td><td>115.20</td><td>1.91%</td></tr>
+          <tr><td>2024</td><td>8</td><td>889.05</td><td>13</td><td>5,958.21</td><td>462.43</td><td>7.76%</td></tr>
+          <tr><td>2025</td><td>10</td><td>1,826.68</td><td>13</td><td>7,752.54</td><td>560.66</td><td>7.23%</td></tr>
+          <tr><td>2026H1</td><td>9</td><td>1,234.76</td><td>11</td><td>4,247.81</td><td>115.20</td><td>2.71%</td></tr>
         </tbody>
       </table>
     </div>
@@ -449,7 +448,7 @@ NA客户：2.64亿
     </div>
 
     <div class="sub-heading"><span class="sub-heading-tag">2</span>地市分析</div>
-    <p class="desc-text">近3年NA客户市场容量TOP3地市是海口市、琼海市、儋州市，同时具有潜力的地市是海口市，可以重点关注。</p>
+    <p class="desc-text">近3年NA客户市场容量TOP3地市是海口市、琼海市、儋州市。</p>
 
     <div class="table-wrap">
       <table class="report-table data-table">
@@ -466,13 +465,13 @@ NA客户：2.64亿
         </thead>
         <tbody>
           <tr class="group-row"><td colspan="7">海口市</td></tr>
-          <tr><td>2024</td><td>7</td><td>857.05</td><td>12</td><td>6,069.80</td><td>456.26</td><td>7.52%</td></tr>
-          <tr><td>2025</td><td>9</td><td>3,252.19</td><td>13</td><td>8,155.84</td><td>557.39</td><td>6.83%</td></tr>
-          <tr><td>2026</td><td>9</td><td>1,709.46</td><td>11</td><td>6,043.69</td><td>110.90</td><td>1.83%</td></tr>
+          <tr><td>2024</td><td>7</td><td>857.05</td><td>12</td><td>5,739.03</td><td>456.26</td><td>7.95%</td></tr>
+          <tr><td>2025</td><td>9</td><td>1,772.68</td><td>13</td><td>7,752.54</td><td>557.39</td><td>7.19%</td></tr>
+          <tr><td>2026H1</td><td>9</td><td>1,234.76</td><td>11</td><td>4,247.81</td><td>110.90</td><td>2.61%</td></tr>
           <tr class="group-row"><td colspan="7">琼海市</td></tr>
           <tr><td>2024</td><td>1</td><td>32.00</td><td>1</td><td>219.18</td><td>6.17</td><td>2.82%</td></tr>
           <tr><td>2025</td><td>0</td><td>0.00</td><td>0</td><td>0.00</td><td>3.27</td><td class="na">N/A</td></tr>
-          <tr><td>2026</td><td>0</td><td>0.00</td><td>0</td><td>0.00</td><td>4.30</td><td class="na">N/A</td></tr>
+          <tr><td>2026H1</td><td>0</td><td>0.00</td><td>0</td><td>0.00</td><td>4.30</td><td class="na">N/A</td></tr>
           <tr class="group-row"><td colspan="7">儋州市</td></tr>
           <tr><td>2025</td><td>1</td><td>54.00</td><td>0</td><td>0.00</td><td>0.00</td><td class="na">N/A</td></tr>
         </tbody>
@@ -485,7 +484,7 @@ NA客户：2.64亿
     </div>
 
     <div class="sub-heading"><span class="sub-heading-tag">3</span>行业分析</div>
-    <p class="desc-text">近3年NA客户市场容量TOP3行业是运营商、政府、企业，同时具有潜力的行业是企业、公安，建议重点关注。</p>
+    <p class="desc-text">近3年NA客户市场容量TOP3行业是运营商、政府、企业，同时具有潜力的行业是企业，建议重点关注。</p>
 
     <div class="table-wrap">
       <table class="report-table data-table">
@@ -502,25 +501,25 @@ NA客户：2.64亿
         </thead>
         <tbody>
           <tr class="group-row"><td colspan="7">运营商</td></tr>
-          <tr><td>2024</td><td>0</td><td>0.00</td><td>2</td><td>2,874.79</td><td>143.52</td><td>4.99%</td></tr>
+          <tr><td>2024</td><td>0</td><td>0.00</td><td>2</td><td>2,544.02</td><td>143.52</td><td>5.64%</td></tr>
           <tr><td>2025</td><td>3</td><td>335.83</td><td>2</td><td>3,008.81</td><td>218.54</td><td>7.26%</td></tr>
-          <tr><td>2026</td><td>2</td><td>821.07</td><td>3</td><td>1,283.63</td><td>50.33</td><td>3.92%</td></tr>
+          <tr><td>2026H1</td><td>2</td><td>346.36</td><td>3</td><td>1,283.63</td><td>50.33</td><td>3.92%</td></tr>
           <tr class="group-row"><td colspan="7">政府</td></tr>
           <tr><td>2024</td><td>4</td><td>694.33</td><td>7</td><td>1,914.28</td><td>181.57</td><td>9.49%</td></tr>
-          <tr><td>2025</td><td>5</td><td>2,905.54</td><td>4</td><td>1,200.56</td><td>129.33</td><td>10.77%</td></tr>
-          <tr><td>2026</td><td>4</td><td>639.46</td><td>2</td><td>954.72</td><td>32.75</td><td>3.43%</td></tr>
+          <tr><td>2025</td><td>5</td><td>1,426.03</td><td>4</td><td>1,200.56</td><td>129.33</td><td>10.77%</td></tr>
+          <tr><td>2026H1</td><td>4</td><td>639.46</td><td>2</td><td>954.72</td><td>32.75</td><td>3.43%</td></tr>
           <tr class="group-row"><td colspan="7">企业</td></tr>
           <tr><td>2024</td><td>3</td><td>130.85</td><td>1</td><td>411.77</td><td>74.15</td><td>18.01%</td></tr>
-          <tr><td>2025</td><td>2</td><td>64.82</td><td>1</td><td>1,293.50</td><td>0.00</td><td>0.00%</td></tr>
-          <tr><td>2026</td><td>3</td><td>248.94</td><td>2</td><td>1,969.83</td><td>0.00</td><td>0.00%</td></tr>
+          <tr><td>2025</td><td>2</td><td>64.82</td><td>1</td><td>855.80</td><td>0.00</td><td>0.00%</td></tr>
+          <tr><td>2026H1</td><td>3</td><td>248.94</td><td>2</td><td>1,848.06</td><td>0.00</td><td>0.00%</td></tr>
           <tr class="group-row"><td colspan="7">公安</td></tr>
           <tr><td>2024</td><td>0</td><td>0.00</td><td>1</td><td>789.22</td><td>6.00</td><td>0.76%</td></tr>
-          <tr><td>2025</td><td>0</td><td>0.00</td><td>1</td><td>1,398.79</td><td>0.00</td><td>0.00%</td></tr>
-          <tr><td>2026</td><td>0</td><td>0.00</td><td>1</td><td>1,700.37</td><td>0.00</td><td>0.00%</td></tr>
+          <tr><td>2025</td><td>0</td><td>0.00</td><td>1</td><td>1,433.20</td><td>0.00</td><td>0.00%</td></tr>
+          <tr><td>2026H1</td><td>0</td><td>0.00</td><td>1</td><td>26.25</td><td>0.00</td><td>0.00%</td></tr>
           <tr class="group-row"><td colspan="7">金融</td></tr>
           <tr><td>2024</td><td>0</td><td>0.00</td><td>2</td><td>298.92</td><td>57.18</td><td>19.13%</td></tr>
           <tr><td>2025</td><td>0</td><td>0.00</td><td>5</td><td>1,254.17</td><td>212.79</td><td>16.97%</td></tr>
-          <tr><td>2026</td><td>0</td><td>0.00</td><td>3</td><td>135.15</td><td>32.12</td><td>23.77%</td></tr>
+          <tr><td>2026H1</td><td>0</td><td>0.00</td><td>3</td><td>135.15</td><td>32.12</td><td>23.77%</td></tr>
           <tr class="group-row"><td colspan="7">央国企</td></tr>
           <tr><td>2024</td><td>1</td><td>63.87</td><td>0</td><td>0.00</td><td>0.00</td><td class="na">N/A</td></tr>
         </tbody>
@@ -552,38 +551,38 @@ NA客户：2.64亿
           </tr>
         </thead>
         <tbody>
-          <tr><td class="left" rowspan="3">海南省公安厅</td><td rowspan="3">公安</td><td rowspan="3">谭柱</td><td rowspan="3">销售负责人</td><td>2024</td><td>789.22</td><td>6.00</td></tr>
-          <tr><td>2025</td><td>1,398.79</td><td>0.00</td></tr>
-          <tr><td>2026</td><td>1,700.37</td><td>0.00</td></tr>
-          <tr><td class="left" rowspan="3">中国电信股份有限公司海南分公司</td><td rowspan="3">运营商</td><td rowspan="3">邹游</td><td rowspan="3">Name销售</td><td>2024</td><td>1,608.79</td><td>13.23</td></tr>
+          <tr><td class="left" rowspan="3">中国电信股份有限公司海南分公司</td><td rowspan="3">运营商</td><td rowspan="3">邹游</td><td rowspan="3">Name销售</td><td>2024</td><td>1,278.02</td><td>13.23</td></tr>
           <tr><td>2025</td><td>1,742.65</td><td>141.79</td></tr>
-          <tr><td>2026</td><td>452.48</td><td>24.75</td></tr>
+          <tr><td>2026H1</td><td>452.48</td><td>24.75</td></tr>
           <tr><td class="left" rowspan="3">海南电网有限责任公司</td><td rowspan="3">企业</td><td rowspan="3">邹游</td><td rowspan="3">Name销售</td><td>2024</td><td>411.77</td><td>70.15</td></tr>
-          <tr><td>2025</td><td>1,293.50</td><td>0.00</td></tr>
-          <tr><td>2026</td><td>1,747.83</td><td>0.00</td></tr>
+          <tr><td>2025</td><td>855.80</td><td>0.00</td></tr>
+          <tr><td>2026H1</td><td>1,626.06</td><td>0.00</td></tr>
           <tr><td class="left" rowspan="3">中国联合网络通信有限公司海南省分公司</td><td rowspan="3">运营商</td><td rowspan="3">邹游</td><td rowspan="3">Name销售</td><td>2024</td><td>1,266.00</td><td>130.29</td></tr>
           <tr><td>2025</td><td>1,266.16</td><td>76.75</td></tr>
-          <tr><td>2026</td><td>293.95</td><td>6.53</td></tr>
+          <tr><td>2026H1</td><td>293.95</td><td>6.53</td></tr>
           <tr><td class="left" rowspan="3">海南省大数据发展中心</td><td rowspan="3">政府</td><td rowspan="3">黄江福</td><td rowspan="3">Name销售</td><td>2024</td><td>1,037.94</td><td>77.66</td></tr>
           <tr><td>2025</td><td>922.20</td><td>123.87</td></tr>
-          <tr><td>2026</td><td>396.25</td><td>20.45</td></tr>
+          <tr><td>2026H1</td><td>396.25</td><td>20.45</td></tr>
+          <tr><td class="left" rowspan="3">海南省公安厅</td><td rowspan="3">公安</td><td rowspan="3">谭柱</td><td rowspan="3">销售负责人</td><td>2024</td><td>789.22</td><td>6.00</td></tr>
+          <tr><td>2025</td><td>1,433.20</td><td>0.00</td></tr>
+          <tr><td>2026H1</td><td>26.25</td><td>0.00</td></tr>
           <tr><td class="left" rowspan="3">海南省医疗保障局</td><td rowspan="3">政府</td><td rowspan="3">黄江福</td><td rowspan="3">Name销售</td><td>2024</td><td>270.47</td><td>3.97</td></tr>
           <tr><td>2025</td><td>197.65</td><td>0.00</td></tr>
-          <tr><td>2026</td><td>558.46</td><td>8.00</td></tr>
+          <tr><td>2026H1</td><td>558.46</td><td>8.00</td></tr>
           <tr><td class="left">海南农村商业银行股份有限公司</td><td>金融</td><td>黄江福</td><td>Name销售</td><td>2025</td><td>796.55</td><td>115.53</td></tr>
-          <tr><td class="left">海南省通信管理局</td><td>运营商</td><td>邹游</td><td>Name销售</td><td>2026</td><td>537.20</td><td>19.05</td></tr>
+          <tr><td class="left">海南省通信管理局</td><td>运营商</td><td>邹游</td><td>Name销售</td><td>2026H1</td><td>537.20</td><td>19.05</td></tr>
           <tr><td class="left" rowspan="2">海南银行股份有限公司</td><td rowspan="2">金融</td><td rowspan="2">黄江福</td><td rowspan="2">Name销售</td><td>2025</td><td>343.37</td><td>51.61</td></tr>
-          <tr><td>2026</td><td>21.95</td><td>1.28</td></tr>
-          <tr><td class="left">易航科技股份有限公司</td><td>企业</td><td>邹游</td><td>Name销售</td><td>2026</td><td>222.00</td><td>0.00</td></tr>
+          <tr><td>2026H1</td><td>21.95</td><td>1.28</td></tr>
+          <tr><td class="left">易航科技股份有限公司</td><td>企业</td><td>邹游</td><td>Name销售</td><td>2026H1</td><td>222.00</td><td>0.00</td></tr>
           <tr><td class="left">琼海市营商环境建设局</td><td>政府</td><td>黄江福</td><td>Name销售</td><td>2024</td><td>219.18</td><td>6.17</td></tr>
           <tr><td class="left">中国人民银行海南省分行</td><td>金融</td><td>黄江福</td><td>Name销售</td><td>2024</td><td>213.92</td><td>0.00</td></tr>
           <tr><td class="left" rowspan="2">海南省财政科技服务中心</td><td rowspan="2">政府</td><td rowspan="2">黄江福</td><td rowspan="2">Name销售</td><td>2024</td><td>146.76</td><td>15.00</td></tr>
           <tr><td>2025</td><td>31.34</td><td>0.00</td></tr>
           <tr><td class="left" rowspan="3">中国邮政储蓄银行股份有限公司海南省分行</td><td rowspan="3">金融</td><td rowspan="3">黄江福</td><td rowspan="3">Name销售</td><td>2024</td><td>85.00</td><td>12.63</td></tr>
           <tr><td>2025</td><td>65.00</td><td>1.79</td></tr>
-          <tr><td>2026</td><td>17.20</td><td>2.43</td></tr>
+          <tr><td>2026H1</td><td>17.20</td><td>2.43</td></tr>
           <tr><td class="left" rowspan="2">中国银行股份有限公司海南省分行</td><td rowspan="2">金融</td><td rowspan="2">黄江福</td><td rowspan="2">Name销售</td><td>2025</td><td>26.00</td><td>33.60</td></tr>
-          <tr><td>2026</td><td>96.00</td><td>28.41</td></tr>
+          <tr><td>2026H1</td><td>96.00</td><td>28.41</td></tr>
           <tr><td class="left">海南省统计局</td><td>政府</td><td>黄江福</td><td>Name销售</td><td>2024</td><td>109.20</td><td>7.05</td></tr>
           <tr><td class="left" rowspan="2">海南省福利彩票发行中心</td><td rowspan="2">政府</td><td rowspan="2">黄江福</td><td rowspan="2">Name销售</td><td>2024</td><td>46.20</td><td>16.73</td></tr>
           <tr><td>2025</td><td>49.37</td><td>0.00</td></tr>
@@ -593,7 +592,7 @@ NA客户：2.64亿
       </table>
     </div>
 
-    <div class="note-block">跳转全量有产出NA客户</div>
+    <div class="note-block">全量数据见附件1</div>
 
     <p class="desc-text" style="margin-top:20px;">在内部无产出，但在外部市场TOP 20（按近3年市场额排序） 的NA客户。</p>
 
@@ -613,38 +612,38 @@ NA客户：2.64亿
           </tr>
         </thead>
         <tbody>
-          <tr><td class="left" rowspan="3">海口市信息中心</td><td rowspan="3">政府</td><td rowspan="3">黄江福</td><td rowspan="3">Name销售</td><td>2024</td><td>99.10</td></tr>
-          <tr><td>2025</td><td>1,530.80</td></tr>
-          <tr><td>2026</td><td>40.50</td></tr>
           <tr><td class="left" rowspan="3">海南省应急管理厅</td><td rowspan="3">政府</td><td rowspan="3">黄江福</td><td rowspan="3">Name销售</td><td>2024</td><td>156.37</td></tr>
-          <tr><td>2025</td><td>1,073.94</td></tr>
-          <tr><td>2026</td><td>260.48</td></tr>
+          <tr><td>2025</td><td>1,078.43</td></tr>
+          <tr><td>2026H1</td><td>260.48</td></tr>
           <tr><td class="left" rowspan="3">国家税务总局海南省税务局</td><td rowspan="3">政府</td><td rowspan="3">叶旭华</td><td rowspan="3">Name销售</td><td>2024</td><td>406.86</td></tr>
           <tr><td>2025</td><td>275.75</td></tr>
-          <tr><td>2026</td><td>314.50</td></tr>
+          <tr><td>2026H1</td><td>314.50</td></tr>
           <tr><td class="left" rowspan="2">中电信数智科技有限公司海南分公司</td><td rowspan="2">运营商</td><td rowspan="2">邹游</td><td rowspan="2">Name销售</td><td>2025</td><td>32.00</td></tr>
-          <tr><td>2026</td><td>694.27</td></tr>
+          <tr><td>2026H1</td><td>219.57</td></tr>
           <tr><td class="left" rowspan="2">联通（海南）产业互联网有限公司</td><td rowspan="2">运营商</td><td rowspan="2">邹游</td><td rowspan="2">Name销售</td><td>2025</td><td>123.83</td></tr>
-          <tr><td>2026</td><td>126.80</td></tr>
+          <tr><td>2026H1</td><td>126.80</td></tr>
           <tr><td class="left" rowspan="2">大唐海南能源开发有限公司</td><td rowspan="2">企业</td><td rowspan="2">邹游</td><td rowspan="2">Name销售</td><td>2024</td><td>36.50</td></tr>
-          <tr><td>2026</td><td>186.00</td></tr>
+          <tr><td>2026H1</td><td>186.00</td></tr>
+          <tr><td class="left" rowspan="3">海口市信息中心</td><td rowspan="3">政府</td><td rowspan="3">黄江福</td><td rowspan="3">Name销售</td><td>2024</td><td>99.10</td></tr>
+          <tr><td>2025</td><td>46.80</td></tr>
+          <tr><td>2026H1</td><td>40.50</td></tr>
           <tr><td class="left">中国铁塔股份有限公司海南省分公司</td><td>运营商</td><td>邹游</td><td>Name销售</td><td>2025</td><td>180.00</td></tr>
           <tr><td class="left" rowspan="2">海南海峡航运股份有限公司</td><td rowspan="2">企业</td><td rowspan="2">邹游</td><td rowspan="2">Name销售</td><td>2024</td><td>74.35</td></tr>
           <tr><td>2025</td><td>10.82</td></tr>
           <tr><td class="left">中国旅游集团有限公司</td><td>央国企</td><td>刘硕</td><td>销售负责人</td><td>2024</td><td>63.87</td></tr>
           <tr><td class="left">中国石化海南炼油化工有限公司</td><td>企业</td><td>邹游</td><td>Name销售</td><td>2025</td><td>54.00</td></tr>
-          <tr><td class="left">海南数据产业服务有限公司</td><td>企业</td><td>邹游</td><td>Name销售</td><td>2026</td><td>51.94</td></tr>
+          <tr><td class="left">海南数据产业服务有限公司</td><td>企业</td><td>邹游</td><td>Name销售</td><td>2026H1</td><td>51.94</td></tr>
           <tr><td class="left" rowspan="2">海南省卫生健康委员会</td><td rowspan="2">政府</td><td rowspan="2">黄江福</td><td rowspan="2">Name销售</td><td>2025</td><td>22.42</td></tr>
-          <tr><td>2026</td><td>23.98</td></tr>
+          <tr><td>2026H1</td><td>23.98</td></tr>
           <tr><td class="left">海南博鳌机场管理有限公司</td><td>政府</td><td>黄江福</td><td>Name销售</td><td>2024</td><td>32.00</td></tr>
           <tr><td class="left" rowspan="2">国家能源集团海南电力有限公司</td><td rowspan="2">企业</td><td rowspan="2">邹游</td><td rowspan="2">Name销售</td><td>2024</td><td>20.00</td></tr>
-          <tr><td>2026</td><td>11.00</td></tr>
+          <tr><td>2026H1</td><td>11.00</td></tr>
           <tr><td class="left">中共海南省委外事工作委员会办公室</td><td>政府</td><td>叶旭华</td><td>Name销售</td><td>2025</td><td>2.62</td></tr>
         </tbody>
       </table>
     </div>
 
-    <div class="note-block">跳转全量无产出NA客户</div>
+    <div class="note-block">全量数据见附件2</div>
 
   </div>
 </div>
@@ -659,7 +658,7 @@ NA客户：2.64亿
     <p class="desc-text">该部分客户为在外部有公开招标，但不在安恒客户池的采购单位。</p>
 
     <div class="sub-heading"><span class="sub-heading-tag">1</span>历年市场分析</div>
-    <p class="desc-text">海南地区，近3年H1同期，潜力客户数量呈先大幅度上升，后下降趋势，市场规模呈先下降，后小幅度上升趋势，历年变化如下：</p>
+    <p class="desc-text">海南地区，近3年H1同期，潜力客户数量呈后持平，先大幅度上升趋势，市场规模呈逐年增长趋势，历年变化如下：</p>
 
     <div class="table-wrap">
       <table class="report-table data-table">
@@ -667,15 +666,17 @@ NA客户：2.64亿
           <tr>
             <th>年份</th>
             <th>潜力客户数量</th>
+            <th>H1同期数量</th>
             <th>H1同期数量增长率</th>
             <th>市场额(亿)</th>
+            <th>H1同期市场额(亿)</th>
             <th>H1同期市场额增长率</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td>2024</td><td>20</td><td class="na">N/A</td><td>0.98</td><td class="na">N/A</td></tr>
-          <tr><td>2025</td><td>22</td><td class="rate-up">+62.50%</td><td>0.65</td><td class="rate-down">-22.15%</td></tr>
-          <tr><td>2026</td><td>11</td><td class="rate-down">-15.38%</td><td>0.26</td><td class="rate-up">+0.27%</td></tr>
+          <tr><td>2024</td><td>19</td><td>6</td><td class="na">N/A</td><td>0.53</td><td>0.07</td><td class="na">N/A</td></tr>
+          <tr><td>2025</td><td>19</td><td>12</td><td class="rate-up">+100.00%</td><td>0.56</td><td>0.25</td><td class="rate-up">+265.56%</td></tr>
+          <tr><td>2026H1</td><td>12</td><td>12</td><td class="na">N/A</td><td>0.27</td><td>0.27</td><td class="rate-up">+5.62%</td></tr>
         </tbody>
       </table>
     </div>
@@ -686,7 +687,7 @@ NA客户：2.64亿
     </div>
 
     <div class="sub-heading"><span class="sub-heading-tag">2</span>地市分析</div>
-    <p class="desc-text">近3年潜力客户市场容量TOP3地市是海口市、三亚市、儋州市，同时具有潜力的地市是海口市，可以重点关注。</p>
+    <p class="desc-text">近3年潜力客户市场容量TOP3地市是海口市、三亚市、东方市，同时具有潜力的地市是海口市，可以重点关注。</p>
 
     <div class="table-wrap">
       <table class="report-table data-table">
@@ -699,15 +700,12 @@ NA客户：2.64亿
         </thead>
         <tbody>
           <tr class="group-row"><td colspan="3">海口市</td></tr>
-          <tr><td>2024</td><td>11</td><td>7,097.77</td></tr>
-          <tr><td>2025</td><td>12</td><td>3,414.30</td></tr>
-          <tr><td>2026</td><td>10</td><td>2,333.00</td></tr>
+          <tr><td>2024</td><td>13</td><td>4,195.86</td></tr>
+          <tr><td>2025</td><td>13</td><td>3,672.07</td></tr>
+          <tr><td>2026H1</td><td>11</td><td>2,348.54</td></tr>
           <tr class="group-row"><td colspan="3">三亚市</td></tr>
-          <tr><td>2024</td><td>2</td><td>1,335.31</td></tr>
-          <tr><td>2025</td><td>4</td><td>1,288.81</td></tr>
-          <tr class="group-row"><td colspan="3">文昌市</td></tr>
-          <tr><td>2024</td><td>2</td><td>622.19</td></tr>
-          <tr><td>2025</td><td>1</td><td>34.41</td></tr>
+          <tr><td>2024</td><td>1</td><td>286.56</td></tr>
+          <tr><td>2025</td><td>3</td><td>1,170.24</td></tr>
           <tr class="group-row"><td colspan="3">昌江黎族自治县</td></tr>
           <tr><td>2024</td><td>1</td><td>261.06</td></tr>
           <tr class="group-row"><td colspan="3">东方市</td></tr>
@@ -721,8 +719,7 @@ NA客户：2.64亿
           <tr class="group-row"><td colspan="3">五指山市</td></tr>
           <tr><td>2025</td><td>1</td><td>270.60</td></tr>
           <tr class="group-row"><td colspan="3">儋州市</td></tr>
-          <tr><td>2025</td><td>2</td><td>1,043.91</td></tr>
-          <tr><td>2026</td><td>1</td><td>308.83</td></tr>
+          <tr><td>2026H1</td><td>1</td><td>308.83</td></tr>
         </tbody>
       </table>
     </div>
@@ -733,7 +730,7 @@ NA客户：2.64亿
     </div>
 
     <div class="sub-heading"><span class="sub-heading-tag">3</span>行业分析</div>
-    <p class="desc-text">近3年潜力客户市场容量TOP3行业是政府、数据局、教育，同时具有潜力的行业是教育、政府，建议重点关注。</p>
+    <p class="desc-text">近3年潜力客户市场容量TOP3行业是政府、运营商、教育，同时具有潜力的行业是运营商、政府，建议重点关注。</p>
 
     <div class="table-wrap">
       <table class="report-table data-table">
@@ -745,34 +742,32 @@ NA客户：2.64亿
           </tr>
         </thead>
         <tbody>
-          <tr class="group-row"><td colspan="3">数据局</td></tr>
-          <tr><td>2024</td><td>1</td><td>4,198.50</td></tr>
           <tr class="group-row"><td colspan="3">政府</td></tr>
-          <tr><td>2024</td><td>11</td><td>2,681.13</td></tr>
+          <tr><td>2024</td><td>10</td><td>2,431.81</td></tr>
           <tr><td>2025</td><td>6</td><td>2,187.40</td></tr>
-          <tr><td>2026</td><td>3</td><td>623.66</td></tr>
-          <tr class="group-row"><td colspan="3">医疗</td></tr>
-          <tr><td>2024</td><td>1</td><td>1,048.75</td></tr>
-          <tr><td>2025</td><td>1</td><td>118.57</td></tr>
-          <tr><td>2026</td><td>1</td><td>308.83</td></tr>
+          <tr><td>2026H1</td><td>3</td><td>623.66</td></tr>
+          <tr class="group-row"><td colspan="3">数据局</td></tr>
+          <tr><td>2024</td><td>2</td><td>1,254.60</td></tr>
           <tr class="group-row"><td colspan="3">运营商</td></tr>
-          <tr><td>2024</td><td>2</td><td>824.52</td></tr>
-          <tr><td>2025</td><td>2</td><td>1,217.94</td></tr>
-          <tr><td>2026</td><td>1</td><td>810.14</td></tr>
-          <tr class="group-row"><td colspan="3">教育</td></tr>
-          <tr><td>2024</td><td>3</td><td>681.87</td></tr>
-          <tr><td>2025</td><td>10</td><td>2,607.87</td></tr>
-          <tr><td>2026</td><td>3</td><td>582.95</td></tr>
+          <tr><td>2024</td><td>3</td><td>866.52</td></tr>
+          <tr><td>2025</td><td>3</td><td>1,475.71</td></tr>
+          <tr><td>2026H1</td><td>2</td><td>825.68</td></tr>
           <tr class="group-row"><td colspan="3">企业</td></tr>
           <tr><td>2024</td><td>1</td><td>347.92</td></tr>
           <tr><td>2025</td><td>1</td><td>2.98</td></tr>
-          <tr><td>2026</td><td>2</td><td>305.81</td></tr>
+          <tr><td>2026H1</td><td>2</td><td>305.81</td></tr>
+          <tr class="group-row"><td colspan="3">教育</td></tr>
+          <tr><td>2024</td><td>2</td><td>309.00</td></tr>
+          <tr><td>2025</td><td>7</td><td>1,529.55</td></tr>
+          <tr><td>2026H1</td><td>3</td><td>582.95</td></tr>
           <tr class="group-row"><td colspan="3">电力</td></tr>
           <tr><td>2024</td><td>1</td><td>62.52</td></tr>
           <tr><td>2025</td><td>1</td><td>157.63</td></tr>
           <tr class="group-row"><td colspan="3">金融</td></tr>
           <tr><td>2025</td><td>1</td><td>209.76</td></tr>
-          <tr><td>2026</td><td>1</td><td>10.44</td></tr>
+          <tr><td>2026H1</td><td>1</td><td>10.44</td></tr>
+          <tr class="group-row"><td colspan="3">医疗</td></tr>
+          <tr><td>2026H1</td><td>1</td><td>308.83</td></tr>
         </tbody>
       </table>
     </div>
@@ -799,43 +794,43 @@ NA客户：2.64亿
           </tr>
         </thead>
         <tbody>
-          <tr><td class="left">海南省大数据管理局</td><td>数据局</td><td>2024</td><td>4,198.50</td></tr>
-          <tr><td class="left" rowspan="3">中国电信海南公司</td><td rowspan="3">运营商</td><td>2024</td><td>173.33</td></tr>
-          <tr><td>2025</td><td>1,143.74</td></tr>
-          <tr><td>2026</td><td>810.14</td></tr>
-          <tr><td class="left" rowspan="2">上海交通大学医学院附属上海儿童医学中心海南医院</td><td rowspan="2">医疗</td><td>2024</td><td>1,048.75</td></tr>
-          <tr><td>2025</td><td>118.57</td></tr>
+          <tr><td class="left" rowspan="3">中国电信海南公司</td><td rowspan="3">运营商</td><td>2024</td><td>205.33</td></tr>
+          <tr><td>2025</td><td>1,130.31</td></tr>
+          <tr><td>2026H1</td><td>810.14</td></tr>
+          <tr><td class="left">海南省大数据管理局</td><td>数据局</td><td>2024</td><td>1,034.60</td></tr>
           <tr><td class="left" rowspan="2">中国移动海南公司</td><td rowspan="2">运营商</td><td>2024</td><td>651.20</td></tr>
           <tr><td>2025</td><td>74.20</td></tr>
-          <tr><td class="left">儋州市教育局</td><td>教育</td><td>2025</td><td>698.91</td></tr>
           <tr><td class="left">海南卫星数据与应用研究中心</td><td>政府</td><td>2025</td><td>590.76</td></tr>
           <tr><td class="left">哈尔滨工程大学三亚南海创新发展基地</td><td>教育</td><td>2025</td><td>544.00</td></tr>
           <tr><td class="left" rowspan="2">海南省政府办公厅</td><td rowspan="2">政府</td><td>2025</td><td>344.25</td></tr>
-          <tr><td>2026</td><td>156.22</td></tr>
+          <tr><td>2026H1</td><td>156.22</td></tr>
           <tr><td class="left" rowspan="3">海南医科大学</td><td rowspan="3">教育</td><td>2024</td><td>271.50</td></tr>
           <tr><td>2025</td><td>67.33</td></tr>
-          <tr><td>2026</td><td>86.28</td></tr>
+          <tr><td>2026H1</td><td>86.28</td></tr>
           <tr><td class="left" rowspan="3">海南省广播电视和网络视听节目监测中心</td><td rowspan="3">企业</td><td>2024</td><td>347.92</td></tr>
           <tr><td>2025</td><td>2.98</td></tr>
-          <tr><td>2026</td><td>64.75</td></tr>
-          <tr><td class="left" rowspan="2">文昌市教育研究培训中心</td><td rowspan="2">教育</td><td>2024</td><td>372.87</td></tr>
-          <tr><td>2025</td><td>34.41</td></tr>
+          <tr><td>2026H1</td><td>64.75</td></tr>
           <tr><td class="left">海南省海口市中级人民法院</td><td>政府</td><td>2024</td><td>363.36</td></tr>
           <tr><td class="left">三亚市人力资源和社会保障局</td><td>政府</td><td>2025</td><td>362.24</td></tr>
           <tr><td class="left" rowspan="2">海南开放大学</td><td rowspan="2">教育</td><td>2025</td><td>55.65</td></tr>
-          <tr><td>2026</td><td>304.89</td></tr>
+          <tr><td>2026H1</td><td>304.89</td></tr>
           <tr><td class="left">海南省城市信息模型（CIM）平台</td><td>政府</td><td>2025</td><td>352.50</td></tr>
-          <tr><td class="left">海南比勒费尔德应用科学大学</td><td>教育</td><td>2025</td><td>345.00</td></tr>
           <tr><td class="left" rowspan="2">琼中黎族苗族自治县教育局</td><td rowspan="2">教育</td><td>2024</td><td>37.50</td></tr>
           <tr><td>2025</td><td>292.50</td></tr>
-          <tr><td class="left">儋州市人民医院医疗集团总院</td><td>医疗</td><td>2026</td><td>308.83</td></tr>
+          <tr><td class="left">儋州市人民医院医疗集团总院</td><td>医疗</td><td>2026H1</td><td>308.83</td></tr>
+          <tr><td class="left" rowspan="3">中国电信股份有限公司海南州分公司</td><td rowspan="3">运营商</td><td>2024</td><td>10.00</td></tr>
+          <tr><td>2025</td><td>271.20</td></tr>
+          <tr><td>2026H1</td><td>15.54</td></tr>
           <tr><td class="left">海口市规划信息资料服务中心</td><td>政府</td><td>2024</td><td>288.75</td></tr>
           <tr><td class="left">三亚市崖州区农业农村局</td><td>政府</td><td>2024</td><td>286.56</td></tr>
+          <tr><td class="left">海南省监狱管理局（海南省戒毒管理局）</td><td>政府</td><td>2026H1</td><td>279.23</td></tr>
+          <tr><td class="left">省公安厅森林公安局</td><td>政府</td><td>2024</td><td>273.98</td></tr>
+          <tr><td class="left">海口市知识产权保护中心</td><td>政府</td><td>2025</td><td>272.71</td></tr>
         </tbody>
       </table>
     </div>
 
-    <div class="note-block">跳转全量潜力客户数据</div>
+    <div class="note-block">全量数据见附件3</div>
 
   </div>
 </div>
@@ -871,9 +866,10 @@ const dataLabelPlugin = {
         var v = dataset.data[index];
         if (v === 0 || v === null || v === undefined) return;
         var pos = el.tooltipPosition();
-        // Skip very short bars
         var barH = Math.abs(el.base - el.y);
-        if (barH < 6) return;
+        // For short bars, place label at a fixed offset above baseline
+        // so the value is always visible even when the bar is tiny
+        var labelY = barH < 10 ? el.base - 6 : pos.y - 2;
         var label;
         if (unit) {
           label = v.toFixed(2) + unit;
@@ -888,9 +884,9 @@ const dataLabelPlugin = {
         ctx.strokeStyle = 'white';
         ctx.lineWidth = 3;
         ctx.lineJoin = 'round';
-        ctx.strokeText(label, pos.x, pos.y - 2);
+        ctx.strokeText(label, pos.x, labelY);
         ctx.fillStyle = '#6b7280';
-        ctx.fillText(label, pos.x, pos.y - 2);
+        ctx.fillText(label, pos.x, labelY);
         ctx.restore();
       });
     });
@@ -909,9 +905,9 @@ const colorOrangeLight = 'rgba(234,88,12,0.15)';
 new Chart(document.getElementById('chart-summary'), {
   type: 'bar',
   data: {
-    labels: ['2024', '2025', '2026'],
+    labels: ['2024', '2025', '2026H1'],
     datasets: [
-      { label: '市场额(亿)', data: [4.73, 5.15, 2.63], unit: '亿', backgroundColor: colorBlueLight, borderColor: colorBlue, borderWidth: 2, borderRadius: 4, yAxisID: 'y' },
+      { label: '市场额(亿)', data: [4.25, 4.89, 2.41], unit: '亿', backgroundColor: colorBlueLight, borderColor: colorBlue, borderWidth: 2, borderRadius: 4, yAxisID: 'y' },
       { label: '签约合同金额(亿)', data: [0.18, 0.18, 0.06], unit: '亿', backgroundColor: colorOrangeLight, borderColor: colorOrange, borderWidth: 2, borderRadius: 4, yAxisID: 'y1' }
     ]
   },
@@ -929,10 +925,10 @@ new Chart(document.getElementById('chart-summary'), {
 new Chart(document.getElementById('chart-anheng-year'), {
   type: 'bar',
   data: {
-    labels: ['2024', '2025', '2026'],
+    labels: ['2024', '2025', '2026H1'],
     datasets: [
-      { label: '无产出客户市场额(万)', data: [19991.45, 29054.31, 12729.02], unit: '万', backgroundColor: colorGrayLight, borderColor: colorGray, borderWidth: 1.5, borderRadius: 4 },
-      { label: '有产出客户市场额(万)', data: [13277.95, 13578.53, 8798.98], unit: '万', backgroundColor: colorBlueLight, borderColor: colorBlue, borderWidth: 1.5, borderRadius: 4 },
+      { label: '无产出客户市场额(万)', data: [19991.45, 27574.79, 12355.42], unit: '万', backgroundColor: colorGrayLight, borderColor: colorGray, borderWidth: 1.5, borderRadius: 4 },
+      { label: '有产出客户市场额(万)', data: [12947.18, 13175.24, 7003.1], unit: '万', backgroundColor: colorBlueLight, borderColor: colorBlue, borderWidth: 1.5, borderRadius: 4 },
       { label: '产出合同金额(万)', data: [1099.87, 872.07, 294.61], unit: '万', backgroundColor: colorOrangeLight, borderColor: colorOrange, borderWidth: 1.5, borderRadius: 4 }
     ]
   },
@@ -947,10 +943,10 @@ new Chart(document.getElementById('chart-anheng-year'), {
 new Chart(document.getElementById('chart-na-year'), {
   type: 'bar',
   data: {
-    labels: ['2024', '2025', '2026'],
+    labels: ['2024', '2025', '2026H1'],
     datasets: [
-      { label: '无产出客户市场额(万)', data: [889.05, 3306.19, 1709.46], unit: '万', backgroundColor: colorGrayLight, borderColor: colorGray, borderWidth: 1.5, borderRadius: 4 },
-      { label: '有产出客户市场额(万)', data: [6288.98, 8155.84, 6043.69], unit: '万', backgroundColor: colorBlueLight, borderColor: colorBlue, borderWidth: 1.5, borderRadius: 4 },
+      { label: '无产出客户市场额(万)', data: [889.05, 1826.68, 1234.76], unit: '万', backgroundColor: colorGrayLight, borderColor: colorGray, borderWidth: 1.5, borderRadius: 4 },
+      { label: '有产出客户市场额(万)', data: [5958.21, 7752.54, 4247.81], unit: '万', backgroundColor: colorBlueLight, borderColor: colorBlue, borderWidth: 1.5, borderRadius: 4 },
       { label: '产出合同金额(万)', data: [462.43, 560.66, 115.2], unit: '万', backgroundColor: colorOrangeLight, borderColor: colorOrange, borderWidth: 1.5, borderRadius: 4 }
     ]
   },
@@ -967,9 +963,9 @@ new Chart(document.getElementById('chart-city'), {
   data: {
     labels: ['海口市', '琼海市', '儋州市'],
     datasets: [
-      { label: '2024市场额(万)', data: [6926.85, 251.18, 0], unit: '万', backgroundColor: 'rgba(37,99,235,0.6)', borderColor: colorBlue, borderWidth: 1, borderRadius: 4 },
-      { label: '2025市场额(万)', data: [11408.03, 0.0, 54.0], unit: '万', backgroundColor: 'rgba(234,88,12,0.6)', borderColor: colorOrange, borderWidth: 1, borderRadius: 4 },
-      { label: '2026市场额(万)', data: [7753.15, 0.0, 0], unit: '万', backgroundColor: 'rgba(156,163,175,0.6)', borderColor: colorGray, borderWidth: 1, borderRadius: 4 }
+      { label: '2024市场额(万)', data: [6596.08, 251.18, 0], unit: '万', backgroundColor: 'rgba(37,99,235,0.6)', borderColor: colorBlue, borderWidth: 1, borderRadius: 4 },
+      { label: '2025市场额(万)', data: [9525.22, 0.0, 54.0], unit: '万', backgroundColor: 'rgba(234,88,12,0.6)', borderColor: colorOrange, borderWidth: 1, borderRadius: 4 },
+      { label: '2026H1市场额(万)', data: [5482.57, 0.0, 0], unit: '万', backgroundColor: 'rgba(156,163,175,0.6)', borderColor: colorGray, borderWidth: 1, borderRadius: 4 }
     ]
   },
   options: {
@@ -985,9 +981,9 @@ new Chart(document.getElementById('chart-industry'), {
   data: {
     labels: ['运营商', '政府', '企业', '公安', '金融', '央国企'],
     datasets: [
-      { label: '2024市场额(万)', data: [2874.79, 2608.6, 542.62, 789.22, 298.92, 63.87], unit: '万', backgroundColor: 'rgba(37,99,235,0.6)', borderColor: colorBlue, borderWidth: 1, borderRadius: 4 },
-      { label: '2025市场额(万)', data: [3344.64, 4106.11, 1358.32, 1398.79, 1254.17, 0], unit: '万', backgroundColor: 'rgba(234,88,12,0.6)', borderColor: colorOrange, borderWidth: 1, borderRadius: 4 },
-      { label: '2026市场额(万)', data: [2104.7, 1594.17, 2218.77, 1700.37, 135.15, 0], unit: '万', backgroundColor: 'rgba(156,163,175,0.6)', borderColor: colorGray, borderWidth: 1, borderRadius: 4 }
+      { label: '2024市场额(万)', data: [2544.02, 2608.6, 542.62, 789.22, 298.92, 63.87], unit: '万', backgroundColor: 'rgba(37,99,235,0.6)', borderColor: colorBlue, borderWidth: 1, borderRadius: 4 },
+      { label: '2025市场额(万)', data: [3344.64, 2626.59, 920.62, 1433.2, 1254.17, 0], unit: '万', backgroundColor: 'rgba(234,88,12,0.6)', borderColor: colorOrange, borderWidth: 1, borderRadius: 4 },
+      { label: '2026H1市场额(万)', data: [1630.0, 1594.17, 2097.0, 26.25, 135.15, 0], unit: '万', backgroundColor: 'rgba(156,163,175,0.6)', borderColor: colorGray, borderWidth: 1, borderRadius: 4 }
     ]
   },
   options: {
@@ -1001,10 +997,10 @@ new Chart(document.getElementById('chart-industry'), {
 new Chart(document.getElementById('chart-potential-year'), {
   type: 'bar',
   data: {
-    labels: ['2024', '2025', '2026'],
+    labels: ['2024', '2025', '2026H1'],
     datasets: [
-      { label: '潜力客户数量', data: [20, 22, 11], backgroundColor: colorBlueLight, borderColor: colorBlue, borderWidth: 2, borderRadius: 4, yAxisID: 'y' },
-      { label: '市场额(亿)', data: [0.98, 0.65, 0.26], unit: '亿', backgroundColor: colorOrangeLight, borderColor: colorOrange, borderWidth: 2, borderRadius: 4, yAxisID: 'y1' }
+      { label: '潜力客户数量', data: [19, 19, 12], backgroundColor: colorBlueLight, borderColor: colorBlue, borderWidth: 2, borderRadius: 4, yAxisID: 'y' },
+      { label: '市场额(亿)', data: [0.53, 0.56, 0.27], unit: '亿', backgroundColor: colorOrangeLight, borderColor: colorOrange, borderWidth: 2, borderRadius: 4, yAxisID: 'y1' }
     ]
   },
   options: {
@@ -1021,11 +1017,11 @@ new Chart(document.getElementById('chart-potential-year'), {
 new Chart(document.getElementById('chart-potential-city'), {
   type: 'bar',
   data: {
-    labels: ['海口市', '三亚市', '儋州市', '文昌市', '东方市', '琼中黎族苗族自治县'],
+    labels: ['海口市', '三亚市', '东方市', '琼中黎族苗族自治县', '儋州市', '五指山市', '昌江黎族自治县', '万宁市'],
     datasets: [
-      { label: '2024市场额(万)', data: [7097.77, 1335.31, 0, 622.19, 286.01, 37.5], unit: '万', backgroundColor: 'rgba(37,99,235,0.6)', borderColor: colorBlue, borderWidth: 1, borderRadius: 4 },
-      { label: '2025市场额(万)', data: [3414.3, 1288.81, 1043.91, 34.41, 157.63, 292.5], unit: '万', backgroundColor: 'rgba(234,88,12,0.6)', borderColor: colorOrange, borderWidth: 1, borderRadius: 4 },
-      { label: '2026市场额(万)', data: [2333.0, 0, 308.83, 0, 0, 0], unit: '万', backgroundColor: 'rgba(156,163,175,0.6)', borderColor: colorGray, borderWidth: 1, borderRadius: 4 }
+      { label: '2024市场额(万)', data: [4195.86, 286.56, 286.01, 37.5, 0, 0, 261.06, 205.37], unit: '万', backgroundColor: 'rgba(37,99,235,0.6)', borderColor: colorBlue, borderWidth: 1, borderRadius: 4 },
+      { label: '2025市场额(万)', data: [3672.07, 1170.24, 157.63, 292.5, 0, 270.6, 0, 0], unit: '万', backgroundColor: 'rgba(234,88,12,0.6)', borderColor: colorOrange, borderWidth: 1, borderRadius: 4 },
+      { label: '2026H1市场额(万)', data: [2348.54, 0, 0, 0, 308.83, 0, 0, 0], unit: '万', backgroundColor: 'rgba(156,163,175,0.6)', borderColor: colorGray, borderWidth: 1, borderRadius: 4 }
     ]
   },
   options: {
@@ -1039,11 +1035,11 @@ new Chart(document.getElementById('chart-potential-city'), {
 new Chart(document.getElementById('chart-potential-industry'), {
   type: 'bar',
   data: {
-    labels: ['数据局', '政府', '医疗', '运营商', '教育', '企业', '电力', '金融'],
+    labels: ['政府', '数据局', '运营商', '企业', '教育', '电力', '金融', '医疗'],
     datasets: [
-      { label: '2024市场额(万)', data: [4198.5, 2681.13, 1048.75, 824.52, 681.87, 347.92, 62.52, 0], unit: '万', backgroundColor: 'rgba(37,99,235,0.6)', borderColor: colorBlue, borderWidth: 1, borderRadius: 4 },
-      { label: '2025市场额(万)', data: [0, 2187.4, 118.57, 1217.94, 2607.87, 2.98, 157.63, 209.76], unit: '万', backgroundColor: 'rgba(234,88,12,0.6)', borderColor: colorOrange, borderWidth: 1, borderRadius: 4 },
-      { label: '2026市场额(万)', data: [0, 623.66, 308.83, 810.14, 582.95, 305.81, 0, 10.44], unit: '万', backgroundColor: 'rgba(156,163,175,0.6)', borderColor: colorGray, borderWidth: 1, borderRadius: 4 }
+      { label: '2024市场额(万)', data: [2431.81, 1254.6, 866.52, 347.92, 309.0, 62.52, 0, 0], unit: '万', backgroundColor: 'rgba(37,99,235,0.6)', borderColor: colorBlue, borderWidth: 1, borderRadius: 4 },
+      { label: '2025市场额(万)', data: [2187.4, 0, 1475.71, 2.98, 1529.55, 157.63, 209.76, 0], unit: '万', backgroundColor: 'rgba(234,88,12,0.6)', borderColor: colorOrange, borderWidth: 1, borderRadius: 4 },
+      { label: '2026H1市场额(万)', data: [623.66, 0, 825.68, 305.81, 582.95, 0, 10.44, 308.83], unit: '万', backgroundColor: 'rgba(156,163,175,0.6)', borderColor: colorGray, borderWidth: 1, borderRadius: 4 }
     ]
   },
   options: {
