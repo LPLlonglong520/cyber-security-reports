@@ -1,94 +1,89 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>第三战区各区域 - 网络安全市场空间分析报告 2026</title>
-<style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Microsoft YaHei", "PingFang SC", sans-serif;
-  background: #f5f7fa; color: #333; min-height: 100vh;
-  -webkit-text-size-adjust: 100%;
-}
-.header {
-  background: linear-gradient(135deg, #1a237e, #283593);
-  color: #fff; padding: 48px 24px; text-align: center;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-}
-.header .zone-tag {
-  display: inline-block; background: rgba(255,255,255,0.15);
-  padding: 4px 16px; border-radius: 20px; font-size: 13px;
-  letter-spacing: 2px; margin-bottom: 16px;
-}
-.header h1 { font-size: 2em; margin-bottom: 8px; font-weight: 700; }
-.header h2 { font-size: 1.1em; opacity: .92; font-weight: 400; margin-bottom: 6px; }
-.header p { opacity: .75; font-size: .95em; }
-.container { max-width: 1200px; margin: 0 auto; padding: 32px 24px; }
-.zone-info {
-  background: #fff; padding: 20px 24px; border-radius: 12px;
-  margin-bottom: 24px; box-shadow: 0 1px 4px rgba(0,0,0,.06);
-  text-align: center; color: #555; font-size: 15px; line-height: 1.7;
-}
-.zone-info strong { color: #1a237e; font-size: 1.1em; }
-.zone-info .count { color: #e65100; font-weight: bold; }
-.report-grid {
-  list-style: none; display: grid;
-  grid-template-columns: repeat(3, 1fr); gap: 12px;
-}
-.report-grid li { margin: 0; }
-.report-grid a {
-  display: block; background: #fff; padding: 22px 20px;
-  border-radius: 10px; text-decoration: none; color: #e65100;
-  font-size: 1.1em; font-weight: 500; text-align: center;
-  box-shadow: 0 1px 4px rgba(0,0,0,.06);
-  transition: transform .15s, box-shadow .15s;
-  border: 1px solid transparent;
-}
-.report-grid a:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(26,35,126,.12);
-  border-color: #1a237e;
-}
-.back-link {
-  display: inline-block; margin-bottom: 16px; color: #1a237e;
-  text-decoration: none; font-size: 14px; padding: 6px 14px;
-  background: #fff; border-radius: 6px; box-shadow: 0 1px 4px rgba(0,0,0,.06);
-}
-.back-link:hover { background: #e8eaf6; }
-.footer { text-align: center; color: #999; padding: 32px 24px; font-size: .85em; }
-@media (max-width: 900px) { .report-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 600px) {
-  .header { padding: 32px 16px; }
-  .header h1 { font-size: 1.5em; }
-  .header h2 { font-size: 1em; }
-  .container { padding: 16px 12px; }
-  .zone-info { padding: 14px 16px; font-size: 13px; }
-  .report-grid { grid-template-columns: 1fr; gap: 8px; }
-  .report-grid a { padding: 16px; font-size: 1em; }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>第三战区各区域 | 2024-2026 网络安全市场空间分析报告</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: #f5f7fa;
+      color: #1f2937;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+    header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%);
+      color: #fff;
+      padding: 60px 20px 48px;
+      text-align: center;
+    }
+    header h1 { font-size: 32px; font-weight: 700; margin-bottom: 12px; }
+    header p { font-size: 16px; opacity: 0.9; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 60px; }
+    .summary-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      padding: 20px 24px;
+      margin-bottom: 28px;
+      font-size: 15px;
+      line-height: 1.8;
+      color: #4b5563;
+    }
+    .summary-card strong { color: #1d4ed8; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 18px;
+    }
+    .region-link {
+      display: block;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 18px 16px;
+      text-align: center;
+      text-decoration: none;
+      color: #1d4ed8;
+      font-size: 16px;
+      font-weight: 500;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+    }
+    .region-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(30,58,138,0.12);
+      border-color: #1d4ed8;
+    }
+    @media (max-width: 640px) {
+      header { padding: 44px 16px 36px; }
+      header h1 { font-size: 26px; }
+      header p { font-size: 14px; }
+      .container { padding: 20px 16px 40px; }
+      .grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+      .region-link { padding: 16px 12px; font-size: 15px; }
+    }
+  </style>
 </head>
 <body>
-<div class="header">
-  <div class="zone-tag">第三战区 · 华北大区</div>
-  <h1>第三战区各区域</h1>
-  <h2>2024-2026 网络安全市场空间分析报告</h2>
-  <p>华北大区 · 代表第三战区</p>
-</div>
-<div class="container">
-  <a class="back-link" href="index.html">← 返回全部区域</a>
-  <div class="zone-info">
-    本战区共 <span class="count">5</span> 个区域报告 · 涵盖 <strong>北京区域、天津区域、河北区域、山西区域、内蒙区域</strong>
+  <header>
+    <h1>第三战区各区域</h1>
+    <p>2024-2026 网络安全市场空间分析报告</p>
+  </header>
+  <div class="container">
+    <div class="summary-card">
+      本战区共 <strong>5</strong> 个区域报告，涵盖：
+      <strong>北京区域</strong>、<strong>天津区域</strong>、<strong>河北区域</strong>、<strong>山西区域</strong>、<strong>内蒙区域</strong>
+    </div>
+    <div class="grid">
+      <a class="region-link" href="https://lpllonglong520.github.io/cyber-security-reports/北京区域.html">北京区域</a>
+      <a class="region-link" href="https://lpllonglong520.github.io/cyber-security-reports/天津区域.html">天津区域</a>
+      <a class="region-link" href="https://lpllonglong520.github.io/cyber-security-reports/河北区域.html">河北区域</a>
+      <a class="region-link" href="https://lpllonglong520.github.io/cyber-security-reports/山西区域.html">山西区域</a>
+      <a class="region-link" href="https://lpllonglong520.github.io/cyber-security-reports/内蒙区域.html">内蒙区域</a>
+    </div>
   </div>
-  <ul class="report-grid">
-    <li><a href="北京区域.html">北京区域</a></li>
-<li><a href="天津区域.html">天津区域</a></li>
-<li><a href="河北区域.html">河北区域</a></li>
-<li><a href="山西区域.html">山西区域</a></li>
-<li><a href="内蒙区域.html">内蒙区域</a></li>
-  </ul>
-</div>
-<div class="footer"><p>网络安全市场空间分析报告 2026 · Powered by GitHub Pages</p></div>
 </body>
 </html>
