@@ -6,62 +6,109 @@
 <title>网络安全市场空间分析报告 2026</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,"Microsoft YaHei",sans-serif;background:#f5f7fa;color:#333;min-height:100vh}
-.header{background:linear-gradient(135deg,#1a237e,#283593);color:#fff;padding:40px 24px;text-align:center}
+body{font-family:-apple-system,BlinkMacSystemFont,"Microsoft YaHei","PingFang SC",sans-serif;background:#f5f7fa;color:#333;min-height:100vh;-webkit-text-size-adjust:100%}
+.header{background:linear-gradient(135deg,#1a237e,#283593);color:#fff;padding:40px 24px;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,.08)}
 .header h1{font-size:1.6em;margin-bottom:6px}
 .header p{opacity:.8}
-.container{max-width:600px;margin:0 auto;padding:24px}
-.report-list{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.report-list li{}
-.report-list a{display:block;background:#fff;padding:12px 14px;border-radius:8px;text-decoration:none;color:#1a237e;font-size:.95em;box-shadow:0 1px 4px rgba(0,0,0,.06);transition:transform .15s;text-align:center}
-.report-list a:hover{transform:translateY(-1px);box-shadow:0 2px 10px rgba(0,0,0,.1)}
-.report-list a .region{color:#e65100;font-weight:bold}
-.footer{text-align:center;color:#999;padding:24px;font-size:.8em}
-@media(max-width:768px){.header{padding:28px 16px}.header h1{font-size:1.3em}.container{padding:16px}.report-list{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:400px){.report-list{grid-template-columns:1fr}}
+.section-title{max-width:1200px;margin:32px auto 16px;padding:0 24px;font-size:1.15em;color:#1a237e;font-weight:600}
+.section-title span{font-size:.85em;color:#999;font-weight:400;margin-left:8px}
+.zone-grid{max-width:1200px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:32px}
+.zone-card{background:#fff;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,.06);overflow:hidden;transition:transform .15s,box-shadow .15s;border:2px solid transparent}
+.zone-card:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(26,35,126,.15);border-color:#1a237e}
+.zone-card a{display:block;padding:24px 16px;text-decoration:none;text-align:center;color:#1a237e}
+.zone-num{font-size:1.3em;font-weight:700;color:#1a237e;margin-bottom:6px}
+.zone-area{font-size:.9em;color:#666;margin-bottom:10px}
+.zone-count{font-size:.8em;color:#e65100;font-weight:500}
+.container{max-width:1200px;margin:0 auto;padding:0 24px 24px}
+.report-grid{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.report-grid li{margin:0}
+.report-grid a{display:block;background:#fff;padding:22px 20px;border-radius:10px;text-decoration:none;color:#e65100;font-size:1.05em;font-weight:500;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,.06);transition:transform .15s,box-shadow .15s;border:1px solid transparent}
+.report-grid a:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(26,35,126,.12);border-color:#1a237e}
+.footer{text-align:center;color:#999;padding:32px 24px;font-size:.85em}
+@media(max-width:900px){.zone-grid{grid-template-columns:repeat(3,1fr)}.report-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.header{padding:28px 16px}.header h1{font-size:1.3em}.section-title{padding:0 16px;margin:20px auto 12px}.zone-grid{grid-template-columns:repeat(2,1fr);padding:0 16px;margin-bottom:20px}.zone-card a{padding:18px 10px}.zone-num{font-size:1.1em}.container{padding:0 16px 16px}.report-grid{grid-template-columns:1fr;gap:8px}.report-grid a{padding:16px;font-size:1em}}
 </style>
 </head>
 <body>
 <div class="header">
-<h1>网络安全市场空间分析报告 2026</h1>
-<p>各省市区域网络安全市场空间全景分析</p>
+  <h1>网络安全市场空间分析报告 2026</h1>
+  <p>各省市区域网络安全市场空间全景分析</p>
 </div>
+<div class="section-title">战区分类入口 <span>· 5大战区 / 32个区域</span></div>
+<div class="zone-grid">
+    <div class="zone-card">
+      <a href="第一战区.html">
+        <div class="zone-num">第一战区</div>
+        <div class="zone-area">华东大区</div>
+        <div class="zone-count">涵盖 8 个区域报告</div>
+      </a>
+    </div>
+    <div class="zone-card">
+      <a href="第二战区.html">
+        <div class="zone-num">第二战区</div>
+        <div class="zone-area">华南华中大区</div>
+        <div class="zone-count">涵盖 7 个区域报告</div>
+      </a>
+    </div>
+    <div class="zone-card">
+      <a href="第三战区.html">
+        <div class="zone-num">第三战区</div>
+        <div class="zone-area">华北大区</div>
+        <div class="zone-count">涵盖 5 个区域报告</div>
+      </a>
+    </div>
+    <div class="zone-card">
+      <a href="第四战区.html">
+        <div class="zone-num">第四战区</div>
+        <div class="zone-area">西南大区</div>
+        <div class="zone-count">涵盖 4 个区域报告</div>
+      </a>
+    </div>
+    <div class="zone-card">
+      <a href="第五战区.html">
+        <div class="zone-num">第五战区</div>
+        <div class="zone-area">西北东北大区</div>
+        <div class="zone-count">涵盖 8 个区域报告</div>
+      </a>
+    </div>
+</div>
+<div class="section-title">全部区域报告 <span>· 共32份</span></div>
 <div class="container">
-<ul class="report-list">
-<li><a href="上海区域.html"><span class="region">上海区域</span></a></li>
-<li><a href="云南区域.html"><span class="region">云南区域</span></a></li>
-<li><a href="内蒙区域.html"><span class="region">内蒙区域</span></a></li>
-<li><a href="北京区域.html"><span class="region">北京区域</span></a></li>
-<li><a href="吉林区域.html"><span class="region">吉林区域</span></a></li>
-<li><a href="四川区域.html"><span class="region">四川区域</span></a></li>
-<li><a href="天津区域.html"><span class="region">天津区域</span></a></li>
-<li><a href="宁夏区域.html"><span class="region">宁夏区域</span></a></li>
-<li><a href="安徽区域.html"><span class="region">安徽区域</span></a></li>
-<li><a href="山西区域.html"><span class="region">山西区域</span></a></li>
-<li><a href="广东区域.html"><span class="region">广东区域</span></a></li>
-<li><a href="广西区域.html"><span class="region">广西区域</span></a></li>
-<li><a href="新疆区域.html"><span class="region">新疆区域</span></a></li>
-<li><a href="江苏区域.html"><span class="region">江苏区域</span></a></li>
-<li><a href="江西区域.html"><span class="region">江西区域</span></a></li>
-<li><a href="河北区域.html"><span class="region">河北区域</span></a></li>
-<li><a href="河南区域.html"><span class="region">河南区域</span></a></li>
-<li><a href="济南区域.html"><span class="region">济南区域</span></a></li>
-<li><a href="浙江区域.html"><span class="region">浙江区域</span></a></li>
-<li><a href="海南区域.html"><span class="region">海南区域</span></a></li>
-<li><a href="深圳区域.html"><span class="region">深圳区域</span></a></li>
-<li><a href="湖北区域.html"><span class="region">湖北区域</span></a></li>
-<li><a href="湖南区域.html"><span class="region">湖南区域</span></a></li>
-<li><a href="甘肃区域.html"><span class="region">甘肃区域</span></a></li>
-<li><a href="福建区域.html"><span class="region">福建区域</span></a></li>
-<li><a href="贵州区域.html"><span class="region">贵州区域</span></a></li>
-<li><a href="辽宁区域.html"><span class="region">辽宁区域</span></a></li>
-<li><a href="重庆区域.html"><span class="region">重庆区域</span></a></li>
-<li><a href="陕西区域.html"><span class="region">陕西区域</span></a></li>
-<li><a href="青岛区域.html"><span class="region">青岛区域</span></a></li>
-<li><a href="青海区域.html"><span class="region">青海区域</span></a></li>
-<li><a href="黑龙江区域.html"><span class="region">黑龙江区域</span></a></li>
-</ul>
+  <ul class="report-grid">
+    <li><a href="上海区域.html">上海区域</a></li>
+    <li><a href="云南区域.html">云南区域</a></li>
+    <li><a href="内蒙区域.html">内蒙区域</a></li>
+    <li><a href="北京区域.html">北京区域</a></li>
+    <li><a href="吉林区域.html">吉林区域</a></li>
+    <li><a href="四川区域.html">四川区域</a></li>
+    <li><a href="天津区域.html">天津区域</a></li>
+    <li><a href="宁夏区域.html">宁夏区域</a></li>
+    <li><a href="安徽区域.html">安徽区域</a></li>
+    <li><a href="山西区域.html">山西区域</a></li>
+    <li><a href="广东区域.html">广东区域</a></li>
+    <li><a href="广西区域.html">广西区域</a></li>
+    <li><a href="新疆区域.html">新疆区域</a></li>
+    <li><a href="江苏区域.html">江苏区域</a></li>
+    <li><a href="江西区域.html">江西区域</a></li>
+    <li><a href="河北区域.html">河北区域</a></li>
+    <li><a href="河南区域.html">河南区域</a></li>
+    <li><a href="济南区域.html">济南区域</a></li>
+    <li><a href="浙江区域.html">浙江区域</a></li>
+    <li><a href="海南区域.html">海南区域</a></li>
+    <li><a href="深圳区域.html">深圳区域</a></li>
+    <li><a href="湖北区域.html">湖北区域</a></li>
+    <li><a href="湖南区域.html">湖南区域</a></li>
+    <li><a href="甘肃区域.html">甘肃区域</a></li>
+    <li><a href="福建区域.html">福建区域</a></li>
+    <li><a href="贵州区域.html">贵州区域</a></li>
+    <li><a href="辽宁区域.html">辽宁区域</a></li>
+    <li><a href="重庆区域.html">重庆区域</a></li>
+    <li><a href="陕西区域.html">陕西区域</a></li>
+    <li><a href="青岛区域.html">青岛区域</a></li>
+    <li><a href="青海区域.html">青海区域</a></li>
+    <li><a href="黑龙江区域.html">黑龙江区域</a></li>
+  </ul>
 </div>
-<div class="footer"><p>共 32 份报告 | Powered by GitHub Pages</p></div>
+<div class="footer"><p>网络安全市场空间分析报告 2026 · Powered by GitHub Pages</p></div>
 </body>
 </html>
